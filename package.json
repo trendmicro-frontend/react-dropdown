@@ -1,0 +1,96 @@
+{
+  "name": "@trendmicro/react-dropdown",
+  "version": "0.1.0",
+  "description": "Trend Micro Components: React Dropdown",
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm run lint && npm test && npm run clean && npm run bowersync && npm run build && npm run build-examples",
+    "bowersync": "./scripts/bowersync",
+    "build": "webpack && npm run cleancss",
+    "build-examples": "cd examples; webpack",
+    "clean": "rm -f {lib,dist}/*",
+    "cleancss": "cleancss -o dist/react-dropdown.min.css dist/react-dropdown.css",
+    "demo": "http-server -p 8000 docs/",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "test": "./babel-tap --coverage test/*.js",
+    "coveralls": "./babel-tap --coverage --coverage-report=text-lcov test/*.js | node_modules/.bin/coveralls",
+    "dev": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000 --content-base ../docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendmicro-frontend/react-dropdown.git"
+  },
+  "author": "",
+  "contributors": [
+    {
+      "name": "",
+      "email": "",
+      "url": "https://github.com/trendmicro-frontend"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trendmicro-frontend/react-dropdown/issues"
+  },
+  "homepage": "https://github.com/trendmicro-frontend/react-dropdown",
+  "keywords": [
+    "react",
+    "react-dropdown"
+  ],
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  },
+  "dependencies": {
+    "@trendmicro/react-anchor": "^0.5.2",
+    "@trendmicro/react-buttons": "^0.5.0",
+    "chained-function": "^0.5.0",
+    "classnames": "^2.2.5",
+    "dom-helpers": "^3.2.1",
+    "react-addons-shallow-compare": "^0.14.0 || ^15.0.0",
+    "react-overlays": "^0.6.11",
+    "uncontrollable": "^4.0.3",
+    "warning": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.23.0",
+    "babel-core": "~6.23.1",
+    "babel-eslint": "~7.1.1",
+    "babel-loader": "~6.3.2",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-preset-es2015": "~6.22.0",
+    "babel-preset-react": "~6.23.0",
+    "babel-preset-stage-0": "~6.22.0",
+    "clean-css": "~4.0.3",
+    "clean-css-cli": "~4.0.0",
+    "coveralls": "~2.11.15",
+    "css-loader": "~0.26.1",
+    "eslint": "~3.15.0",
+    "eslint-config-trendmicro": "~0.5.1",
+    "eslint-loader": "~1.6.1",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jsx-a11y": "~2.2.3",
+    "eslint-plugin-react": "~6.10.0",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "~0.10.0",
+    "html-webpack-plugin": "~2.28.0",
+    "http-server": "~0.9.0",
+    "nib": "~1.1.2",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0",
+    "style-loader": "~0.13.1",
+    "stylint": "~1.5.9",
+    "stylint-loader": "~1.0.0",
+    "stylus-loader": "~2.4.0",
+    "tap": "~10.1.1",
+    "trendmicro-ui": "~0.2.0",
+    "url-loader": "~0.5.7",
+    "webpack": "~2.2.1",
+    "webpack-dev-server": "~2.3.0"
+  }
+}

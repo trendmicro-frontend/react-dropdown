@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var pkg = require('../package.json');
+var bower = require('../bower.json');
+
+// Update bower.json
+Object.keys(bower).forEach((key) => {
+    bower[key] = pkg[key] || bower[key];
+});
+bower.authors = pkg.contributors.map(author => {
+    return {
+        name: author.name,
+        email: author.email,
+        homepage: author.url
+    };
+});
+
+var content = JSON.stringify(bower, null, 2);
+fs.writeFileSync(path.join(__dirname, '../bower.json'), content + '\n', 'utf8');
