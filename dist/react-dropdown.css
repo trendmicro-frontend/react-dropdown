@@ -76,16 +76,11 @@
 .dropdown---dropdown-menu---1fkH0 > li.dropdown---dropdown-submenu---11C1M > a {
   padding-right: 32px;
 }
-/*
-.dropdown-menu .fa {
-    margin-right: 8px;
+.dropdown---dropdown-menu---1fkH0 .dropdown---badge---37jSy {
+  float: right;
+  margin-left: 24px;
+  margin-top: 1px;
 }
-.dropdown-menu .badge {
-    float: right;
-    margin-left: 24px;
-    margin-top: 1px;
-}
-*/
 .dropdown---dropdown-menu---1fkH0 > li > a:hover,
 .dropdown---dropdown-menu---1fkH0 > li > a:focus,
 .dropdown---dropdown-menu---1fkH0 > li > a.dropdown---focus---1kVJZ {
@@ -98,7 +93,6 @@
 .dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a:focus {
   text-decoration: none;
   color: #222;
-  background-color: #eee;
 }
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a,
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a:hover,
