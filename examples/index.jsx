@@ -22,7 +22,11 @@ class App extends React.Component {
                             <div className="col-md-6">
                                 <Section className="row-md-4">
                                     <h2>Dropdown</h2>
-                                    <Dropdown>
+                                    <Dropdown
+                                        onSelect={(eventKey) => {
+                                            console.log('##', eventKey);
+                                        }}
+                                    >
                                         <Dropdown.Toggle
                                             btnStyle="flat"
                                         >
@@ -30,16 +34,19 @@ class App extends React.Component {
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
                                             <MenuItem header>Header</MenuItem>
-                                            <MenuItem>link</MenuItem>
+                                            <MenuItem eventKey={1}>link</MenuItem>
                                             <MenuItem divider />
                                             <MenuItem header>Header</MenuItem>
-                                            <MenuItem>link</MenuItem>
-                                            <MenuItem disabled>disabled</MenuItem>
-                                            <MenuItem title="link with title">
+                                            <MenuItem eventKey={2}>link</MenuItem>
+                                            <MenuItem eventKey={3} disabled>disabled</MenuItem>
+                                            <MenuItem
+                                                eventKey={4}
+                                                title="link with title"
+                                            >
                                                 link with title
                                             </MenuItem>
                                             <MenuItem
-                                                eventKey={1}
+                                                eventKey={5}
                                                 href="#someHref"
                                                 active
                                                 onSelect={(eventKey) => {
@@ -53,9 +60,12 @@ class App extends React.Component {
                                     <DropdownButton
                                         btnSize="xs"
                                         title="xxx"
+                                        onSelect={(eventKey) => {
+                                            console.log('##', eventKey);
+                                        }}
                                     >
-                                        <MenuItem>link</MenuItem>
-                                        <MenuItem>link</MenuItem>
+                                        <MenuItem eventKey={1}>link</MenuItem>
+                                        <MenuItem eventKey={2}>link</MenuItem>
                                     </DropdownButton>
                                 </Section>
                             </div>

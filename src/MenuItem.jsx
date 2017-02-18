@@ -113,6 +113,7 @@ class MenuItem extends Component {
             >
                 <Anchor
                     {...props}
+                    disabled={disabled}
                     role="menuitem"
                     tabIndex="-1"
                     onClick={chainedFunction(onClick, this.actions.handleClick)}
