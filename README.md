@@ -17,7 +17,7 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 2. At this point you can import `@trendmicro/react-dropdown` and its styles in your application as follows:
 
   ```js
-  import Dropdown from '@trendmicro/react-dropdown';
+  import Dropdown, { DropdownToggle, DropdownMenu, MenuItem, DropdownButton } from '@trendmicro/react-dropdown';
 
   // Be sure to include styles at some point, probably during your bootstraping
   import '@trendmicro/react-dropdown/dist/react-dropdown.css';
@@ -25,12 +25,57 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 
 ## Usage
 
+### Dropdown
+
 ```js
 <Dropdown
-    className="component"
+    onSelect={(eventKey) => {
+    }}
 >
-    GitHub
+    <Dropdown.Toggle
+        btnStyle="flat"
+    >
+        Toggler
+    </Dropdown.Toggle>
+    <Dropdown.Menu>
+        <MenuItem header>Header</MenuItem>
+        <MenuItem eventKey={1}>link</MenuItem>
+        <MenuItem divider />
+        <MenuItem header>Header</MenuItem>
+        <MenuItem eventKey={2}>link</MenuItem>
+        <MenuItem eventKey={3} disabled>disabled</MenuItem>
+        <MenuItem
+            eventKey={4}
+            title="link with title"
+        >
+            link with title
+        </MenuItem>
+        <MenuItem
+            eventKey={5}
+            href="#someHref"
+            active
+            onSelect={(eventKey) => {
+                alert(`Alert from menu item.\neventKey: ${eventKey}`);
+            }}
+        >
+            link that alerts
+        </MenuItem>
+    </Dropdown.Menu>
 </Dropdown>
+```
+
+### DropdownButton
+
+```js
+<DropdownButton
+    btnSize="xs"
+    title="More"
+    onSelect={(eventKey) => {
+    }}
+>
+    <MenuItem eventKey={1}>link</MenuItem>
+    <MenuItem eventKey={2}>link</MenuItem>
+</DropdownButton>
 ```
 
 
