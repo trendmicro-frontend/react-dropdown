@@ -25,12 +25,12 @@
     "type": "git",
     "url": "git+https://github.com/trendmicro-frontend/react-dropdown.git"
   },
-  "author": "",
+  "author": "Cheton Wu <cheton_wu@trend.com.tw>",
   "contributors": [
     {
-      "name": "",
-      "email": "",
-      "url": "https://github.com/trendmicro-frontend"
+      "name": "Cheton Wu",
+      "email": "cheton_wu@trend.com.tw",
+      "url": "https://github.com/cheton"
     }
   ],
   "license": "MIT",
