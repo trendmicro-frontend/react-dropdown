@@ -83,10 +83,69 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 </DropdownButton>
 ```
 
+### Multi-Level Dropdown
+
+```js
+<Dropdown>
+    <Dropdown.Toggle title="Select an option" />
+    <Dropdown.Menu>
+        <MenuItem>
+            Menu item one
+        </MenuItem>
+        <MenuItem>
+            Menu item two
+        </MenuItem>
+        <MenuItem>
+            Menu item three
+        </MenuItem>
+        <MenuItem divider />
+        <Dropdown.SubMenu title="Menu item four">
+            <MenuItem>
+                Second level item one
+            </MenuItem>
+            <MenuItem>
+                Second level item two
+            </MenuItem>
+            <Dropdown.SubMenu title="Second level item three">
+                <MenuItem>
+                    Third level item one
+                </MenuItem>
+            </Dropdown.SubMenu>
+        </Dropdown.SubMenu>
+    </Dropdown.Menu>
+</Dropdown>
+```
 
 ## API
 
 ### Properties
+
+#### Dropdown
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+
+#### DropdownToggle
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+
+#### DropdownMenu
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+
+#### DropdownSubMenu
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+
+#### MenuItem
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+
+#### DropdownButton
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
