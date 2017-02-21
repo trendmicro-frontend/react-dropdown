@@ -69,20 +69,6 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 </Dropdown>
 ```
 
-### DropdownButton
-
-```js
-<DropdownButton
-    btnSize="xs"
-    title="More"
-    onSelect={(eventKey) => {
-    }}
->
-    <MenuItem eventKey={1}>link</MenuItem>
-    <MenuItem eventKey={2}>link</MenuItem>
-</DropdownButton>
-```
-
 ### Multi-Level Dropdown
 
 ```js
@@ -114,6 +100,20 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
         </Dropdown.SubMenu>
     </Dropdown.Menu>
 </Dropdown>
+```
+
+### DropdownButton
+
+```js
+<DropdownButton
+    btnSize="xs"
+    title="More"
+    onSelect={(eventKey) => {
+    }}
+>
+    <MenuItem eventKey={1}>link</MenuItem>
+    <MenuItem eventKey={2}>link</MenuItem>
+</DropdownButton>
 ```
 
 ## API
