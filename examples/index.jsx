@@ -13,7 +13,7 @@ import MultipleSelection from './MultipleSelection';
 import Header from './Header';
 import Icon from './Icon';
 import Badge from './Badge';
-import Submenu from './Submenu';
+import MultiLevelDropdown from './MultiLevelDropdown';
 import Scrollable from './Scrollable';
 import SearchFilter from './SearchFilter';
 import styles from './index.styl';
@@ -57,7 +57,7 @@ class App extends React.Component {
                                 <Badge />
                             </div>
                             <div className="col-md-12 col-lg-6 col-xs-4">
-                                <Submenu />
+                                <MultiLevelDropdown />
                             </div>
                             <div className="col-md-12 col-lg-6 col-xs-4">
                                 <Scrollable />

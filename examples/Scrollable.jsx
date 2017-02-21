@@ -18,7 +18,8 @@ export default () => (
                     <MenuItem>Menu item six</MenuItem>
                     <MenuItem>Menu item seven</MenuItem>
                     <MenuItem>Menu item eight</MenuItem>
-                    <MenuItem>Menu item nubne</MenuItem>
+                    <MenuItem>Menu item nine</MenuItem>
+                    <MenuItem>Menu item ten</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>

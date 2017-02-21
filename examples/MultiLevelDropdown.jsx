@@ -6,7 +6,7 @@ import styles from './index.styl';
 export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
-            <h3>Submenu</h3>
+            <h3>Multi-Level Dropdown</h3>
             <Dropdown open>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
