@@ -20,11 +20,13 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
   import Dropdown, {
       DropdownToggle,
       DropdownMenu,
+      DropdownSubMenu,
       MenuItem,
       DropdownButton
   } from '@trendmicro/react-dropdown';
 
   // Be sure to include styles at some point, probably during your bootstraping
+  import '@trendmicro/react-buttons/dist/react-buttons.css';
   import '@trendmicro/react-dropdown/dist/react-dropdown.css';
   ```
 
