@@ -26273,6 +26273,100 @@ exports.default = function () {
 
 /***/ }),
 
+/***/ "./MultiLevelDropdown.jsx":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__("../node_modules/react/react.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Section = __webpack_require__("./Section.jsx");
+
+var _Section2 = _interopRequireDefault(_Section);
+
+var _src = __webpack_require__("../src/index.js");
+
+var _src2 = _interopRequireDefault(_src);
+
+var _index = __webpack_require__("./index.styl");
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+    return _react2.default.createElement(
+        _Section2.default,
+        { className: 'row-md-5 row-xl-5' },
+        _react2.default.createElement(
+            'div',
+            { className: _index2.default.sectionGroup },
+            _react2.default.createElement(
+                'h3',
+                null,
+                'Multi-Level Dropdown'
+            ),
+            _react2.default.createElement(
+                _src2.default,
+                { open: true },
+                _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
+                _react2.default.createElement(
+                    _src2.default.Menu,
+                    null,
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Menu item one'
+                    ),
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Menu item two'
+                    ),
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Menu item three'
+                    ),
+                    _react2.default.createElement(_src.MenuItem, { divider: true }),
+                    _react2.default.createElement(
+                        _src2.default.SubMenu,
+                        { title: 'Menu item four', open: true },
+                        _react2.default.createElement(
+                            _src.MenuItem,
+                            null,
+                            'Second level item one'
+                        ),
+                        _react2.default.createElement(
+                            _src.MenuItem,
+                            null,
+                            'Second level item two'
+                        ),
+                        _react2.default.createElement(
+                            _src2.default.SubMenu,
+                            { title: 'Second level item three' },
+                            _react2.default.createElement(
+                                _src.MenuItem,
+                                null,
+                                'Third level item one'
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
+
+/***/ }),
+
 /***/ "./MultipleSelection.jsx":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26685,7 +26779,12 @@ exports.default = function () {
                     _react2.default.createElement(
                         _src.MenuItem,
                         null,
-                        'Menu item nubne'
+                        'Menu item nine'
+                    ),
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Menu item ten'
                     )
                 )
             )
@@ -27000,100 +27099,6 @@ exports.default = function () {
 
 /***/ }),
 
-/***/ "./Submenu.jsx":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__("../node_modules/react/react.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Section = __webpack_require__("./Section.jsx");
-
-var _Section2 = _interopRequireDefault(_Section);
-
-var _src = __webpack_require__("../src/index.js");
-
-var _src2 = _interopRequireDefault(_src);
-
-var _index = __webpack_require__("./index.styl");
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-    return _react2.default.createElement(
-        _Section2.default,
-        { className: 'row-md-5 row-xl-5' },
-        _react2.default.createElement(
-            'div',
-            { className: _index2.default.sectionGroup },
-            _react2.default.createElement(
-                'h3',
-                null,
-                'Submenu'
-            ),
-            _react2.default.createElement(
-                _src2.default,
-                { open: true },
-                _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
-                _react2.default.createElement(
-                    _src2.default.Menu,
-                    null,
-                    _react2.default.createElement(
-                        _src.MenuItem,
-                        null,
-                        'Menu item one'
-                    ),
-                    _react2.default.createElement(
-                        _src.MenuItem,
-                        null,
-                        'Menu item two'
-                    ),
-                    _react2.default.createElement(
-                        _src.MenuItem,
-                        null,
-                        'Menu item three'
-                    ),
-                    _react2.default.createElement(_src.MenuItem, { divider: true }),
-                    _react2.default.createElement(
-                        _src2.default.SubMenu,
-                        { title: 'Menu item four', open: true },
-                        _react2.default.createElement(
-                            _src.MenuItem,
-                            null,
-                            'Second level item one'
-                        ),
-                        _react2.default.createElement(
-                            _src.MenuItem,
-                            null,
-                            'Second level item two'
-                        ),
-                        _react2.default.createElement(
-                            _src2.default.SubMenu,
-                            { title: 'Second level item three' },
-                            _react2.default.createElement(
-                                _src.MenuItem,
-                                null,
-                                'Third level item one'
-                            )
-                        )
-                    )
-                )
-            )
-        )
-    );
-};
-
-/***/ }),
-
 /***/ "./index.jsx":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27154,9 +27159,9 @@ var _Badge = __webpack_require__("./Badge.jsx");
 
 var _Badge2 = _interopRequireDefault(_Badge);
 
-var _Submenu = __webpack_require__("./Submenu.jsx");
+var _MultiLevelDropdown = __webpack_require__("./MultiLevelDropdown.jsx");
 
-var _Submenu2 = _interopRequireDefault(_Submenu);
+var _MultiLevelDropdown2 = _interopRequireDefault(_MultiLevelDropdown);
 
 var _Scrollable = __webpack_require__("./Scrollable.jsx");
 
@@ -27255,7 +27260,7 @@ var App = function (_React$Component) {
                             _react2.default.createElement(
                                 'div',
                                 { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Submenu2.default, null)
+                                _react2.default.createElement(_MultiLevelDropdown2.default, null)
                             ),
                             _react2.default.createElement(
                                 'div',
@@ -27309,4 +27314,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?1f4318d9a089a30f8bc6
+//# sourceMappingURL=bundle.js.map?6bdce97d3baef3b79cb6
