@@ -803,7 +803,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---2S8BA {\n  padding: 20px 20px 0;\n}\n.section-group---2U2Sp {\n  margin-bottom: 12px;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR {\n  clear: left;\n  position: static;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR .badge---11CEV {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.badge---11CEV {\n  display: inline-block;\n  min-width: 8px;\n  padding: 3px 5px;\n  font-size: 12px;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  border-radius: 10px;\n}\n.badge---11CEV:empty {\n  display: none;\n}\n.badge-light-gray---3dC16 {\n  background-color: #e6e6e6;\n  color: #666;\n}\n.badge-blue---pfpNs {\n  background-color: #4cb5db;\n}\n.badge-green---4-5Uk {\n  background-color: #4cc383;\n}\n.badge-cyan---2sQEc {\n  background-color: #45cce7;\n}\n.badge-orange---3Pue1 {\n  background-color: #fe9967;\n}\n.badge-red---N8Un4 {\n  background-color: #e56669;\n}\n.badge-yellow---2bkSy {\n  background-color: #fcde78;\n  color: #666;\n}\n.badge-dark---rRIli {\n  background-color: #666;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---2S8BA {\n  padding: 20px 20px 0;\n}\n.section-group---2U2Sp {\n  margin-bottom: 12px;\n}\n.input-checkbox---2SI5v {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR {\n  clear: left;\n  position: static;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR .badge---11CEV {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.badge---11CEV {\n  display: inline-block;\n  min-width: 8px;\n  padding: 3px 5px;\n  font-size: 12px;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  border-radius: 10px;\n}\n.badge---11CEV:empty {\n  display: none;\n}\n.badge-light-gray---3dC16 {\n  background-color: #e6e6e6;\n  color: #666;\n}\n.badge-blue---pfpNs {\n  background-color: #4cb5db;\n}\n.badge-green---4-5Uk {\n  background-color: #4cc383;\n}\n.badge-cyan---2sQEc {\n  background-color: #45cce7;\n}\n.badge-orange---3Pue1 {\n  background-color: #fe9967;\n}\n.badge-red---N8Un4 {\n  background-color: #e56669;\n}\n.badge-yellow---2bkSy {\n  background-color: #fcde78;\n  color: #666;\n}\n.badge-dark---rRIli {\n  background-color: #666;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -811,6 +811,8 @@ exports.locals = {
 	"container": "container---2S8BA",
 	"section-group": "section-group---2U2Sp",
 	"sectionGroup": "section-group---2U2Sp",
+	"input-checkbox": "input-checkbox---2SI5v",
+	"inputCheckbox": "input-checkbox---2SI5v",
 	"dropdown-example": "dropdown-example---3OPgA",
 	"dropdownExample": "dropdown-example---3OPgA",
 	"dropdown-menu": "dropdown-menu---2SGNR",
@@ -945,7 +947,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---3iQ8C {\n  padding: 20px 20px 0;\n}\n.section-group---qk5Ty {\n  margin-bottom: 12px;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo {\n  clear: left;\n  position: static;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo .badge---1_wqL {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-filter---1R3Yj > .dropdown-menu---1pkAo {\n  padding: 0;\n}\n.dropdown-menu-filter---3sZdC {\n  margin: 8px;\n}\n.dropdown-menu---1pkAo .checkbox---1GXiZ > label {\n  width: 100%;\n}\ninput[type=\"text\"]:focus,\ninput[type=\"number\"]:focus,\ntextarea:focus,\n.input-focus---1oxQl {\n  border-color: #0096cc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n  outline: none;\n}\n.input-icon-group---3IKaZ {\n  position: relative;\n}\n.input-icon-group---3IKaZ > .form-control---1sMvt {\n  padding-left: 30px;\n  padding-right: 36px;\n}\n.input-icon-label---1ZNi_ {\n  position: absolute;\n  left: 9px;\n  top: 50%;\n  margin-top: -10px;\n  color: #666;\n}\n.form-control---1sMvt {\n  display: block;\n  width: 100%;\n  padding: 5px 12px;\n  font-size: 13px;\n  color: #222;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---3iQ8C {\n  padding: 20px 20px 0;\n}\n.section-group---qk5Ty {\n  margin-bottom: 12px;\n}\n.input-checkbox---JA88y {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo {\n  clear: left;\n  position: static;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo .badge---1_wqL {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-filter---1R3Yj > .dropdown-menu---1pkAo {\n  padding: 0;\n}\n.dropdown-menu-filter---3sZdC {\n  margin: 8px;\n}\n.dropdown-menu---1pkAo .checkbox---1GXiZ > label {\n  width: 100%;\n}\ninput[type=\"text\"]:focus,\ninput[type=\"number\"]:focus,\ntextarea:focus,\n.input-focus---1oxQl {\n  border-color: #0096cc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n  outline: none;\n}\n.input-icon-group---3IKaZ {\n  position: relative;\n}\n.input-icon-group---3IKaZ > .form-control---1sMvt {\n  padding-left: 30px;\n  padding-right: 36px;\n}\n.input-icon-label---1ZNi_ {\n  position: absolute;\n  left: 9px;\n  top: 50%;\n  margin-top: -10px;\n  color: #666;\n}\n.form-control---1sMvt {\n  display: block;\n  width: 100%;\n  padding: 5px 12px;\n  font-size: 13px;\n  color: #222;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -953,6 +955,8 @@ exports.locals = {
 	"container": "container---3iQ8C",
 	"section-group": "section-group---qk5Ty",
 	"sectionGroup": "section-group---qk5Ty",
+	"input-checkbox": "input-checkbox---JA88y",
+	"inputCheckbox": "input-checkbox---JA88y",
 	"dropdown-example": "dropdown-example---2GyVl",
 	"dropdownExample": "dropdown-example---2GyVl",
 	"dropdown-menu": "dropdown-menu---1pkAo",
@@ -1005,7 +1009,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---kixWP {\n  padding: 20px 20px 0;\n}\n.section-group---2NZXl {\n  margin-bottom: 12px;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B {\n  clear: left;\n  position: static;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B .badge---1WZyt {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---kixWP {\n  padding: 20px 20px 0;\n}\n.section-group---2NZXl {\n  margin-bottom: 12px;\n}\n.input-checkbox---2ClFU {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B {\n  clear: left;\n  position: static;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B .badge---1WZyt {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1013,6 +1017,8 @@ exports.locals = {
 	"container": "container---kixWP",
 	"section-group": "section-group---2NZXl",
 	"sectionGroup": "section-group---2NZXl",
+	"input-checkbox": "input-checkbox---2ClFU",
+	"inputCheckbox": "input-checkbox---2ClFU",
 	"dropdown-example": "dropdown-example---16p45",
 	"dropdownExample": "dropdown-example---16p45",
 	"dropdown-menu": "dropdown-menu---2z24B",
@@ -26284,6 +26290,14 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactDom = __webpack_require__("../node_modules/react-dom/index.js");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
+
+var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
+
 var _Section = __webpack_require__("./Section.jsx");
 
 var _Section2 = _interopRequireDefault(_Section);
@@ -26304,8 +26318,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var selectedCount = 0;
-
 var _default = function (_Component) {
     _inherits(_default, _Component);
 
@@ -26321,29 +26333,25 @@ var _default = function (_Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = _default.__proto__ || Object.getPrototypeOf(_default)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            products: [{
-                id: 1,
-                name: 'Product 1',
-                checked: true
-            }, {
-                id: 2,
-                name: 'Product 2',
-                checked: true
-            }, {
-                id: 3,
-                name: 'Product 3',
-                checked: false
-            }, {
-                id: 4,
-                name: 'Product 4',
-                checked: false
-            }]
+            selectedCount: 0
         }, _this.actions = {
-            handleChange: function handleChange() {}
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+            handleClick: function handleClick(event) {
+                event.stopPropagation();
+            },
+            handleChange: function handleChange(event) {
+                var el = _reactDom2.default.findDOMNode(_this.dropdownMenu);
+                var selectedCount = el.querySelectorAll('[type="checkbox"]:checked').length;
+                _this.setState({ selectedCount: selectedCount });
+            }
+        }, _this.dropdownMenu = null, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(_default, [{
+        key: 'shouldComponentUpdate',
+        value: function shouldComponentUpdate(nextProps, nextState) {
+            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -26366,47 +26374,49 @@ var _default = function (_Component) {
                     ),
                     _react2.default.createElement(
                         _src2.default,
-                        { open: true },
-                        _react2.default.createElement(_src2.default.Toggle, { title: 'Product (' + selectedCount + ')' }),
+                        { open: true, onToggle: null },
+                        _react2.default.createElement(_src2.default.Toggle, { title: 'Product (' + this.state.selectedCount + ')' }),
                         _react2.default.createElement(
                             _src2.default.Menu,
-                            null,
-                            this.state.products.map(function (product, index) {
-                                return _react2.default.createElement(
-                                    _src.MenuItem,
-                                    { key: product.id },
-                                    _react2.default.createElement(
-                                        'span',
-                                        { className: 'checkbox' },
-                                        _react2.default.createElement('input', {
-                                            type: 'checkbox',
-                                            name: 'menuitem-' + index,
-                                            id: 'menuitem-' + index,
-                                            className: 'input-checkbox',
-                                            checked: product.checked,
-                                            onChange: function onChange(event) {
-                                                _this2.setState({
-                                                    products: _this2.state.products.map(function (product, idx) {
-                                                        if (index === idx) {
-                                                            return {
-                                                                name: product.name,
-                                                                checked: !product.checked
-                                                            };
-                                                        }
-
-                                                        return product;
-                                                    })
-                                                });
-                                            }
-                                        }),
-                                        _react2.default.createElement(
-                                            'label',
-                                            { htmlFor: 'menuitem-' + index },
-                                            product.name
-                                        )
-                                    )
-                                );
-                            })
+                            {
+                                ref: function ref(node) {
+                                    _this2.dropdownMenu = node;
+                                }
+                            },
+                            _react2.default.createElement(
+                                _src.MenuItem,
+                                { eventKey: 1 },
+                                _react2.default.createElement('input', {
+                                    type: 'checkbox',
+                                    name: 'menuitem-1',
+                                    id: 'menuitem-1',
+                                    className: _index2.default.inputCheckbox,
+                                    onClick: this.actions.handleClick,
+                                    onChange: this.actions.handleChange
+                                }),
+                                _react2.default.createElement(
+                                    'label',
+                                    { htmlFor: 'menuitem-1' },
+                                    'Product 1'
+                                )
+                            ),
+                            _react2.default.createElement(
+                                _src.MenuItem,
+                                { eventKey: 2 },
+                                _react2.default.createElement('input', {
+                                    type: 'checkbox',
+                                    name: 'menuitem-2',
+                                    id: 'menuitem-2',
+                                    className: _index2.default.inputCheckbox,
+                                    onClick: this.actions.handleClick,
+                                    onChange: this.actions.handleChange
+                                }),
+                                _react2.default.createElement(
+                                    'label',
+                                    { htmlFor: 'menuitem-2' },
+                                    'Product 2'
+                                )
+                            )
                         )
                     )
                 )
@@ -27299,4 +27309,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?ca5e4e3f64188c6a28fe
+//# sourceMappingURL=bundle.js.map?1f4318d9a089a30f8bc6
