@@ -8,8 +8,17 @@ import styles from './index.styl';
 
 class DropdownMenu extends Component {
     static propTypes = {
+        // Set a custom element for this component
+        componentClass: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func
+        ]),
+
         open: PropTypes.bool,
+        noPadding: PropTypes.bool,
         pullRight: PropTypes.bool,
+        scrollable: PropTypes.bool,
+        maxHeight: PropTypes.number,
         onClose: PropTypes.func,
         onSelect: PropTypes.func,
         rootCloseEvent: PropTypes.oneOf([
@@ -18,9 +27,13 @@ class DropdownMenu extends Component {
         ])
     };
     static defaultProps = {
+        componentClass: 'ul',
         dropdownRole: 'menu',
         open: false,
-        pullRight: false
+        noPadding: false,
+        pullRight: false,
+        scrollable: false,
+        maxHeight: 150
     };
 
     actions = {
@@ -59,7 +72,7 @@ class DropdownMenu extends Component {
             return [];
         }
 
-        return Array.from(node.querySelectorAll('[tabIndex="-1"]'));
+        return Array.from(node.querySelectorAll('[tabIndex="-1"]:not([disabled])'));
     }
     focusNext() {
         const { items, activeIndex } = this.getItemsAndActiveIndex();
@@ -81,12 +94,17 @@ class DropdownMenu extends Component {
     }
     render() {
         const {
+            componentClass: Component,
             open,
+            noPadding,
             pullRight,
+            scrollable,
+            maxHeight,
             onClose,
             onSelect,
             rootCloseEvent,
             className,
+            style = {},
             children,
             ...props
         } = this.props;
@@ -95,8 +113,14 @@ class DropdownMenu extends Component {
 
         const classes = {
             [styles.dropdownMenu]: true,
-            [styles.right]: pullRight
+            [styles.noPadding]: noPadding,
+            [styles.pullRight]: pullRight
         };
+
+        if (scrollable) {
+            style.maxHeight = maxHeight;
+            style.overflowY = 'auto';
+        }
 
         return (
             <RootCloseWrapper
@@ -104,10 +128,11 @@ class DropdownMenu extends Component {
                 onRootClose={onClose}
                 event={rootCloseEvent}
             >
-                <ul
+                <Component
                     {...props}
                     role="menu"
                     className={classNames(className, classes)}
+                    style={style}
                 >
                     {React.Children.map(children, child => {
                         if (!React.isValidElement(child)) {
@@ -125,7 +150,7 @@ class DropdownMenu extends Component {
                             )
                         });
                     })}
-                </ul>
+                </Component>
             </RootCloseWrapper>
         );
     }

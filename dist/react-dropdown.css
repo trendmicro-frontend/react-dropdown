@@ -1,4 +1,35 @@
-/*! react-dropdown v0.1.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v0.5.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+.dropdown---dropdown-submenu---11C1M {
+  position: relative;
+}
+.dropdown---dropdown-submenu---11C1M > .dropdown---dropdown-menu---1fkH0 {
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown---dropdown-submenu---11C1M > a:before {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-right-width: 0;
+  border-left-color: #666;
+  margin: 6px -16px 6px 0;
+}
+.dropdown---dropdown-submenu---11C1M:hover > .dropdown---dropdown-menu---1fkH0,
+.dropdown---dropdown-submenu---11C1M.dropdown---open---1ju75 > .dropdown---dropdown-menu---1fkH0 {
+  display: block;
+}
+.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY {
+  float: none;
+}
+.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY > .dropdown---dropdown-menu---1fkH0 {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+}
 .dropdown---caret---3CkEt {
   display: inline-block;
   width: 0;
@@ -30,6 +61,40 @@
   margin-bottom: 8px;
   margin-left: 8px;
 }
+.dropdown---btn-lg---2xtUV.dropdown---dropdown-toggle---vMtjL .dropdown---caret---3CkEt {
+  margin-top: 9.5px;
+  margin-bottom: 9.5px;
+}
+.dropdown---btn-md---HRR_F.dropdown---dropdown-toggle---vMtjL .dropdown---caret---3CkEt {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.dropdown---btn-sm---3cNnY.dropdown---dropdown-toggle---vMtjL .dropdown---caret---3CkEt {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.dropdown---btn-xs---2eEDQ.dropdown---dropdown-toggle---vMtjL .dropdown---caret---3CkEt {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.dropdown---dropdown-toggle---vMtjL.dropdown---btn-link---1xwS4:hover .dropdown---caret---3CkEt {
+  border-top-color: #0096cc;
+}
+.dropdown---dropdown-toggle---vMtjL.dropdown---empty---zMmdA .dropdown---caret---3CkEt {
+  margin-left: 0;
+}
+/*
+.dropdown-menu-scrollable {
+    overflow-y: auto;
+}
+.dropdown-menu-scrollable .dropdown-menu {
+    position: static;
+    border: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+}
+*/
 .dropdown---dropdown-menu---1fkH0 {
   position: absolute;
   top: 100%;
@@ -52,6 +117,9 @@
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+.dropdown---dropdown-menu---1fkH0.dropdown---no-padding---K-H2z {
+  padding: 0;
 }
 .dropdown---dropdown-menu---1fkH0.dropdown---pull-right---2juGH {
   right: 0;
@@ -92,7 +160,7 @@
 .dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a:hover,
 .dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a:focus {
   text-decoration: none;
-  color: #222;
+  outline: 0;
 }
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a,
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a:hover,

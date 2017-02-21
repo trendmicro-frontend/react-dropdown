@@ -8,8 +8,9 @@ import shallowCompare from 'react-addons-shallow-compare';
 import uncontrollable from 'uncontrollable';
 import warning from 'warning';
 import { ButtonGroup } from '@trendmicro/react-buttons';
-import DropdownMenu from './DropdownMenu';
 import DropdownToggle from './DropdownToggle';
+import DropdownMenu from './DropdownMenu';
+import DropdownSubMenu from './DropdownSubMenu';
 import styles from './index.styl';
 
 const TOGGLE_ROLE = DropdownToggle.defaultProps.dropdownRole;
@@ -255,6 +256,7 @@ class Dropdown extends Component {
         return (
             <Component
                 {...props}
+                dropdownOpen={open}
                 className={classNames(className, classes)}
             >
                 {React.Children.map(children, child => {
@@ -288,5 +290,6 @@ const UncontrollableDropdown = uncontrollable(Dropdown, {
 
 UncontrollableDropdown.Toggle = DropdownToggle;
 UncontrollableDropdown.Menu = DropdownMenu;
+UncontrollableDropdown.SubMenu = DropdownSubMenu;
 
 export default UncontrollableDropdown;

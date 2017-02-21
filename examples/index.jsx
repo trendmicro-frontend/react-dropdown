@@ -4,8 +4,18 @@ import '@trendmicro/react-buttons/dist/react-buttons.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './Nav';
-import Section from './Section';
-import Dropdown, { DropdownButton, MenuItem } from '../src';
+import DropdownButton from './DropdownButton';
+import DropdownMenu from './DropdownMenu';
+import Disabled from './Disabled';
+import Divider from './Divider';
+import SingleSelection from './SingleSelection';
+import MultipleSelection from './MultipleSelection';
+import Header from './Header';
+import Icon from './Icon';
+import Badge from './Badge';
+import Submenu from './Submenu';
+import Scrollable from './Scrollable';
+import SearchFilter from './SearchFilter';
 import styles from './index.styl';
 
 class App extends React.Component {
@@ -19,55 +29,41 @@ class App extends React.Component {
                 <div className={styles.container}>
                     <div className="container-fluid">
                         <div className="row">
-                            <div className="col-md-6">
-                                <Section className="row-md-4">
-                                    <h2>Dropdown</h2>
-                                    <Dropdown
-                                        onSelect={(eventKey) => {
-                                            console.log('##', eventKey);
-                                        }}
-                                    >
-                                        <Dropdown.Toggle
-                                            btnStyle="flat"
-                                        >
-                                            Toggler
-                                        </Dropdown.Toggle>
-                                        <Dropdown.Menu>
-                                            <MenuItem header>Header</MenuItem>
-                                            <MenuItem eventKey={1}>link</MenuItem>
-                                            <MenuItem divider />
-                                            <MenuItem header>Header</MenuItem>
-                                            <MenuItem eventKey={2}>link</MenuItem>
-                                            <MenuItem eventKey={3} disabled>disabled</MenuItem>
-                                            <MenuItem
-                                                eventKey={4}
-                                                title="link with title"
-                                            >
-                                                link with title
-                                            </MenuItem>
-                                            <MenuItem
-                                                eventKey={5}
-                                                href="#someHref"
-                                                active
-                                                onSelect={(eventKey) => {
-                                                    alert(`Alert from menu item.\neventKey: ${eventKey}`);
-                                                }}
-                                            >
-                                                link that alerts
-                                            </MenuItem>
-                                        </Dropdown.Menu>
-                                    </Dropdown>
-                                    <DropdownButton
-                                        btnSize="xs"
-                                        title="xxx"
-                                        onSelect={(eventKey) => {
-                                            console.log('##', eventKey);
-                                        }}
-                                    >
-                                        <MenuItem eventKey={1}>link</MenuItem>
-                                        <MenuItem eventKey={2}>link</MenuItem>
-                                    </DropdownButton>
-                                </Section>
+                            <div className="col-md-12">
+                                <DropdownButton />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <DropdownMenu />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Disabled />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Divider />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <SingleSelection />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <MultipleSelection />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Header />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Icon />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Badge />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Submenu />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <Scrollable />
+                            </div>
+                            <div className="col-md-12 col-lg-6 col-xs-4">
+                                <SearchFilter />
                             </div>
                         </div>
                     </div>

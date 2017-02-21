@@ -34,25 +34,35 @@ class DropdownToggle extends Component {
 
         delete props.dropdownRole;
 
-        const classes = {
-            [styles.dropdownToggle]: true
-        };
         const Component = useAnchor ? Anchor : Button;
         const noAnchor = !useAnchor;
         const useCaret = !noCaret;
+        const empty = !children && !props.title;
+        const dropdownToggleClasses = {
+            [styles.dropdownToggle]: true,
+            [styles.btnLink]: props.btnStyle === 'link',
+            [styles.btnLg]: props.btnSize === 'lg' || props.btnSize === 'large',
+            [styles.btnMd]: props.btnSize === 'md' || props.btnSize === 'medium',
+            [styles.btnSm]: props.btnSize === 'sm' || props.btnSize === 'small',
+            [styles.btnXs]: props.btnSize === 'xs' || props.btnSize === 'extra-small',
+            [styles.empty]: empty
+        };
+        const caretClasses = {
+            [styles.caret]: true
+        };
 
         return (
             <Component
                 btnStyle="flat"
                 {...props}
                 role="button"
-                className={classNames(className, classes)}
+                className={classNames(className, dropdownToggleClasses)}
                 dropdownToggle={noAnchor}
                 aria-haspopup
                 aria-expanded={open}
             >
                 {children || props.title}
-                {useCaret && <span className={styles.caret} />}
+                {useCaret && <span className={classNames(caretClasses)} />}
             </Component>
         );
     }

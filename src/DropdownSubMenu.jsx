@@ -2,9 +2,10 @@ import chainedFunction from 'chained-function';
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import Anchor from '@trendmicro/react-anchor';
+import DropdownMenu from './DropdownMenu';
 import styles from './index.styl';
 
-class MenuItem extends Component {
+class DropdownSubMenu extends Component {
     static propTypes = {
         // Highlight the menu item as active.
         active: PropTypes.bool,
@@ -12,17 +13,17 @@ class MenuItem extends Component {
         // Disable the menu item, making it unselectable.
         disabled: PropTypes.bool,
 
-        // Styles the menu item as a horizontal rule, providing visual separation between
-        // groups of menu items.
-        divider: PropTypes.bool,
-
         // Value passed to the `onSelect` handler, useful for identifying the selected menu item.
         eventKey: PropTypes.any,
 
-        // Styles the menu item as a header label, useful for describing a group of menu items.
-        header: PropTypes.bool,
+        // TODO
+        open: PropTypes.bool,
 
-        submenu: PropTypes.bool,
+        // TODO
+        title: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.node
+        ]),
 
         // HTML `href` attribute corresponding to `a.href`.
         href: PropTypes.string,
@@ -40,9 +41,7 @@ class MenuItem extends Component {
     static defaultProps = {
         active: false,
         disabled: false,
-        divider: false,
-        header: false,
-        submenu: false
+        open: false
     };
 
     actions = {
@@ -67,48 +66,23 @@ class MenuItem extends Component {
         const {
             active,
             disabled,
-            divider,
-            header,
-            submenu,
+            open,
+            title,
             onClick,
             className,
             style,
+            children,
             ...props
         } = this.props;
 
         delete props.eventKey;
         delete props.onSelect;
 
-        if (divider) {
-            // Forcibly blank out the children; separators shouldn't render any.
-            props.children = undefined;
-
-            return (
-                <li
-                    {...props}
-                    role="separator"
-                    className={classNames(className, styles.divider)}
-                    style={style}
-                />
-            );
-        }
-
-        if (header) {
-            return (
-                <li
-                    {...props}
-                    role="heading"
-                    className={classNames(className, styles.dropdownHeader)}
-                    style={style}
-                />
-            );
-        }
-
         const classes = {
             [styles.active]: active,
             [styles.disabled]: disabled,
-            [styles.dropdownSubmenu]: submenu,
-            [styles.open]: submenu
+            [styles.dropdownSubmenu]: true,
+            [styles.open]: open
         };
 
         return (
@@ -123,10 +97,15 @@ class MenuItem extends Component {
                     role="menuitem"
                     tabIndex="-1"
                     onClick={chainedFunction(onClick, this.actions.handleClick)}
-                />
+                >
+                    {title}
+                </Anchor>
+                <DropdownMenu>
+                    {children}
+                </DropdownMenu>
             </li>
         );
     }
 }
 
-export default MenuItem;
+export default DropdownSubMenu;

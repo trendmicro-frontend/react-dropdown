@@ -2,7 +2,11 @@
   "name": "@trendmicro/react-dropdown",
   "description": "Trend Micro Components: React Dropdown",
   "authors": [
-    "Cheton Wu <cheton_wu@trend.com.tw>"
+    {
+      "name": "Cheton Wu",
+      "email": "cheton_wu@trend.com.tw",
+      "homepage": "https://github.com/cheton"
+    }
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-dropdown",
   "snapshots": [],
