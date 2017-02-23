@@ -801,12 +801,10 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---2S8BA {\n  padding: 20px 20px 0;\n}\n.section-group---2U2Sp {\n  margin-bottom: 12px;\n}\n.input-checkbox---2SI5v {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR {\n  clear: left;\n  position: static;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR .badge---11CEV {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.badge---11CEV {\n  display: inline-block;\n  min-width: 8px;\n  padding: 3px 5px;\n  font-size: 12px;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  border-radius: 10px;\n}\n.badge---11CEV:empty {\n  display: none;\n}\n.badge-light-gray---3dC16 {\n  background-color: #e6e6e6;\n  color: #666;\n}\n.badge-blue---pfpNs {\n  background-color: #4cb5db;\n}\n.badge-green---4-5Uk {\n  background-color: #4cc383;\n}\n.badge-cyan---2sQEc {\n  background-color: #45cce7;\n}\n.badge-orange---3Pue1 {\n  background-color: #fe9967;\n}\n.badge-red---N8Un4 {\n  background-color: #e56669;\n}\n.badge-yellow---2bkSy {\n  background-color: #fcde78;\n  color: #666;\n}\n.badge-dark---rRIli {\n  background-color: #666;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.section-group---2U2Sp {\n  margin-bottom: 12px;\n}\n.input-checkbox---2SI5v {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR {\n  clear: left;\n  position: static;\n}\n.dropdown-example---3OPgA .dropdown-menu---2SGNR .badge---11CEV {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.badge---11CEV {\n  display: inline-block;\n  min-width: 8px;\n  padding: 3px 5px;\n  font-size: 12px;\n  color: #fff;\n  line-height: 1;\n  vertical-align: middle;\n  white-space: nowrap;\n  text-align: center;\n  border-radius: 10px;\n}\n.badge---11CEV:empty {\n  display: none;\n}\n.badge-light-gray---3dC16 {\n  background-color: #e6e6e6;\n  color: #666;\n}\n.badge-blue---pfpNs {\n  background-color: #4cb5db;\n}\n.badge-green---4-5Uk {\n  background-color: #4cc383;\n}\n.badge-cyan---2sQEc {\n  background-color: #45cce7;\n}\n.badge-orange---3Pue1 {\n  background-color: #fe9967;\n}\n.badge-red---N8Un4 {\n  background-color: #e56669;\n}\n.badge-yellow---2bkSy {\n  background-color: #fcde78;\n  color: #666;\n}\n.badge-dark---rRIli {\n  background-color: #666;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "container---2S8BA",
-	"container": "container---2S8BA",
 	"section-group": "section-group---2U2Sp",
 	"sectionGroup": "section-group---2U2Sp",
 	"input-checkbox": "input-checkbox---2SI5v",
@@ -945,12 +943,10 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---3iQ8C {\n  padding: 20px 20px 0;\n}\n.section-group---qk5Ty {\n  margin-bottom: 12px;\n}\n.input-checkbox---JA88y {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo {\n  clear: left;\n  position: static;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo .badge---1_wqL {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-filter---1R3Yj > .dropdown-menu---1pkAo {\n  padding: 0;\n}\n.dropdown-menu-filter---3sZdC {\n  margin: 8px;\n}\n.dropdown-menu---1pkAo .checkbox---1GXiZ > label {\n  width: 100%;\n}\ninput[type=\"text\"]:focus,\ninput[type=\"number\"]:focus,\ntextarea:focus,\n.input-focus---1oxQl {\n  border-color: #0096cc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n  outline: none;\n}\n.input-icon-group---3IKaZ {\n  position: relative;\n}\n.input-icon-group---3IKaZ > .form-control---1sMvt {\n  padding-left: 30px;\n  padding-right: 36px;\n}\n.input-icon-label---1ZNi_ {\n  position: absolute;\n  left: 9px;\n  top: 50%;\n  margin-top: -10px;\n  color: #666;\n}\n.form-control---1sMvt {\n  display: block;\n  width: 100%;\n  padding: 5px 12px;\n  font-size: 13px;\n  color: #222;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.section-group---qk5Ty {\n  margin-bottom: 12px;\n}\n.input-checkbox---JA88y {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo {\n  clear: left;\n  position: static;\n}\n.dropdown-example---2GyVl .dropdown-menu---1pkAo .badge---1_wqL {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-filter---1R3Yj > .dropdown-menu---1pkAo {\n  padding: 0;\n}\n.dropdown-menu-filter---3sZdC {\n  margin: 8px;\n}\n.dropdown-menu---1pkAo .checkbox---1GXiZ > label {\n  width: 100%;\n}\ninput[type=\"text\"]:focus,\ninput[type=\"number\"]:focus,\ntextarea:focus,\n.input-focus---1oxQl {\n  border-color: #0096cc;\n  -webkit-transition: all 0.2s linear 0s;\n  -moz-transition: all 0.2s linear 0s;\n  -o-transition: all 0.2s linear 0s;\n  -ms-transition: all 0.2s linear 0s;\n  transition: all 0.2s linear 0s;\n  outline: none;\n}\n.input-icon-group---3IKaZ {\n  position: relative;\n}\n.input-icon-group---3IKaZ > .form-control---1sMvt {\n  padding-left: 30px;\n  padding-right: 36px;\n}\n.input-icon-label---1ZNi_ {\n  position: absolute;\n  left: 9px;\n  top: 50%;\n  margin-top: -10px;\n  color: #666;\n}\n.form-control---1sMvt {\n  display: block;\n  width: 100%;\n  padding: 5px 12px;\n  font-size: 13px;\n  color: #222;\n  background-color: #fff;\n  background-image: none;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "container---3iQ8C",
-	"container": "container---3iQ8C",
 	"section-group": "section-group---qk5Ty",
 	"sectionGroup": "section-group---qk5Ty",
 	"input-checkbox": "input-checkbox---JA88y",
@@ -1007,12 +1003,10 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.container---kixWP {\n  padding: 20px 20px 0;\n}\n.section-group---2NZXl {\n  margin-bottom: 12px;\n}\n.input-checkbox---2ClFU {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B {\n  clear: left;\n  position: static;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B .badge---1WZyt {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n", ""]);
+exports.push([module.i, ".fa {\n  margin-right: 8px;\n}\ni.fa,\nspan.fa {\n  font-size: 14px;\n  color: #666;\n}\n.section-group---2NZXl {\n  margin-bottom: 12px;\n}\n.input-checkbox---2ClFU {\n  vertical-align: middle;\n  margin-right: 5px;\n  margin-bottom: 2px;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B {\n  clear: left;\n  position: static;\n}\n.dropdown-example---16p45 .dropdown-menu---2z24B .badge---1WZyt {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"container": "container---kixWP",
-	"container": "container---kixWP",
 	"section-group": "section-group---2NZXl",
 	"sectionGroup": "section-group---2NZXl",
 	"input-checkbox": "input-checkbox---2ClFU",
@@ -27192,10 +27186,6 @@ var _SearchFilter = __webpack_require__("./SearchFilter.jsx");
 
 var _SearchFilter2 = _interopRequireDefault(_SearchFilter);
 
-var _index = __webpack_require__("./index.styl");
-
-var _index2 = _interopRequireDefault(_index);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27226,73 +27216,69 @@ var App = function (_React$Component) {
                 _react2.default.createElement(_Nav2.default, { name: name, url: url }),
                 _react2.default.createElement(
                     'div',
-                    { className: _index2.default.container },
+                    { className: 'container-fluid', style: { padding: '20px 20px 0' } },
                     _react2.default.createElement(
                         'div',
-                        { className: 'container-fluid' },
+                        { className: 'row' },
                         _react2.default.createElement(
                             'div',
-                            { className: 'row' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12' },
-                                _react2.default.createElement(_DropdownButton2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_DropdownMenu2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Disabled2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Divider2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_SingleSelection2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_MultipleSelection2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Header2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Icon2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Badge2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_MultiLevelDropdown2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_Scrollable2.default, null)
-                            ),
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'col-md-12 col-lg-6 col-xs-4' },
-                                _react2.default.createElement(_SearchFilter2.default, null)
-                            )
+                            { className: 'col-md-12' },
+                            _react2.default.createElement(_DropdownButton2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_DropdownMenu2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Disabled2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Divider2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_SingleSelection2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_MultipleSelection2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Header2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Icon2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Badge2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_MultiLevelDropdown2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_Scrollable2.default, null)
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'col-md-12 col-lg-6 col-xs-4' },
+                            _react2.default.createElement(_SearchFilter2.default, null)
                         )
                     )
                 )
@@ -27335,4 +27321,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?0b282a4d5c4980379c6f
+//# sourceMappingURL=bundle.js.map?e715d4bc743ba4039923
