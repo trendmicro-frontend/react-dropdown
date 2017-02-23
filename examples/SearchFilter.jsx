@@ -10,7 +10,7 @@ export default () => (
             <h3>Search Filter</h3>
             <Dropdown open>
                 <Dropdown.Toggle title="Sample" />
-                <Dropdown.Menu noPadding>
+                <Dropdown.Menu style={{ padding: 0 }}>
                     <div className={classNames(styles.inputIconGroup, styles.dropdownMenuFilter)}>
                         <input
                             id="filter"

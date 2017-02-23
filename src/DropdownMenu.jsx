@@ -8,17 +8,21 @@ import styles from './index.styl';
 
 class DropdownMenu extends Component {
     static propTypes = {
-        // Set a custom element for this component
+        // A custom element for this component.
         componentClass: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.func
         ]),
 
-        open: PropTypes.bool,
-        noPadding: PropTypes.bool,
-        pullRight: PropTypes.bool,
+        // Whether or not the scroll bar is visible.
         scrollable: PropTypes.bool,
+
+        // The maximum height of the dropdown menu.
         maxHeight: PropTypes.number,
+
+        // Dropdown
+        open: PropTypes.bool,
+        pullRight: PropTypes.bool,
         onClose: PropTypes.func,
         onSelect: PropTypes.func,
         rootCloseEvent: PropTypes.oneOf([
@@ -27,13 +31,14 @@ class DropdownMenu extends Component {
         ])
     };
     static defaultProps = {
+        dropdownRole: 'menu', // Accessed by Dropdown
         componentClass: 'ul',
-        dropdownRole: 'menu',
-        open: false,
-        noPadding: false,
-        pullRight: false,
         scrollable: false,
-        maxHeight: 150
+        maxHeight: 150,
+
+        // Dropdown
+        open: false,
+        pullRight: false
     };
 
     actions = {
@@ -95,11 +100,10 @@ class DropdownMenu extends Component {
     render() {
         const {
             componentClass: Component,
-            open,
-            noPadding,
-            pullRight,
             scrollable,
             maxHeight,
+            open,
+            pullRight,
             onClose,
             onSelect,
             rootCloseEvent,
@@ -109,11 +113,10 @@ class DropdownMenu extends Component {
             ...props
         } = this.props;
 
-        delete props.dropdownRole;
+        delete props.dropdownRole; // Accessed by Dropdown
 
         const classes = {
             [styles.dropdownMenu]: true,
-            [styles.noPadding]: noPadding,
             [styles.pullRight]: pullRight
         };
 

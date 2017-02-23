@@ -126,31 +126,86 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+componentClass | element | ButtonGroup | A custom element for this component.
+dropup | boolean | false | The menu will open above the dropdown button, instead of below it.
+disabled | boolean | false | Whether or not component is disabled.
+open | boolean | false | Whether or not the dropdown is visible.
+pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
+onClose | function(event) | | A callback fired when the dropdown closes.
+onToggle | function(boolean) | | A callback fired when the dropdown wishes to change visibility. Called with the requested `open` value.
+onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
+role | string | | If `'menuitem'`, causes the dropdown to behave like a menu item rather than a menu button.
+rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
 
 #### DropdownToggle
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+componentClass | element | Button | A custom element for this component.
+btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs' | 'md' |
+btnStyle | One of:<br/>'default'<br/>'primary'<br/>'emphasis'<br/>'flat'<br/>'link' | 'flat' |
+noCaret | boolean | false | Whether to prevent a caret from being rendered next to the title.
+title | node | | Title content.
+disabled | boolean | false | Whether or not component is disabled.
+open | boolean | false | Whether or not the dropdown is visible.
 
 #### DropdownMenu
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+componentClass | element | ul | A custom element for this component.
+scrollable | boolean | false | Whether or not the scrollbar is visible.
+maxHeight | number | 150 | The maximum height of the dropdown menu.
+open | boolean | false | Whether or not the dropdown is visible.
+pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
+onClose | function(event) | | A callback fired when the dropdown menu closes.
+onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
+rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
 
 #### DropdownSubMenu
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+active | boolean | false | Highlight the menu item as active.
+disabled | boolean | false | Disable the menu item, making it unselectable.
+eventKey | any | | Value passed to the `onSelect` handler, useful for identifying the selected menu item.
+open | boolean | false | Whether or not the dropdown submenu is visible.
+title | node | | Title content.
+href | string | | HTML `href` attribute corresponding to `a.href`.
+onClick | function(event) | | Callback fired when the menu item is clicked.
+onSelect | function(eventKey, event) | | Callback fired when the menu item is selected.
 
 #### MenuItem
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+active | boolean | false | Highlight the menu item as active.
+disabled | boolean | false | Disable the menu item, making it unselectable.
+divider | boolean | false | Style the menu item as a horizontal rule, providing visual separation between groups of menu items.
+eventKey | any | | Value passed to the `onSelect` handler, useful for identifying the selected menu item.
+header | boolean | false | Style the menu item as a header label, useful for describing a group of menu items.
+href | string | | HTML `href` attribute corresponding to `a.href`.
+onClick | function(event) | | Callback fired when the menu item is clicked.
+onSelect | function(eventKey, event) | | Callback fired when the menu item is selected.
 
 #### DropdownButton
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+componentClass | element | ButtonGroup | A custom element for this component.
+dropup | boolean | false | The menu will open above the dropdown button, instead of below it.
+disabled | boolean | false | Whether or not component is disabled.
+pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
+open | boolean | false | Whether or not the dropdown is visible.
+onClose | function(event) | | A callback fired when the dropdown closes.
+onToggle | function(boolean) | | A callback fired when the dropdown wishes to change visibility. Called with the requested `open` value.
+onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
+role | string | | If `'menuitem'`, causes the dropdown to behave like a menu item rather than a menu button.
+rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
+btnSize | One of:<br/>'lg'<br/>'md'<br/>'sm'<br/>'xs' | 'md' |
+btnStyle | One of:<br/>'default'<br/>'primary'<br/>'emphasis'<br/>'flat'<br/>'link' | 'flat' |
+title | node | | Title content.
+noCaret | boolean | false | Whether to prevent a caret from being rendered next to the title.
 
 ## License
 

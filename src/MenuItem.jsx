@@ -12,17 +12,14 @@ class MenuItem extends Component {
         // Disable the menu item, making it unselectable.
         disabled: PropTypes.bool,
 
-        // Styles the menu item as a horizontal rule, providing visual separation between
-        // groups of menu items.
+        // Style the menu item as a horizontal rule, providing visual separation between groups of menu items.
         divider: PropTypes.bool,
 
         // Value passed to the `onSelect` handler, useful for identifying the selected menu item.
         eventKey: PropTypes.any,
 
-        // Styles the menu item as a header label, useful for describing a group of menu items.
+        // Style the menu item as a header label, useful for describing a group of menu items.
         header: PropTypes.bool,
-
-        submenu: PropTypes.bool,
 
         // HTML `href` attribute corresponding to `a.href`.
         href: PropTypes.string,
@@ -41,8 +38,7 @@ class MenuItem extends Component {
         active: false,
         disabled: false,
         divider: false,
-        header: false,
-        submenu: false
+        header: false
     };
 
     actions = {
@@ -69,7 +65,6 @@ class MenuItem extends Component {
             disabled,
             divider,
             header,
-            submenu,
             onClick,
             className,
             style,
@@ -106,9 +101,7 @@ class MenuItem extends Component {
 
         const classes = {
             [styles.active]: active,
-            [styles.disabled]: disabled,
-            [styles.dropdownSubmenu]: submenu,
-            [styles.open]: submenu
+            [styles.disabled]: disabled
         };
 
         return (

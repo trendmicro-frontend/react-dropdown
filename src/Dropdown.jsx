@@ -18,7 +18,7 @@ const MENU_ROLE = DropdownMenu.defaultProps.dropdownRole;
 
 class Dropdown extends Component {
     static propTypes = {
-        // Set a custom element for this component
+        // A custom element for this component.
         componentClass: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.func
@@ -30,16 +30,16 @@ class Dropdown extends Component {
         // Whether or not component is disabled.
         disabled: PropTypes.bool,
 
-        // Align the menu to the right side of the Dropdown toggle
-        pullRight: PropTypes.bool,
-
-        // Whether or not the Dropdown is visible.
+        // Whether or not the dropdown is visible.
         open: PropTypes.bool,
 
-        // A callback fired when the Dropdown closes.
+        // Align the menu to the right side of the dropdown toggle.
+        pullRight: PropTypes.bool,
+
+        // A callback fired when the dropdown closes.
         onClose: PropTypes.func,
 
-        // A callback fired when the Dropdown wishes to change visibility. Called with the requested
+        // A callback fired when the dropdown wishes to change visibility. Called with the requested
         // `open` value.
         //
         // ```js
@@ -54,8 +54,7 @@ class Dropdown extends Component {
         // ```
         onSelect: PropTypes.func,
 
-        // If `'menuitem'`, causes the dropdown to behave like a menu item rather than
-        // a menu button.
+        // If `'menuitem'`, causes the dropdown to behave like a menu item rather than a menu button.
         role: PropTypes.string,
 
         // Which event when fired outside the component will cause it to be closed.
@@ -238,7 +237,6 @@ class Dropdown extends Component {
             open,
             onClose,
             onSelect,
-            role,
             className,
             rootCloseEvent,
             children,
@@ -266,7 +264,7 @@ class Dropdown extends Component {
 
                     if (child.props.dropdownRole === TOGGLE_ROLE) {
                         return this.renderToggle(child, {
-                            disabled, open, role
+                            disabled, open
                         });
                     }
 

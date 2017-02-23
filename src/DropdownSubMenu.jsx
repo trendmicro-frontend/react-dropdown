@@ -16,10 +16,10 @@ class DropdownSubMenu extends Component {
         // Value passed to the `onSelect` handler, useful for identifying the selected menu item.
         eventKey: PropTypes.any,
 
-        // TODO
+        // Whether or not the dropdown submenu is visible.
         open: PropTypes.bool,
 
-        // TODO
+        // Title content.
         title: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.node

@@ -1,22 +1,41 @@
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
-import Anchor from '@trendmicro/react-anchor';
 import { Button } from '@trendmicro/react-buttons';
 import styles from './index.styl';
 
 class DropdownToggle extends Component {
     static propTypes = {
+        // A custom element for this component.
+        componentClass: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func
+        ]),
+
+        // One of: 'lg', 'md', 'sm', 'xs'
+        btnSize: Button.propTypes.btnSize,
+
+        // One of: 'default', 'primary', 'emphasis', 'flat', 'link'
+        btnStyle: Button.propTypes.btnStyle,
+
+        // Whether to prevent a caret from being rendered next to the title.
         noCaret: PropTypes.bool,
-        open: PropTypes.bool,
+
+        // Title content.
         title: PropTypes.string,
-        useAnchor: PropTypes.bool
+
+        // Dropdown
+        disabled: PropTypes.bool,
+        open: PropTypes.bool
     };
     static defaultProps = {
-        dropdownRole: 'toggle',
+        dropdownRole: 'toggle', // Accessed by Dropdown
+        componentClass: Button,
         noCaret: false,
-        open: false,
-        useAnchor: false
+
+        // Dropdown
+        disabled: false,
+        open: false
     };
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -24,18 +43,16 @@ class DropdownToggle extends Component {
     }
     render() {
         const {
+            componentClass: Component,
             noCaret,
             open,
-            useAnchor,
             className,
             children,
             ...props
         } = this.props;
 
-        delete props.dropdownRole;
+        delete props.dropdownRole; // Accessed by Dropdown
 
-        const Component = useAnchor ? Anchor : Button;
-        const noAnchor = !useAnchor;
         const useCaret = !noCaret;
         const empty = !children && !props.title;
         const dropdownToggleClasses = {
@@ -57,7 +74,7 @@ class DropdownToggle extends Component {
                 {...props}
                 role="button"
                 className={classNames(className, dropdownToggleClasses)}
-                dropdownToggle={noAnchor}
+                dropdownToggle={Component === Button}
                 aria-haspopup
                 aria-expanded={open}
             >
