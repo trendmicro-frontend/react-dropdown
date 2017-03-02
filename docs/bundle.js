@@ -24384,12 +24384,15 @@ var Dropdown = (_temp2 = _class = function (_Component) {
 
             delete props.onToggle;
 
+            if (Component === _reactButtons.ButtonGroup) {
+                props.dropdownOpen = open;
+            }
+
             var classes = (_classes = {}, _defineProperty(_classes, _index2.default.open, open), _defineProperty(_classes, _index2.default.disabled, disabled), _defineProperty(_classes, _index2.default.dropup, dropup), _classes);
 
             return _react2.default.createElement(
                 Component,
                 _extends({}, props, {
-                    dropdownOpen: open,
                     className: (0, _classnames2.default)(className, classes)
                 }),
                 _react2.default.Children.map(children, function (child) {
@@ -27321,4 +27324,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?e715d4bc743ba4039923
+//# sourceMappingURL=bundle.js.map?46db393af85eb926dd22

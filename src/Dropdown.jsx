@@ -245,6 +245,10 @@ class Dropdown extends Component {
 
         delete props.onToggle;
 
+        if (Component === ButtonGroup) {
+            props.dropdownOpen = open;
+        }
+
         const classes = {
             [styles.open]: open,
             [styles.disabled]: disabled,
@@ -254,7 +258,6 @@ class Dropdown extends Component {
         return (
             <Component
                 {...props}
-                dropdownOpen={open}
                 className={classNames(className, classes)}
             >
                 {React.Children.map(children, child => {
