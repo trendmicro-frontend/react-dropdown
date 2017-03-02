@@ -2,6 +2,7 @@ var pkg = require('./package.json');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var findImports = require('find-imports');
 var stylusLoader = require('stylus-loader');
 var nib = require('nib');
 var publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
@@ -22,6 +23,7 @@ module.exports = {
         libraryTarget: 'commonjs2'
     },
     externals: []
+        .concat(findImports(['src/**/*.{js,jsx}'], { flatten: true }))
         .concat(Object.keys(pkg.peerDependencies))
         .concat(Object.keys(pkg.dependencies)),
     module: {
