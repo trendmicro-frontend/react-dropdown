@@ -25083,6 +25083,11 @@ var DropdownToggle = (_temp = _class = function (_Component) {
 
             delete props.dropdownRole; // Accessed by Dropdown
 
+            if (Component === _reactButtons.Button) {
+                props.btnStyle = props.btnStyle || 'flat';
+                props.dropdownToggle = true;
+            }
+
             var useCaret = !noCaret;
             var empty = !children && !props.title;
             var dropdownToggleClasses = (_dropdownToggleClasse = {}, _defineProperty(_dropdownToggleClasse, _index2.default.dropdownToggle, true), _defineProperty(_dropdownToggleClasse, _index2.default.btnLink, props.btnStyle === 'link'), _defineProperty(_dropdownToggleClasse, _index2.default.btnLg, props.btnSize === 'lg' || props.btnSize === 'large'), _defineProperty(_dropdownToggleClasse, _index2.default.btnMd, props.btnSize === 'md' || props.btnSize === 'medium'), _defineProperty(_dropdownToggleClasse, _index2.default.btnSm, props.btnSize === 'sm' || props.btnSize === 'small'), _defineProperty(_dropdownToggleClasse, _index2.default.btnXs, props.btnSize === 'xs' || props.btnSize === 'extra-small'), _defineProperty(_dropdownToggleClasse, _index2.default.empty, empty), _dropdownToggleClasse);
@@ -25090,12 +25095,9 @@ var DropdownToggle = (_temp = _class = function (_Component) {
 
             return _react2.default.createElement(
                 Component,
-                _extends({
-                    btnStyle: 'flat'
-                }, props, {
+                _extends({}, props, {
                     role: 'button',
                     className: (0, _classnames2.default)(className, dropdownToggleClasses),
-                    dropdownToggle: Component === _reactButtons.Button,
                     'aria-haspopup': true,
                     'aria-expanded': open
                 }),
@@ -27324,4 +27326,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?46db393af85eb926dd22
+//# sourceMappingURL=bundle.js.map?f4874ade6a3640b0b77b

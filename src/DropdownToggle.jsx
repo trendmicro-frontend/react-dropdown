@@ -53,6 +53,11 @@ class DropdownToggle extends Component {
 
         delete props.dropdownRole; // Accessed by Dropdown
 
+        if (Component === Button) {
+            props.btnStyle = props.btnStyle || 'flat';
+            props.dropdownToggle = true;
+        }
+
         const useCaret = !noCaret;
         const empty = !children && !props.title;
         const dropdownToggleClasses = {
@@ -70,11 +75,9 @@ class DropdownToggle extends Component {
 
         return (
             <Component
-                btnStyle="flat"
                 {...props}
                 role="button"
                 className={classNames(className, dropdownToggleClasses)}
-                dropdownToggle={Component === Button}
                 aria-haspopup
                 aria-expanded={open}
             >
