@@ -1,4 +1,4 @@
-/*! react-dropdown v0.6.2 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v0.6.3 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown-submenu---11C1M {
   position: relative;
 }
@@ -55,7 +55,7 @@
   outline: 0;
 }
 .dropdown---dropdown-toggle---vMtjL .dropdown---caret---3CkEt {
-  float: right;
+  vertical-align: top;
   margin-top: 8px;
   margin-right: 0;
   margin-bottom: 8px;
