@@ -11,7 +11,7 @@ export default () => (
             <Dropdown open>
                 <Dropdown.Toggle title="View by severity" />
                 <Dropdown.Menu>
-                    <MenuItem>
+                    <MenuItem active>
                         High
                     </MenuItem>
                     <MenuItem>

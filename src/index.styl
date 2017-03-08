@@ -122,11 +122,28 @@
     color: #222222;
     background-color: #eeeeee;
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
+.dropdown-menu-selected > li > a {
+    padding: 4px 32px 4px 40px;
+}
+.dropdown-menu-selected > li.active > a:before {
+    background-image: url("./icon-check.svg");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    margin: 0 8px 0 -24px;
+    vertical-align: top;
+    width: 16px;
+}
+.dropdown-menu-selected > li.active > a,
+.dropdown-menu-selected > li.active > a:hover,
+.dropdown-menu-selected > li.active > a:focus {
     text-decoration: none;
     outline: 0;
+}
+.dropdown-menu > .disabled {
+    cursor: not-allowed;
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,

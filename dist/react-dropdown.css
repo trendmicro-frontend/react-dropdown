@@ -1,4 +1,4 @@
-/*! react-dropdown v0.6.3 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v0.6.4 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown-submenu---11C1M {
   position: relative;
 }
@@ -153,11 +153,28 @@
   color: #222;
   background-color: #eee;
 }
-.dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a,
-.dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a:hover,
-.dropdown---dropdown-menu---1fkH0 > .dropdown---active---2-a32 > a:focus {
+.dropdown---dropdown-menu-selected---3hvia > li > a {
+  padding: 4px 32px 4px 40px;
+}
+.dropdown---dropdown-menu-selected---3hvia > li.dropdown---active---2-a32 > a:before {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KPCFbQ0RBVEFbDQoJLnN0MHtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiMwMDk2Q0M7fQ0KXV0+DQo8L3N0eWxlPg0KPGcgaWQ9Imljb25TZWxlY3RDaGVjayI+DQoJPGc+DQoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMi43LDQuMWMtMC40LTAuNC0xLTAuNC0xLjQsMGwtNS4yLDYuMUw0LjcsNy4zQzQuMyw3LDMuNyw3LDMuMyw3LjNzLTAuNCwxLDAsMS40TDUsMTIuMg0KCQkJYzAsMC4xLDAuMSwwLjIsMC4yLDAuM2wwLjEsMC4yYzAuNCwwLjQsMSwwLjQsMS40LDBjMCwwLDAtMC4xLDAuMS0wLjFsNi03LjFDMTMuMSw1LjEsMTMuMSw0LjUsMTIuNyw0LjF6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=);
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  margin: 0 8px 0 -24px;
+  vertical-align: top;
+  width: 16px;
+}
+.dropdown---dropdown-menu-selected---3hvia > li.dropdown---active---2-a32 > a,
+.dropdown---dropdown-menu-selected---3hvia > li.dropdown---active---2-a32 > a:hover,
+.dropdown---dropdown-menu-selected---3hvia > li.dropdown---active---2-a32 > a:focus {
   text-decoration: none;
   outline: 0;
+}
+.dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b {
+  cursor: not-allowed;
 }
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a,
 .dropdown---dropdown-menu---1fkH0 > .dropdown---disabled---eCY9b > a:hover,

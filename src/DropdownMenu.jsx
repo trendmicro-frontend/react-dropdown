@@ -115,8 +115,31 @@ class DropdownMenu extends Component {
 
         delete props.dropdownRole; // Accessed by Dropdown
 
+        const activeMenuItems = [];
+        const menuItems = React.Children.map(children, child => {
+            if (!React.isValidElement(child)) {
+                return child;
+            }
+
+            if (child.props.active) {
+                activeMenuItems.push(child);
+            }
+
+            return cloneElement(child, {
+                onKeyDown: chainedFunction(
+                    child.props.onKeyDown,
+                    this.actions.handleKeyDown
+                ),
+                onSelect: chainedFunction(
+                    child.props.onSelect,
+                    onSelect
+                )
+            });
+        });
+
         const classes = {
             [styles.dropdownMenu]: true,
+            [styles.dropdownMenuSelected]: activeMenuItems.length > 0,
             [styles.pullRight]: pullRight
         };
 
@@ -137,22 +160,7 @@ class DropdownMenu extends Component {
                     className={classNames(className, classes)}
                     style={style}
                 >
-                    {React.Children.map(children, child => {
-                        if (!React.isValidElement(child)) {
-                            return child;
-                        }
-
-                        return cloneElement(child, {
-                            onKeyDown: chainedFunction(
-                                child.props.onKeyDown,
-                                this.actions.handleKeyDown
-                            ),
-                            onSelect: chainedFunction(
-                                child.props.onSelect,
-                                onSelect
-                            )
-                        });
-                    })}
+                    {menuItems}
                 </Component>
             </RootCloseWrapper>
         );
