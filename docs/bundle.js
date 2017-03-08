@@ -25491,10 +25491,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                {
-                    className: _Badge2.default.dropdownExample,
-                    open: true
-                },
+                { className: _Badge2.default.dropdownExample, open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(
                     _src2.default.Toggle,
                     null,
@@ -25615,7 +25612,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -25695,7 +25692,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -26104,7 +26101,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -26184,7 +26181,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -26274,7 +26271,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(
                     _src2.default.Toggle,
                     { iconOnly: true, noCaret: true },
@@ -26351,7 +26348,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Select an option' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -26504,7 +26501,7 @@ var _default = function (_Component) {
                     ),
                     _react2.default.createElement(
                         _src2.default,
-                        { open: true, onToggle: null },
+                        { open: true, onToggle: function onToggle() {} },
                         _react2.default.createElement(_src2.default.Toggle, { title: 'Product (' + this.state.selectedCount + ')' }),
                         _react2.default.createElement(
                             _src2.default.Menu,
@@ -26767,7 +26764,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Sample' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -26876,7 +26873,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Sample' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -27107,7 +27104,7 @@ exports.default = function () {
             ),
             _react2.default.createElement(
                 _src2.default,
-                { open: true },
+                { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'View by severity' }),
                 _react2.default.createElement(
                     _src2.default.Menu,
@@ -27342,4 +27339,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?70cce6895fb17dc7e651
+//# sourceMappingURL=bundle.js.map?9b524b2c94de348a4f45
