@@ -8,7 +8,7 @@ export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
             <h3>Search Filter</h3>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Sample" />
                 <Dropdown.Menu style={{ padding: 0 }}>
                     <div className={classNames(styles.inputIconGroup, styles.dropdownMenuFilter)}>

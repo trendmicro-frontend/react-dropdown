@@ -8,7 +8,7 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Single Selection</h3>
             <p>Use a check mark to indicate a selected item.</p>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="View by severity" />
                 <Dropdown.Menu>
                     <MenuItem active>

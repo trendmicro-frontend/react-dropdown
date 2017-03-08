@@ -7,7 +7,7 @@ export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
             <h3>Multi-Level Dropdown</h3>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem>

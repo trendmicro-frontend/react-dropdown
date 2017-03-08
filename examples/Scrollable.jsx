@@ -7,7 +7,7 @@ export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
             <h3>Scrollable</h3>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Sample" />
                 <Dropdown.Menu scrollable>
                     <MenuItem>Menu item one</MenuItem>

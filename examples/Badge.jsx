@@ -8,10 +8,7 @@ export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
             <h3>Badge</h3>
-            <Dropdown
-                className={styles.dropdownExample}
-                open
-            >
+            <Dropdown className={styles.dropdownExample} open onToggle={() => {}}>
                 <Dropdown.Toggle>
                     Default
                 </Dropdown.Toggle>

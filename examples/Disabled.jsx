@@ -8,7 +8,7 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Disabled</h3>
             <p>A disabled menu item cannot allow user configurations.</p>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem>

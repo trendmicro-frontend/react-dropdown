@@ -8,7 +8,7 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Header</h3>
             <p>Separate different option groups with capitalized heading.</p>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem header>

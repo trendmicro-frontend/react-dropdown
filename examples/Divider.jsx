@@ -8,7 +8,7 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Divider</h3>
             <p>Use a divider to separate two sets of dropdown options.</p>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem>

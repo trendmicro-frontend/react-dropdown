@@ -8,7 +8,7 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Dropdown Menu</h3>
             <p>A dropdown menu is used to provide a list of options for the user. Use sentence case for menu options.</p>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem>

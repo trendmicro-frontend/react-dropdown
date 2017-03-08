@@ -30,7 +30,7 @@ export default class extends Component {
                 <div className={styles.sectionGroup}>
                     <h3>Multiple Selection</h3>
                     <p>Use checkboxes in a dropdown menu to indicate item selection. As a summary, you can display the number of selected items. Separate the listed items with commas, and put ellipsis (...) at the end to indicate omission if the list is too long to fit into one line.</p>
-                    <Dropdown open onToggle={null}>
+                    <Dropdown open onToggle={() => {}}>
                         <Dropdown.Toggle title={`Product (${this.state.selectedCount})`} />
                         <Dropdown.Menu
                             ref={node => {

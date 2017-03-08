@@ -7,7 +7,7 @@ export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
             <h3>Icon</h3>
-            <Dropdown open>
+            <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle iconOnly noCaret>
                     <i className="fa fa-cog" />
                 </Dropdown.Toggle>
