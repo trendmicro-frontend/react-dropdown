@@ -1,6 +1,7 @@
 {
   "name": "@trendmicro/react-dropdown",
   "description": "Trend Micro Components: React Dropdown",
+  "theme": "minimalism",
   "authors": [
     {
       "name": "Cheton Wu",
@@ -9,8 +10,22 @@
     }
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-dropdown",
-  "snapshots": [],
+  "snapshots": [
+    "dropdown-buttons.png",   
+    "dropdown-menu.png",
+    "dropdown-disabled.png",
+    "dropdown-divider.png",
+    "dropdown-single-selection.png",
+    "dropdown-multiple-selection.png",
+    "dropdown-header.png",
+    "dropdown-icon.png",
+    "dropdown-badge.png",
+    "dropdown-multi-level-dropdown.png",
+    "dropdown-scrollable.png",
+    "dropdown-search-filter.png"
+  ],
   "keywords": [
+    "dropdown",
     "react",
     "react-dropdown"
   ],
