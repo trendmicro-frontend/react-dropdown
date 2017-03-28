@@ -11,7 +11,7 @@
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-dropdown",
   "snapshots": [
-    "./snapshots/dropdown-buttons.png",   
+    "./snapshots/dropdown-buttons.png",
     "./snapshots/dropdown-menu.png",
     "./snapshots/dropdown-disabled.png",
     "./snapshots/dropdown-divider.png",
