@@ -130,6 +130,7 @@ componentClass | element | ButtonGroup | A custom element for this component.
 dropup | boolean | false | The menu will open above the dropdown button, instead of below it.
 disabled | boolean | false | Whether or not component is disabled.
 open | boolean | false | Whether or not the dropdown is visible.
+autoOpen | boolean | false | Whether to open the dropdown on mouse over.
 pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown closes.
 onToggle | function(boolean) | | A callback fired when the dropdown wishes to change visibility. Called with the requested `open` value.

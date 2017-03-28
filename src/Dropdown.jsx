@@ -33,6 +33,9 @@ class Dropdown extends Component {
         // Whether or not the dropdown is visible.
         open: PropTypes.bool,
 
+        // Whether to open the dropdown on mouse over.
+        autoOpen: PropTypes.bool,
+
         // Align the menu to the right side of the dropdown toggle.
         pullRight: PropTypes.bool,
 
@@ -235,6 +238,7 @@ class Dropdown extends Component {
             disabled,
             pullRight,
             open,
+            autoOpen,
             onClose,
             onSelect,
             className,
@@ -251,6 +255,7 @@ class Dropdown extends Component {
 
         const classes = {
             [styles.open]: open,
+            [styles.autoOpen]: autoOpen,
             [styles.disabled]: disabled,
             [styles.dropup]: dropup
         };
