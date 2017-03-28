@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import Anchor from '@trendmicro/react-anchor';
 import DropdownMenu from './DropdownMenu';
+import splitComponentProps from './splitComponentProps';
 import styles from './index.styl';
 
 class DropdownSubMenu extends Component {
@@ -76,7 +77,6 @@ class DropdownSubMenu extends Component {
         } = this.props;
 
         delete props.eventKey;
-        delete props.onSelect;
 
         const classes = {
             [styles.active]: active,
@@ -85,6 +85,8 @@ class DropdownSubMenu extends Component {
             [styles.open]: open
         };
 
+        const [toggleProps, menuProps] = splitComponentProps(props, Anchor);
+
         return (
             <li
                 role="presentation"
@@ -92,7 +94,7 @@ class DropdownSubMenu extends Component {
                 style={style}
             >
                 <Anchor
-                    {...props}
+                    {...toggleProps}
                     disabled={disabled}
                     role="menuitem"
                     tabIndex="-1"
@@ -100,7 +102,9 @@ class DropdownSubMenu extends Component {
                 >
                     {title}
                 </Anchor>
-                <DropdownMenu>
+                <DropdownMenu
+                    {...menuProps}
+                >
                     {children}
                 </DropdownMenu>
             </li>
