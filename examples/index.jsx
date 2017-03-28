@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import Nav from './Nav';
 import DropdownButton from './DropdownButton';
 import DropdownMenu from './DropdownMenu';
+import AutoOpen from './AutoOpen';
 import Disabled from './Disabled';
 import Divider from './Divider';
 import SingleSelection from './SingleSelection';
@@ -32,6 +33,9 @@ class App extends React.Component {
                         </div>
                         <div className="col-md-12 col-lg-6 col-xs-4">
                             <DropdownMenu />
+                        </div>
+                        <div className="col-md-12 col-lg-6 col-xs-4">
+                            <AutoOpen />
                         </div>
                         <div className="col-md-12 col-lg-6 col-xs-4">
                             <Disabled />
