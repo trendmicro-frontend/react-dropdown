@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 import { Button } from '@trendmicro/react-buttons';
 import splitComponentProps from './splitComponentProps';
@@ -18,7 +19,7 @@ class DropdownButton extends Component {
         title: PropTypes.node.isRequired,
 
         // Whether to prevent a caret from being rendered next to the title.
-        noCaret: React.PropTypes.bool
+        noCaret: PropTypes.bool
     };
     static defaultProps = {
         btnStyle: 'flat'

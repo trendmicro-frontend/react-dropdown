@@ -1,9 +1,10 @@
 import chainedFunction from 'chained-function';
 import classNames from 'classnames';
-import React, { Component, PropTypes, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import shallowCompare from 'react-addons-shallow-compare';
-import RootCloseWrapper from 'react-overlays/lib/RootCloseWrapper';
+import RootCloseWrapper from './RootCloseWrapper';
 import styles from './index.styl';
 
 class DropdownMenu extends Component {
