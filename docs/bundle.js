@@ -2681,7 +2681,7 @@ exports = module.exports = __webpack_require__("../node_modules/css-loader/lib/c
 
 
 // module
-exports.push([module.i, ".dropdown-submenu---2WCQI {\n  position: relative;\n}\n.dropdown-submenu---2WCQI > .dropdown-menu---2R-2v {\n  top: 0;\n  left: 100%;\n  margin-top: 0;\n}\n.dropdown-submenu---2WCQI > a:before {\n  display: block;\n  content: \" \";\n  float: right;\n  width: 0;\n  height: 0;\n  border: 4px solid transparent;\n  border-right-width: 0;\n  border-left-color: #666;\n  margin: 6px -16px 6px 0;\n}\n.dropdown-submenu---2WCQI:hover > .dropdown-menu---2R-2v,\n.dropdown-submenu---2WCQI.open---2SG_5 > .dropdown-menu---2R-2v {\n  display: block;\n}\n.dropdown-submenu---2WCQI.pull-left---2GwcI {\n  float: none;\n}\n.dropdown-submenu---2WCQI.pull-left---2GwcI > .dropdown-menu---2R-2v {\n  left: auto;\n  right: 100%;\n  margin-left: 0;\n}\n.caret---3JEHc {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  vertical-align: middle;\n  border-top: 4px dashed #666;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropup---2n2rh .caret---3JEHc {\n  border-top: 0;\n  border-bottom: 4px dashed;\n  content: \"\";\n}\n.dropup---2n2rh,\n.dropdown---Wq_VE {\n  position: relative;\n}\n.dropdown-toggle---3HGp8 {\n  min-width: 0;\n}\n.dropdown-toggle---3HGp8:focus {\n  outline: 0;\n}\n.dropdown-toggle---3HGp8 .caret---3JEHc {\n  vertical-align: top;\n  margin-top: 8px;\n  margin-right: 0;\n  margin-bottom: 8px;\n  margin-left: 8px;\n}\n.btn-lg---3-G3_.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 9.5px;\n  margin-bottom: 9.5px;\n}\n.btn-md---1qmNv.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.btn-sm---1SIAr.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 7px;\n  margin-bottom: 7px;\n}\n.btn-xs---20Y8g.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 7px;\n  margin-bottom: 7px;\n}\n.dropdown-toggle---3HGp8.btn-link---2uZ0X:hover .caret---3JEHc {\n  border-top-color: #0096cc;\n}\n.dropdown-toggle---3HGp8.empty---1AOl8 .caret---3JEHc {\n  margin-left: 0;\n}\n/*\n.dropdown-menu-scrollable {\n    overflow-y: auto;\n}\n.dropdown-menu-scrollable .dropdown-menu {\n    position: static;\n    border: 0;\n    box-shadow: none;\n    display: block;\n    width: 100%;\n}\n*/\n.dropdown-menu---2R-2v {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 0;\n  padding: 8px 0;\n  margin: 0;\n  list-style: none;\n  font-size: 13px;\n  text-align: left;\n  background-color: #fff;\n  border: 1px solid #bbb;\n  border-radius: 0;\n  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  -webkit-background-clip: padding;\n  -moz-background-clip: padding;\n  background-clip: padding-box;\n}\n.dropdown-menu---2R-2v.pull-right---15WIg {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu---2R-2v .divider---KFzk1 {\n  height: 1px;\n  margin: 8px 0;\n  overflow: hidden;\n  background-color: #eee;\n}\n.dropdown-menu---2R-2v > li > a {\n  display: block;\n  padding: 4px 16px;\n  clear: both;\n  font-weight: normal;\n  line-height: 20px;\n  color: #222;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.dropdown-menu---2R-2v > li.dropdown-submenu---2WCQI > a {\n  padding-right: 32px;\n}\n.dropdown-menu---2R-2v .badge---2WUrq {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-menu---2R-2v > li > a:hover,\n.dropdown-menu---2R-2v > li > a:focus,\n.dropdown-menu---2R-2v > li > a.focus---2QWlU {\n  text-decoration: none;\n  color: #222;\n  background-color: #eee;\n}\n.dropdown-menu-selected---U_dCb > li > a {\n  padding: 4px 32px 4px 40px;\n}\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:before {\n  background-image: url(" + __webpack_require__("../src/icon-check.svg") + ");\n  background-position: 0 2px;\n  background-repeat: no-repeat;\n  content: \"\";\n  display: inline-block;\n  height: 20px;\n  margin: 0 8px 0 -24px;\n  vertical-align: top;\n  width: 16px;\n}\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a,\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:hover,\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:focus {\n  text-decoration: none;\n  outline: 0;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc {\n  cursor: not-allowed;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:hover,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:focus {\n  color: #bbb;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:hover,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.auto-open---hEQaF:hover > .dropdown-menu---2R-2v,\n.open---2SG_5 > .dropdown-menu---2R-2v {\n  display: block;\n}\n.auto-open---hEQaF > a,\n.open---2SG_5 > a {\n  outline: 0;\n}\n.dropdown-header---1RvbC {\n  display: block;\n  padding: 4px 16px;\n  font-size: 12px;\n  line-height: 20px;\n  color: #888;\n  text-transform: uppercase;\n  white-space: nowrap;\n}\n.dropdown-header---1RvbC ~ li > a {\n  padding-left: 28px;\n}\n", ""]);
+exports.push([module.i, ".dropdown-submenu---2WCQI {\n  position: relative;\n}\n.dropdown-submenu---2WCQI > .dropdown-menu---2R-2v {\n  top: 0;\n  left: 100%;\n  margin-top: 0;\n}\n.dropdown-submenu---2WCQI > a:before {\n  display: block;\n  content: \" \";\n  float: right;\n  width: 0;\n  height: 0;\n  border: 4px solid transparent;\n  border-right-width: 0;\n  border-left-color: #666;\n  margin: 6px -16px 6px 0;\n}\n.dropdown-submenu---2WCQI:hover > .dropdown-menu---2R-2v,\n.dropdown-submenu---2WCQI.open---2SG_5 > .dropdown-menu---2R-2v {\n  display: block;\n}\n.dropdown-submenu---2WCQI.pull-left---2GwcI {\n  float: none;\n}\n.dropdown-submenu---2WCQI.pull-left---2GwcI > .dropdown-menu---2R-2v {\n  left: auto;\n  right: 100%;\n  margin-left: 0;\n}\n.caret---3JEHc {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  vertical-align: middle;\n  border-top: 4px dashed #666;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropup---2n2rh .caret---3JEHc {\n  border-top: 0;\n  border-bottom: 4px dashed;\n  content: \"\";\n}\n.dropup---2n2rh,\n.dropdown---Wq_VE {\n  position: relative;\n}\n.dropdown-toggle---3HGp8 {\n  min-width: 0;\n}\n.dropdown-toggle---3HGp8:focus {\n  outline: 0;\n}\n.dropdown-toggle---3HGp8 .caret---3JEHc {\n  vertical-align: top;\n  margin-top: 8px;\n  margin-right: 0;\n  margin-bottom: 8px;\n  margin-left: 8px;\n}\n.btn-lg---3-G3_.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 9.5px;\n  margin-bottom: 9.5px;\n}\n.btn-md---1qmNv.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.btn-sm---1SIAr.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 7px;\n  margin-bottom: 7px;\n}\n.btn-xs---20Y8g.dropdown-toggle---3HGp8 .caret---3JEHc {\n  margin-top: 7px;\n  margin-bottom: 7px;\n}\n.dropdown-toggle---3HGp8.btn-link---2uZ0X:hover .caret---3JEHc {\n  border-top-color: #0096cc;\n}\n.dropdown-toggle---3HGp8.empty---1AOl8 .caret---3JEHc {\n  margin-left: 0;\n}\n.dropup---2n2rh .dropdown-menu---2R-2v {\n  top: auto;\n  bottom: 100%;\n}\n.dropdown-menu---2R-2v {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 0;\n  padding: 8px 0;\n  margin: 0;\n  list-style: none;\n  font-size: 13px;\n  text-align: left;\n  background-color: #fff;\n  border: 1px solid #bbb;\n  border-radius: 0;\n  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  box-shadow: 0 2px 6px rgba(0,0,0,0.2);\n  -webkit-background-clip: padding;\n  -moz-background-clip: padding;\n  background-clip: padding-box;\n}\n.dropdown-menu---2R-2v.pull-right---15WIg {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu---2R-2v .divider---KFzk1 {\n  height: 1px;\n  margin: 8px 0;\n  overflow: hidden;\n  background-color: #eee;\n}\n.dropdown-menu---2R-2v > li > a {\n  display: block;\n  padding: 4px 16px;\n  clear: both;\n  font-weight: normal;\n  line-height: 20px;\n  color: #222;\n  text-decoration: none;\n  white-space: nowrap;\n}\n.dropdown-menu---2R-2v > li.dropdown-submenu---2WCQI > a {\n  padding-right: 32px;\n}\n.dropdown-menu---2R-2v .badge---2WUrq {\n  float: right;\n  margin-left: 24px;\n  margin-top: 1px;\n}\n.dropdown-menu---2R-2v > li > a:hover,\n.dropdown-menu---2R-2v > li > a:focus,\n.dropdown-menu---2R-2v > li > a.focus---2QWlU {\n  text-decoration: none;\n  color: #222;\n  background-color: #eee;\n}\n.dropdown-menu-selected---U_dCb > li > a {\n  padding: 4px 32px 4px 40px;\n}\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:before {\n  background-image: url(" + __webpack_require__("../src/icon-check.svg") + ");\n  background-position: 0 2px;\n  background-repeat: no-repeat;\n  content: \"\";\n  display: inline-block;\n  height: 20px;\n  margin: 0 8px 0 -24px;\n  vertical-align: top;\n  width: 16px;\n}\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a,\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:hover,\n.dropdown-menu-selected---U_dCb > li.active---3WkHr > a:focus {\n  text-decoration: none;\n  outline: 0;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc {\n  cursor: not-allowed;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:hover,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:focus {\n  color: #bbb;\n}\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:hover,\n.dropdown-menu---2R-2v > .disabled---3l4Hc > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.auto-open---hEQaF:hover > .dropdown-menu---2R-2v,\n.open---2SG_5 > .dropdown-menu---2R-2v {\n  display: block;\n}\n.auto-open---hEQaF > a,\n.open---2SG_5 > a {\n  outline: 0;\n}\n.dropdown-header---1RvbC {\n  display: block;\n  padding: 4px 16px;\n  font-size: 12px;\n  line-height: 20px;\n  color: #888;\n  text-transform: uppercase;\n  white-space: nowrap;\n}\n.dropdown-header---1RvbC ~ li > a {\n  padding-left: 28px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -28469,15 +28469,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function () {
     return _react2.default.createElement(
         _Section2.default,
-        { className: 'row-md-8' },
+        { className: 'row-md-10' },
+        _react2.default.createElement(
+            'h3',
+            null,
+            'Dropdown Buttons'
+        ),
         _react2.default.createElement(
             'div',
             { className: _index2.default.sectionGroup },
-            _react2.default.createElement(
-                'h3',
-                null,
-                'Dropdown Buttons'
-            ),
             _react2.default.createElement(
                 'div',
                 { style: { display: 'inline-block', marginRight: 20 } },
@@ -28541,6 +28541,50 @@ exports.default = function () {
                             null,
                             'Something else here'
                         )
+                    )
+                )
+            )
+        ),
+        _react2.default.createElement(
+            'div',
+            { className: _index2.default.sectionGroup },
+            _react2.default.createElement(
+                'h5',
+                null,
+                'Dropup'
+            ),
+            _react2.default.createElement(
+                'p',
+                null,
+                'Dropdown menus can be changed to expand upwards (instead of downwards) by adding the ',
+                _react2.default.createElement(
+                    'code',
+                    null,
+                    'dropup'
+                ),
+                ' prop.'
+            ),
+            _react2.default.createElement(
+                _src2.default,
+                { dropup: true },
+                _react2.default.createElement(_src2.default.Toggle, { btnStyle: 'flat', title: 'Dropdown' }),
+                _react2.default.createElement(
+                    _src2.default.Menu,
+                    null,
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Action'
+                    ),
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Another Action'
+                    ),
+                    _react2.default.createElement(
+                        _src.MenuItem,
+                        null,
+                        'Something else here'
                     )
                 )
             )
@@ -30072,4 +30116,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?cbee1f0a3d9cda92c91b
+//# sourceMappingURL=bundle.js.map?1dc546841da59bee750b

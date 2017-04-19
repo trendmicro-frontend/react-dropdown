@@ -1,4 +1,4 @@
-/*! react-dropdown v0.6.7 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v0.6.8 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown-submenu---11C1M {
   position: relative;
 }
@@ -83,18 +83,10 @@
 .dropdown---dropdown-toggle---vMtjL.dropdown---empty---zMmdA .dropdown---caret---3CkEt {
   margin-left: 0;
 }
-/*
-.dropdown-menu-scrollable {
-    overflow-y: auto;
+.dropdown---dropup---30DnN .dropdown---dropdown-menu---1fkH0 {
+  top: auto;
+  bottom: 100%;
 }
-.dropdown-menu-scrollable .dropdown-menu {
-    position: static;
-    border: 0;
-    box-shadow: none;
-    display: block;
-    width: 100%;
-}
-*/
 .dropdown---dropdown-menu---1fkH0 {
   position: absolute;
   top: 100%;
