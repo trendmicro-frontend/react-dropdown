@@ -5,9 +5,9 @@ import Dropdown, { MenuItem } from '../src';
 import styles from './index.styl';
 
 export default () => (
-    <Section className="row-md-8">
+    <Section className="row-md-10">
+        <h3>Dropdown Buttons</h3>
         <div className={styles.sectionGroup}>
-            <h3>Dropdown Buttons</h3>
             <div style={{ display: 'inline-block', marginRight: 20 }}>
                 <h5>Basic</h5>
                 <Dropdown>
@@ -30,6 +30,18 @@ export default () => (
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
+        </div>
+        <div className={styles.sectionGroup}>
+            <h5>Dropup</h5>
+            <p>Dropdown menus can be changed to expand upwards (instead of downwards) by adding the <code>dropup</code> prop.</p>
+            <Dropdown dropup>
+                <Dropdown.Toggle btnStyle="flat" title="Dropdown" />
+                <Dropdown.Menu>
+                    <MenuItem>Action</MenuItem>
+                    <MenuItem>Another Action</MenuItem>
+                    <MenuItem>Something else here</MenuItem>
+                </Dropdown.Menu>
+            </Dropdown>
         </div>
         <div className={styles.sectionGroup}>
             <h5>Split</h5>
