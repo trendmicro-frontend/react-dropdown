@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
-import shallowCompare from 'react-addons-shallow-compare';
 import Section from './Section';
 import Dropdown, { MenuItem } from '../src';
 import styles from './index.styl';
 
-export default class extends Component {
+export default class extends PureComponent {
     state = {
         selectedCount: 0
     };
@@ -21,9 +20,6 @@ export default class extends Component {
     };
     dropdownMenu = null;
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         return (
             <Section className="row-md-5 row-xl-5">
