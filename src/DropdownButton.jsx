@@ -1,7 +1,7 @@
+import { Button } from '@trendmicro/react-buttons';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Button } from '@trendmicro/react-buttons';
-import splitComponentProps from './splitComponentProps';
+import splitComponentProps from 'split-component-props';
 import Dropdown from './Dropdown';
 
 class DropdownButton extends PureComponent {

@@ -1,10 +1,10 @@
+import Anchor from '@trendmicro/react-anchor';
 import chainedFunction from 'chained-function';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Anchor from '@trendmicro/react-anchor';
+import splitComponentProps from 'split-component-props';
 import DropdownMenu from './DropdownMenu';
-import splitComponentProps from './splitComponentProps';
 import styles from './index.styl';
 
 class DropdownSubMenu extends Component {

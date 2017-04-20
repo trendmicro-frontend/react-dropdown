@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-dropdown",
-  "version": "0.6.10",
+  "version": "0.6.11",
   "description": "Trend Micro Components: React Dropdown",
   "main": "lib/index.js",
   "files": [
@@ -54,6 +54,7 @@
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
     "prop-types": "^15.5.8",
+    "split-component-props": "^0.5.0",
     "uncontrollable": "^4.1.0",
     "warning": "^3.0.0"
   },
