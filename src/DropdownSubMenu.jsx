@@ -3,7 +3,6 @@ import chainedFunction from 'chained-function';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import splitComponentProps from 'split-component-props';
 import DropdownMenu from './DropdownMenu';
 import styles from './index.styl';
 
@@ -86,7 +85,17 @@ class DropdownSubMenu extends Component {
             [styles.open]: open
         };
 
-        const [toggleProps, menuProps] = splitComponentProps(props, Anchor);
+        // Split component props
+        const toggleProps = {};
+        const menuProps = {};
+        Object.keys(props).forEach(entry => {
+            const [propName, propValue] = entry;
+            if (Anchor.propTypes[propName]) {
+                toggleProps[propName] = propValue;
+            } else {
+                menuProps[propName] = propValue;
+            }
+        });
 
         return (
             <li

@@ -25518,64 +25518,6 @@ module.exports = __webpack_require__("../node_modules/react/lib/React.js");
 
 /***/ }),
 
-/***/ "../node_modules/split-component-props/lib/index.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _splitComponentProps = __webpack_require__("../node_modules/split-component-props/lib/split-component-props.js");
-
-var _splitComponentProps2 = _interopRequireDefault(_splitComponentProps);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-module.exports = _splitComponentProps2.default;
-
-/***/ }),
-
-/***/ "../node_modules/split-component-props/lib/split-component-props.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-exports.default = splitComponentProps;
-// https://github.com/tc39/proposal-object-values-entries/blob/master/polyfill.js
-var reduce = Function.bind.call(Function.call, Array.prototype.reduce);
-var isEnumerable = Function.bind.call(Function.call, Object.prototype.propertyIsEnumerable);
-var concat = Function.bind.call(Function.call, Array.prototype.concat);
-var keys = Reflect.ownKeys;
-function objectEntries(O) {
-    return reduce(keys(O), function (e, k) {
-        return concat(e, typeof k === 'string' && isEnumerable(O, k) ? [[k, O[k]]] : []);
-    }, []);
-}
-
-function splitComponentProps(props, Component) {
-    var componentPropTypes = Component.propTypes;
-
-    var parentProps = {};
-    var childProps = {};
-
-    objectEntries(props).forEach(function (entry) {
-        var propName = entry[0],
-            propValue = entry[1];
-
-
-        if (componentPropTypes[propName]) {
-            parentProps[propName] = propValue;
-        } else {
-            childProps[propName] = propValue;
-        }
-    });
-
-    return [parentProps, childProps];
-}
-
-/***/ }),
-
 /***/ "../node_modules/style-loader/addStyles.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26907,10 +26849,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _splitComponentProps2 = __webpack_require__("../node_modules/split-component-props/lib/index.js");
-
-var _splitComponentProps3 = _interopRequireDefault(_splitComponentProps2);
-
 var _Dropdown = __webpack_require__("../src/Dropdown.jsx");
 
 var _Dropdown2 = _interopRequireDefault(_Dropdown);
@@ -26942,9 +26880,21 @@ var DropdownButton = (_temp = _class = function (_PureComponent) {
             children = _props.children,
             props = _objectWithoutProperties(_props, ['btnSize', 'btnStyle', 'title', 'children']);
 
-        var _splitComponentProps = (0, _splitComponentProps3.default)(props, _Dropdown2.default.ControlledComponent),
-            dropdownProps = _splitComponentProps[0],
-            toggleProps = _splitComponentProps[1];
+        // Split component props
+
+
+        var dropdownProps = {};
+        var toggleProps = {};
+        Object.keys(props).forEach(function (entry) {
+            var propName = entry[0],
+                propValue = entry[1];
+
+            if (_Dropdown2.default.ControlledComponent.propTypes[propName]) {
+                dropdownProps[propName] = propValue;
+            } else {
+                toggleProps[propName] = propValue;
+            }
+        });
 
         return _react2.default.createElement(
             _Dropdown2.default,
@@ -27242,10 +27192,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _splitComponentProps2 = __webpack_require__("../node_modules/split-component-props/lib/index.js");
-
-var _splitComponentProps3 = _interopRequireDefault(_splitComponentProps2);
-
 var _DropdownMenu = __webpack_require__("../src/DropdownMenu.jsx");
 
 var _DropdownMenu2 = _interopRequireDefault(_DropdownMenu);
@@ -27318,9 +27264,19 @@ var DropdownSubMenu = (_temp2 = _class = function (_Component) {
 
         var classes = (_classes = {}, _classes[_index2.default.active] = active, _classes[_index2.default.disabled] = disabled, _classes[_index2.default.dropdownSubmenu] = true, _classes[_index2.default.open] = open, _classes);
 
-        var _splitComponentProps = (0, _splitComponentProps3.default)(props, _reactAnchor2.default),
-            toggleProps = _splitComponentProps[0],
-            menuProps = _splitComponentProps[1];
+        // Split component props
+        var toggleProps = {};
+        var menuProps = {};
+        Object.keys(props).forEach(function (entry) {
+            var propName = entry[0],
+                propValue = entry[1];
+
+            if (_reactAnchor2.default.propTypes[propName]) {
+                toggleProps[propName] = propValue;
+            } else {
+                menuProps[propName] = propValue;
+            }
+        });
 
         return _react2.default.createElement(
             'li',
@@ -29892,4 +29848,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?052b48655c90ece87f6d
+//# sourceMappingURL=bundle.js.map?9edfe9e1124ff2bfa44a

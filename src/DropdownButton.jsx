@@ -1,7 +1,6 @@
 import { Button } from '@trendmicro/react-buttons';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import splitComponentProps from 'split-component-props';
 import Dropdown from './Dropdown';
 
 class DropdownButton extends PureComponent {
@@ -26,7 +25,18 @@ class DropdownButton extends PureComponent {
 
     render() {
         const { btnSize, btnStyle, title, children, ...props } = this.props;
-        const [dropdownProps, toggleProps] = splitComponentProps(props, Dropdown.ControlledComponent);
+
+        // Split component props
+        const dropdownProps = {};
+        const toggleProps = {};
+        Object.keys(props).forEach(entry => {
+            const [propName, propValue] = entry;
+            if (Dropdown.ControlledComponent.propTypes[propName]) {
+                dropdownProps[propName] = propValue;
+            } else {
+                toggleProps[propName] = propValue;
+            }
+        });
 
         return (
             <Dropdown
