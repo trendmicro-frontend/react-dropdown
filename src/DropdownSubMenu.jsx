@@ -88,8 +88,8 @@ class DropdownSubMenu extends Component {
         // Split component props
         const toggleProps = {};
         const menuProps = {};
-        Object.keys(props).forEach(entry => {
-            const [propName, propValue] = entry;
+        Object.keys(props).forEach(propName => {
+            const propValue = props[propName];
             if (Anchor.propTypes[propName]) {
                 toggleProps[propName] = propValue;
             } else {

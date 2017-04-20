@@ -26885,10 +26885,8 @@ var DropdownButton = (_temp = _class = function (_PureComponent) {
 
         var dropdownProps = {};
         var toggleProps = {};
-        Object.keys(props).forEach(function (entry) {
-            var propName = entry[0],
-                propValue = entry[1];
-
+        Object.keys(props).forEach(function (propName) {
+            var propValue = props[propName];
             if (_Dropdown2.default.ControlledComponent.propTypes[propName]) {
                 dropdownProps[propName] = propValue;
             } else {
@@ -27267,10 +27265,8 @@ var DropdownSubMenu = (_temp2 = _class = function (_Component) {
         // Split component props
         var toggleProps = {};
         var menuProps = {};
-        Object.keys(props).forEach(function (entry) {
-            var propName = entry[0],
-                propValue = entry[1];
-
+        Object.keys(props).forEach(function (propName) {
+            var propValue = props[propName];
             if (_reactAnchor2.default.propTypes[propName]) {
                 toggleProps[propName] = propValue;
             } else {
@@ -29848,4 +29844,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?9edfe9e1124ff2bfa44a
+//# sourceMappingURL=bundle.js.map?54290b8185b9ba64f057

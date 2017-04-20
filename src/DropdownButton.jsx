@@ -29,8 +29,8 @@ class DropdownButton extends PureComponent {
         // Split component props
         const dropdownProps = {};
         const toggleProps = {};
-        Object.keys(props).forEach(entry => {
-            const [propName, propValue] = entry;
+        Object.keys(props).forEach(propName => {
+            const propValue = props[propName];
             if (Dropdown.ControlledComponent.propTypes[propName]) {
                 dropdownProps[propName] = propValue;
             } else {
