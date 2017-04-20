@@ -1,11 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 import { Button } from '@trendmicro/react-buttons';
 import styles from './index.styl';
 
-class DropdownToggle extends Component {
+class DropdownToggle extends PureComponent {
     static propTypes = {
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -39,9 +38,6 @@ class DropdownToggle extends Component {
         open: false
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         const {
             componentClass: Component,

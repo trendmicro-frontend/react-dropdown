@@ -1,13 +1,12 @@
 import chainedFunction from 'chained-function';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Component, cloneElement } from 'react';
+import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
-import shallowCompare from 'react-addons-shallow-compare';
 import RootCloseWrapper from './RootCloseWrapper';
 import styles from './index.styl';
 
-class DropdownMenu extends Component {
+class DropdownMenu extends PureComponent {
     static propTypes = {
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -63,9 +62,6 @@ class DropdownMenu extends Component {
         }
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     getItemsAndActiveIndex() {
         const items = this.getFocusableMenuItems();
         const activeIndex = items.indexOf(document.activeElement);

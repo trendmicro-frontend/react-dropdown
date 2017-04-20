@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 import { Button } from '@trendmicro/react-buttons';
 import splitComponentProps from './splitComponentProps';
 import Dropdown from './Dropdown';
 
-class DropdownButton extends Component {
+class DropdownButton extends PureComponent {
     static propTypes = {
         ...Dropdown.propTypes,
 
@@ -25,9 +24,6 @@ class DropdownButton extends Component {
         btnStyle: 'flat'
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         const { btnSize, btnStyle, title, children, ...props } = this.props;
         const [dropdownProps, toggleProps] = splitComponentProps(props, Dropdown.ControlledComponent);

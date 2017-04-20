@@ -26573,10 +26573,6 @@ var _reactDom = __webpack_require__("../node_modules/react-dom/index.js");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 var _uncontrollable = __webpack_require__("../node_modules/uncontrollable/index.js");
 
 var _uncontrollable2 = _interopRequireDefault(_uncontrollable);
@@ -26618,8 +26614,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TOGGLE_ROLE = _DropdownToggle2.default.defaultProps.dropdownRole;
 var MENU_ROLE = _DropdownMenu2.default.defaultProps.dropdownRole;
 
-var Dropdown = (_temp2 = _class = function (_Component) {
-    _inherits(Dropdown, _Component);
+var Dropdown = (_temp2 = _class = function (_PureComponent) {
+    _inherits(Dropdown, _PureComponent);
 
     function Dropdown() {
         var _ref;
@@ -26704,11 +26700,6 @@ var Dropdown = (_temp2 = _class = function (_Component) {
                     this.focus();
                 }
             }
-        }
-    }, {
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
         }
     }, {
         key: 'toggleOpen',
@@ -26851,7 +26842,7 @@ var Dropdown = (_temp2 = _class = function (_Component) {
     }]);
 
     return Dropdown;
-}(_react.Component), _class.propTypes = {
+}(_react.PureComponent), _class.propTypes = {
     // A custom element for this component.
     componentClass: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.func]),
 
@@ -26941,10 +26932,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 var _reactButtons = __webpack_require__("../node_modules/@trendmicro/react-buttons/lib/index.js");
 
 var _splitComponentProps3 = __webpack_require__("../src/splitComponentProps.js");
@@ -26965,8 +26952,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DropdownButton = (_temp = _class = function (_Component) {
-    _inherits(DropdownButton, _Component);
+var DropdownButton = (_temp = _class = function (_PureComponent) {
+    _inherits(DropdownButton, _PureComponent);
 
     function DropdownButton() {
         _classCallCheck(this, DropdownButton);
@@ -26975,11 +26962,6 @@ var DropdownButton = (_temp = _class = function (_Component) {
     }
 
     _createClass(DropdownButton, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -27016,7 +26998,7 @@ var DropdownButton = (_temp = _class = function (_Component) {
     }]);
 
     return DropdownButton;
-}(_react.Component), _class.propTypes = _extends({}, _Dropdown2.default.propTypes, {
+}(_react.PureComponent), _class.propTypes = _extends({}, _Dropdown2.default.propTypes, {
 
     // One of: 'lg', 'md', 'sm', 'xs'
     btnSize: _reactButtons.Button.propTypes.btnSize,
@@ -27072,10 +27054,6 @@ var _reactDom = __webpack_require__("../node_modules/react-dom/index.js");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 var _RootCloseWrapper = __webpack_require__("../src/RootCloseWrapper.jsx");
 
 var _RootCloseWrapper2 = _interopRequireDefault(_RootCloseWrapper);
@@ -27096,8 +27074,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DropdownMenu = (_temp2 = _class = function (_Component) {
-    _inherits(DropdownMenu, _Component);
+var DropdownMenu = (_temp2 = _class = function (_PureComponent) {
+    _inherits(DropdownMenu, _PureComponent);
 
     function DropdownMenu() {
         var _ref;
@@ -27136,11 +27114,6 @@ var DropdownMenu = (_temp2 = _class = function (_Component) {
     }
 
     _createClass(DropdownMenu, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
         key: 'getItemsAndActiveIndex',
         value: function getItemsAndActiveIndex() {
             var items = this.getFocusableMenuItems();
@@ -27253,7 +27226,7 @@ var DropdownMenu = (_temp2 = _class = function (_Component) {
     }]);
 
     return DropdownMenu;
-}(_react.Component), _class.propTypes = {
+}(_react.PureComponent), _class.propTypes = {
     // A custom element for this component.
     componentClass: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.func]),
 
@@ -27500,10 +27473,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 var _reactButtons = __webpack_require__("../node_modules/@trendmicro/react-buttons/lib/index.js");
 
 var _index = __webpack_require__("../src/index.styl");
@@ -27522,8 +27491,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var DropdownToggle = (_temp = _class = function (_Component) {
-    _inherits(DropdownToggle, _Component);
+var DropdownToggle = (_temp = _class = function (_PureComponent) {
+    _inherits(DropdownToggle, _PureComponent);
 
     function DropdownToggle() {
         _classCallCheck(this, DropdownToggle);
@@ -27532,11 +27501,6 @@ var DropdownToggle = (_temp = _class = function (_Component) {
     }
 
     _createClass(DropdownToggle, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
         key: 'render',
         value: function render() {
             var _dropdownToggleClasse;
@@ -27576,7 +27540,7 @@ var DropdownToggle = (_temp = _class = function (_Component) {
     }]);
 
     return DropdownToggle;
-}(_react.Component), _class.propTypes = {
+}(_react.PureComponent), _class.propTypes = {
     // A custom element for this component.
     componentClass: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.func]),
 
@@ -30116,4 +30080,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?d441b9c5307849274d3d
+//# sourceMappingURL=bundle.js.map?0a02aa29a980dfee1f93

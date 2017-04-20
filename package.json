@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-dropdown",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Trend Micro Components: React Dropdown",
   "main": "lib/index.js",
   "files": [
@@ -48,13 +48,12 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "@trendmicro/react-anchor": "^0.5.4",
-    "@trendmicro/react-buttons": "^1.0.3",
+    "@trendmicro/react-anchor": "^0.5.5",
+    "@trendmicro/react-buttons": "^1.0.4",
     "chained-function": "^0.5.0",
     "classnames": "^2.2.5",
     "dom-helpers": "^3.2.1",
     "prop-types": "^15.5.8",
-    "react-addons-shallow-compare": "^0.14.0 || ^15.0.0",
     "uncontrollable": "^4.1.0",
     "warning": "^3.0.0"
   },

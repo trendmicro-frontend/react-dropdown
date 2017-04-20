@@ -3,9 +3,8 @@ import classNames from 'classnames';
 import activeElement from 'dom-helpers/activeElement';
 import contains from 'dom-helpers/query/contains';
 import PropTypes from 'prop-types';
-import React, { Component, cloneElement } from 'react';
+import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
-import shallowCompare from 'react-addons-shallow-compare';
 import uncontrollable from 'uncontrollable';
 import warning from 'warning';
 import { ButtonGroup } from '@trendmicro/react-buttons';
@@ -17,7 +16,7 @@ import styles from './index.styl';
 const TOGGLE_ROLE = DropdownToggle.defaultProps.dropdownRole;
 const MENU_ROLE = DropdownMenu.defaultProps.dropdownRole;
 
-class Dropdown extends Component {
+class Dropdown extends PureComponent {
     static propTypes = {
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -140,9 +139,6 @@ class Dropdown extends Component {
                 this.focus();
             }
         }
-    }
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
     }
     toggleOpen(eventType) {
         const open = !this.props.open;
