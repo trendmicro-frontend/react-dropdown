@@ -27391,22 +27391,25 @@ var DropdownToggle = (_temp = _class = function (_PureComponent) {
 
         var _props = this.props,
             Component = _props.componentClass,
+            btnSize = _props.btnSize,
+            _props$btnStyle = _props.btnStyle,
+            btnStyle = _props$btnStyle === undefined ? 'flat' : _props$btnStyle,
             noCaret = _props.noCaret,
             open = _props.open,
             className = _props.className,
             children = _props.children,
-            props = _objectWithoutProperties(_props, ['componentClass', 'noCaret', 'open', 'className', 'children']);
+            props = _objectWithoutProperties(_props, ['componentClass', 'btnSize', 'btnStyle', 'noCaret', 'open', 'className', 'children']);
 
         delete props.dropdownRole; // Accessed by Dropdown
 
         if (Component === _reactButtons.Button) {
-            props.btnStyle = props.btnStyle || 'flat';
+            props.btnStyle = btnStyle;
             props.dropdownToggle = true;
         }
 
         var useCaret = !noCaret;
         var empty = !children && !props.title;
-        var dropdownToggleClasses = (_dropdownToggleClasse = {}, _dropdownToggleClasse[_index2.default.dropdownToggle] = true, _dropdownToggleClasse[_index2.default.btnLink] = props.btnStyle === 'link', _dropdownToggleClasse[_index2.default.btnLg] = props.btnSize === 'lg' || props.btnSize === 'large', _dropdownToggleClasse[_index2.default.btnMd] = props.btnSize === 'md' || props.btnSize === 'medium', _dropdownToggleClasse[_index2.default.btnSm] = props.btnSize === 'sm' || props.btnSize === 'small', _dropdownToggleClasse[_index2.default.btnXs] = props.btnSize === 'xs' || props.btnSize === 'extra-small', _dropdownToggleClasse[_index2.default.empty] = empty, _dropdownToggleClasse);
+        var dropdownToggleClasses = (_dropdownToggleClasse = {}, _dropdownToggleClasse[_index2.default.dropdownToggle] = true, _dropdownToggleClasse[_index2.default.btnLink] = btnStyle === 'link', _dropdownToggleClasse[_index2.default.btnLg] = btnSize === 'lg' || btnSize === 'large', _dropdownToggleClasse[_index2.default.btnMd] = btnSize === 'md' || btnSize === 'medium', _dropdownToggleClasse[_index2.default.btnSm] = btnSize === 'sm' || btnSize === 'small', _dropdownToggleClasse[_index2.default.btnXs] = btnSize === 'xs' || btnSize === 'extra-small', _dropdownToggleClasse[_index2.default.empty] = empty, _dropdownToggleClasse);
         var caretClasses = (_caretClasses = {}, _caretClasses[_index2.default.caret] = true, _caretClasses);
 
         return _react2.default.createElement(
@@ -29844,4 +29847,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?54290b8185b9ba64f057
+//# sourceMappingURL=bundle.js.map?08330a437a8c6d2a6064
