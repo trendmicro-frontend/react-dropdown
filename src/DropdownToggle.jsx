@@ -41,6 +41,8 @@ class DropdownToggle extends PureComponent {
     render() {
         const {
             componentClass: Component,
+            btnSize,
+            btnStyle = 'flat',
             noCaret,
             open,
             className,
@@ -51,7 +53,7 @@ class DropdownToggle extends PureComponent {
         delete props.dropdownRole; // Accessed by Dropdown
 
         if (Component === Button) {
-            props.btnStyle = props.btnStyle || 'flat';
+            props.btnStyle = btnStyle;
             props.dropdownToggle = true;
         }
 
@@ -59,11 +61,11 @@ class DropdownToggle extends PureComponent {
         const empty = !children && !props.title;
         const dropdownToggleClasses = {
             [styles.dropdownToggle]: true,
-            [styles.btnLink]: props.btnStyle === 'link',
-            [styles.btnLg]: props.btnSize === 'lg' || props.btnSize === 'large',
-            [styles.btnMd]: props.btnSize === 'md' || props.btnSize === 'medium',
-            [styles.btnSm]: props.btnSize === 'sm' || props.btnSize === 'small',
-            [styles.btnXs]: props.btnSize === 'xs' || props.btnSize === 'extra-small',
+            [styles.btnLink]: btnStyle === 'link', // CSS selector ".btn-link:hover .caret"
+            [styles.btnLg]: btnSize === 'lg' || btnSize === 'large',
+            [styles.btnMd]: btnSize === 'md' || btnSize === 'medium',
+            [styles.btnSm]: btnSize === 'sm' || btnSize === 'small',
+            [styles.btnXs]: btnSize === 'xs' || btnSize === 'extra-small',
             [styles.empty]: empty
         };
         const caretClasses = {
