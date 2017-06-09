@@ -37,27 +37,21 @@ export default class extends PureComponent {
                                 <input
                                     type="checkbox"
                                     name="menuitem-1"
-                                    id="menuitem-1"
-                                    className={styles.inputCheckbox}
-                                    onClick={this.actions.handleClick}
+                                    style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
+                                    onClick={event => event.stopPropagation()}
                                 />
-                                <label htmlFor="menuitem-1">
-                                    Product 1
-                                </label>
+                                Product 1
                             </MenuItem>
                             <MenuItem eventKey={2}>
                                 <input
                                     type="checkbox"
                                     name="menuitem-2"
-                                    id="menuitem-2"
-                                    className={styles.inputCheckbox}
-                                    onClick={this.actions.handleClick}
+                                    style={{ marginRight: 5 }}
                                     onChange={this.actions.handleChange}
+                                    onClick={event => event.stopPropagation()}
                                 />
-                                <label htmlFor="menuitem-2">
-                                    Product 2
-                                </label>
+                                Product 2
                             </MenuItem>
                         </Dropdown.Menu>
                     </Dropdown>
