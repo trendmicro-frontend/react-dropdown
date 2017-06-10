@@ -66,7 +66,7 @@ export {
 } from '@trendmicro/react-dropdown';
 ```
 
-Then, import `Dropdown` component from your components directory, like so:
+Then, import `Dropdown` component in your code:
 ```js
 import Dropdown from '../components/Dropdown';
 ```
