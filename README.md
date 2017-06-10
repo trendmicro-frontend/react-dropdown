@@ -41,7 +41,6 @@ components/
     index.js
 ```
 
-### Buttons
 **components/Buttons/index.js**
 ```js
 import '@trendmicro/react-buttons/dist/react-buttons.css';
@@ -49,7 +48,6 @@ import '@trendmicro/react-buttons/dist/react-buttons.css';
 export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
 ```
 
-### Dropdown
 **components/Dropdown/index.js**
 ```js
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
