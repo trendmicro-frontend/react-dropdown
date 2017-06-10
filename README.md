@@ -30,6 +30,47 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
   import '@trendmicro/react-dropdown/dist/react-dropdown.css';
   ```
 
+## Recommended Setup
+
+Create a common components directory including both `Buttons` and `Dropdown` components, as shown below:
+```
+components/
+  Buttons/
+    index.js
+  Dropdown/
+    index.js
+```
+
+Then, import `Dropdown` component from your components directory:
+```js
+import Dropdown from '../components/Dropdown';
+```
+
+### Buttons
+**components/Buttons/index.js**
+```js
+import '@trendmicro/react-buttons/dist/react-buttons.css';
+
+export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
+```
+
+### Dropdown
+**components/Dropdown/index.js**
+```js
+import '@trendmicro/react-dropdown/dist/react-dropdown.css';
+import Dropdown from '@trendmicro/react-dropdown';
+import '../Buttons'; // Ensure CSS dependency
+
+export default Dropdown;
+export {
+    DropdownToggle,
+    DropdownMenu,
+    DropdownSubMenu,
+    MenuItem,
+    DropdownButton
+} from '@trendmicro/react-dropdown';
+```
+
 ## Usage
 
 ### Dropdown
