@@ -66,7 +66,7 @@ export {
 
 Then, import `Dropdown` component in your code:
 ```js
-import Dropdown from '../components/Dropdown';
+import Dropdown from './components/Dropdown';
 ```
 
 ## Usage
