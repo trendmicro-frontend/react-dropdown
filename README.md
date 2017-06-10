@@ -41,11 +41,6 @@ components/
     index.js
 ```
 
-Then, import `Dropdown` component from your components directory:
-```js
-import Dropdown from '../components/Dropdown';
-```
-
 ### Buttons
 **components/Buttons/index.js**
 ```js
@@ -69,6 +64,11 @@ export {
     MenuItem,
     DropdownButton
 } from '@trendmicro/react-dropdown';
+```
+
+Then, import `Dropdown` component from your components directory, like so:
+```js
+import Dropdown from '../components/Dropdown';
 ```
 
 ## Usage
