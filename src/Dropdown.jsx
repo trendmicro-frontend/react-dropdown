@@ -250,17 +250,19 @@ class Dropdown extends PureComponent {
             props.dropdownOpen = open;
         }
 
-        const classes = {
-            [styles.open]: open,
-            [styles.autoOpen]: autoOpen,
-            [styles.disabled]: disabled,
-            [styles.dropup]: dropup
-        };
-
         return (
             <Component
                 {...props}
-                className={classNames(className, classes)}
+                className={classNames(
+                    className,
+                    styles.dropdown,
+                    {
+                        [styles.open]: open,
+                        [styles.autoOpen]: autoOpen,
+                        [styles.disabled]: disabled,
+                        [styles.dropup]: dropup
+                    }
+                )}
             >
                 {React.Children.map(children, child => {
                     if (!React.isValidElement(child)) {
