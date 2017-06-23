@@ -1,34 +1,17 @@
-/*! react-dropdown v0.6.13 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
-.dropdown---dropdown-submenu---11C1M {
+/*! react-dropdown v0.6.14 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+.dropdown---dropdown---1yvIZ {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 20px;
   position: relative;
 }
-.dropdown---dropdown-submenu---11C1M > .dropdown---dropdown-menu---1fkH0 {
-  top: 0;
-  left: 100%;
-  margin-top: 0;
-}
-.dropdown---dropdown-submenu---11C1M > a:before {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border: 4px solid transparent;
-  border-right-width: 0;
-  border-left-color: #666;
-  margin: 6px -16px 6px 0;
-}
-.dropdown---dropdown-submenu---11C1M:hover > .dropdown---dropdown-menu---1fkH0,
-.dropdown---dropdown-submenu---11C1M.dropdown---open---1ju75 > .dropdown---dropdown-menu---1fkH0 {
-  display: block;
-}
-.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY {
-  float: none;
-}
-.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY > .dropdown---dropdown-menu---1fkH0 {
-  left: auto;
-  right: 100%;
-  margin-left: 0;
+.dropdown---dropdown---1yvIZ *,
+.dropdown---dropdown---1yvIZ *:before,
+.dropdown---dropdown---1yvIZ *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 .dropdown---caret---3CkEt {
   display: inline-block;
@@ -42,10 +25,6 @@
 .dropdown---dropup---30DnN .dropdown---caret---3CkEt {
   border-top: 0;
   border-bottom: 4px dashed #666;
-}
-.dropdown---dropup---30DnN,
-.dropdown---dropdown---1yvIZ {
-  position: relative;
 }
 .dropdown---dropdown-toggle---vMtjL {
   min-width: 0;
@@ -177,6 +156,37 @@
 }
 .dropdown---dropdown-header---3VGao ~ li > a {
   padding-left: 28px;
+}
+.dropdown---dropdown-submenu---11C1M {
+  position: relative;
+}
+.dropdown---dropdown-submenu---11C1M > .dropdown---dropdown-menu---1fkH0 {
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+.dropdown---dropdown-submenu---11C1M > a:before {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-right-width: 0;
+  border-left-color: #666;
+  margin: 6px -16px 6px 0;
+}
+.dropdown---dropdown-submenu---11C1M:hover > .dropdown---dropdown-menu---1fkH0,
+.dropdown---dropdown-submenu---11C1M.dropdown---open---1ju75 > .dropdown---dropdown-menu---1fkH0 {
+  display: block;
+}
+.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY {
+  float: none;
+}
+.dropdown---dropdown-submenu---11C1M.dropdown---pull-left---176QY > .dropdown---dropdown-menu---1fkH0 {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=react-dropdown.css.map*/
