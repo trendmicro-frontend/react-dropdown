@@ -88,7 +88,17 @@ class Dropdown extends PureComponent {
                 return;
             }
 
-            if (event.keyCode === 40) { // Down
+            if (event.keyCode === 38) { // up
+                if (!this.props.open) {
+                    this.toggleOpen('keyup');
+                } else if (this.menu.focusPrevious) {
+                    this.menu.focusPrevious();
+                }
+                event.preventDefault();
+                return;
+            }
+
+            if (event.keyCode === 40) { // down
                 if (!this.props.open) {
                     this.toggleOpen('keydown');
                 } else if (this.menu.focusNext) {
@@ -117,7 +127,7 @@ class Dropdown extends PureComponent {
     lastOpenEventType = null;
 
     componentDidMount() {
-        this.focusNextOnOpen();
+        this.focusOnOpen();
     }
     componentWillUpdate(nextProps) {
         if (!nextProps.open && this.props.open) {
@@ -129,7 +139,7 @@ class Dropdown extends PureComponent {
         const prevOpen = prevProps.open;
 
         if (open && !prevOpen) {
-            this.focusNextOnOpen();
+            this.focusOnOpen();
         }
 
         if (!open && prevOpen) {
@@ -151,15 +161,17 @@ class Dropdown extends PureComponent {
             this.props.onToggle(open);
         }
     }
-    focusNextOnOpen() {
+    focusOnOpen() {
         const menu = this.menu;
 
-        if (!menu.focusNext) {
+        if (this.lastOpenEventType === 'keydown' || this.props.role === 'menuitem') {
+            menu.focusNext && menu.focusNext();
             return;
         }
 
-        if (this.lastOpenEventType === 'keydown' || this.props.role === 'menuitem') {
-            menu.focusNext();
+        if (this.lastOpenEventType === 'keyup') {
+            menu.focusPrevious && menu.focusPrevious();
+            return;
         }
     }
     focus() {
