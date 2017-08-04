@@ -87,6 +87,7 @@ module.exports = {
     },
     // https://webpack.github.io/docs/webpack-dev-server.html#additional-configuration-options
     devServer: {
+        disableHostCheck: true,
         noInfo: false,
         lazy: false,
         // https://webpack.github.io/docs/node.js-api.html#compiler
