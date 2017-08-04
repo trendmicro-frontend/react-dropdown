@@ -82,7 +82,7 @@ class DropdownMenu extends PureComponent {
             return;
         }
 
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        const nextIndex = (activeIndex >= items.length - 1) ? 0 : activeIndex + 1;
         items[nextIndex].focus();
     }
     focusPrevious() {
@@ -91,7 +91,7 @@ class DropdownMenu extends PureComponent {
             return;
         }
 
-        const prevIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        const prevIndex = (activeIndex <= 0) ? items.length - 1 : activeIndex - 1;
         items[prevIndex].focus();
     }
     render() {
