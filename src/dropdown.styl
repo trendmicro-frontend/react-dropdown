@@ -14,11 +14,11 @@
     border-top: 4px dashed #666666;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
-}
 
-.dropup .caret {
-    border-top: 0;
-    border-bottom: 4px dashed #666666;
+    .dropup & {
+        border-top: 0;
+        border-bottom: 4px dashed #666666;
+    }
 }
 
 .dropdown-toggle {
@@ -35,10 +35,6 @@
 }
 .dropdown-toggle.empty .caret {
     margin-left: 0;
-}
-.dropup .dropdown-menu {
-    top: auto;
-    bottom: 100%;
 }
 .dropdown-menu {
     position: absolute;
@@ -129,10 +125,19 @@
     background-color: transparent;
     cursor: not-allowed;
 }
-.auto-open:hover > .dropdown-menu,
-.open > .dropdown-menu {
-    display: block;
+
+.dropdown-menu {
+    .dropup > & {
+        top: auto;
+        bottom: 100%;
+    }
+
+    .auto-open:hover > &,
+    .open > & {
+        display: block;
+    }
 }
+
 .auto-open > a,
 .open > a {
     outline: 0;

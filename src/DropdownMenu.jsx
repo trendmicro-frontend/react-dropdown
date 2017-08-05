@@ -1,5 +1,5 @@
 import chainedFunction from 'chained-function';
-import classNames from 'classnames';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
@@ -134,12 +134,6 @@ class DropdownMenu extends PureComponent {
             });
         });
 
-        const classes = {
-            [styles.dropdownMenu]: true,
-            [styles.dropdownMenuSelected]: activeMenuItems.length > 0,
-            [styles.pullRight]: pullRight
-        };
-
         if (scrollable) {
             style.maxHeight = maxHeight;
             style.overflowY = 'auto';
@@ -154,7 +148,11 @@ class DropdownMenu extends PureComponent {
                 <Component
                     {...props}
                     role="menu"
-                    className={classNames(className, classes)}
+                    className={cx(className, {
+                        [styles.dropdownMenu]: true,
+                        [styles.dropdownMenuSelected]: activeMenuItems.length > 0,
+                        [styles.pullRight]: pullRight
+                    })}
                     style={style}
                 >
                     {menuItems}
