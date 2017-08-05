@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Button } from '@trendmicro/react-buttons';
 import styles from './index.styl';
+import {
+    DROPDOWN_TOGGLE_ROLE
+} from './constants';
 
 class DropdownToggle extends PureComponent {
     static propTypes = {
@@ -29,7 +32,7 @@ class DropdownToggle extends PureComponent {
         open: PropTypes.bool
     };
     static defaultProps = {
-        dropdownRole: 'toggle', // Accessed by Dropdown
+        dropdownRole: DROPDOWN_TOGGLE_ROLE, // Accessed by Dropdown
         componentClass: Button,
         noCaret: false,
 

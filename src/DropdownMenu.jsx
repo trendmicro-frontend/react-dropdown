@@ -5,6 +5,9 @@ import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import RootCloseWrapper from './RootCloseWrapper';
 import styles from './index.styl';
+import {
+    DROPDOWN_MENU_ROLE
+} from './constants';
 
 class DropdownMenu extends PureComponent {
     static propTypes = {
@@ -31,7 +34,7 @@ class DropdownMenu extends PureComponent {
         ])
     };
     static defaultProps = {
-        dropdownRole: 'menu', // Accessed by Dropdown
+        dropdownRole: DROPDOWN_MENU_ROLE, // Accessed by Dropdown
         componentClass: 'ul',
         scrollable: false,
         maxHeight: 150,

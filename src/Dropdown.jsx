@@ -9,12 +9,14 @@ import uncontrollable from 'uncontrollable';
 import warning from 'warning';
 import { ButtonGroup } from '@trendmicro/react-buttons';
 import DropdownToggle from './DropdownToggle';
+import DropdownMenuWrapper from './DropdownMenuWrapper';
 import DropdownMenu from './DropdownMenu';
 import DropdownSubMenu from './DropdownSubMenu';
 import styles from './index.styl';
-
-const TOGGLE_ROLE = DropdownToggle.defaultProps.dropdownRole;
-const MENU_ROLE = DropdownMenu.defaultProps.dropdownRole;
+import {
+    DROPDOWN_TOGGLE_ROLE,
+    DROPDOWN_MENU_ROLE
+} from './constants';
 
 class Dropdown extends PureComponent {
     static propTypes = {
@@ -281,13 +283,13 @@ class Dropdown extends PureComponent {
                         return child;
                     }
 
-                    if (child.props.dropdownRole === TOGGLE_ROLE) {
+                    if (child.props.dropdownRole === DROPDOWN_TOGGLE_ROLE) {
                         return this.renderToggle(child, {
                             disabled, open
                         });
                     }
 
-                    if (child.props.dropdownRole === MENU_ROLE) {
+                    if (child.props.dropdownRole === DROPDOWN_MENU_ROLE) {
                         return this.renderMenu(child, {
                             open, pullRight, onClose, onSelect, rootCloseEvent
                         });
@@ -307,6 +309,7 @@ const UncontrollableDropdown = uncontrollable(Dropdown, {
 
 UncontrollableDropdown.Toggle = DropdownToggle;
 UncontrollableDropdown.Menu = DropdownMenu;
+UncontrollableDropdown.MenuWrapper = DropdownMenuWrapper;
 UncontrollableDropdown.SubMenu = DropdownSubMenu;
 
 export default UncontrollableDropdown;
