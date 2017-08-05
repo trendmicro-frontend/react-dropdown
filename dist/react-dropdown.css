@@ -1,4 +1,4 @@
-/*! react-dropdown v0.6.14 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v0.7.0 | (c) 2017 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown---1yvIZ {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,10 +40,6 @@
 }
 .dropdown---dropdown-toggle---vMtjL.dropdown---empty---zMmdA .dropdown---caret---3CkEt {
   margin-left: 0;
-}
-.dropdown---dropup---30DnN .dropdown---dropdown-menu---1fkH0 {
-  top: auto;
-  bottom: 100%;
 }
 .dropdown---dropdown-menu---1fkH0 {
   position: absolute;
@@ -137,12 +133,38 @@
   background-color: transparent;
   cursor: not-allowed;
 }
-.dropdown---auto-open---nH6JF:hover > .dropdown---dropdown-menu---1fkH0,
-.dropdown---open---1ju75 > .dropdown---dropdown-menu---1fkH0 {
+.dropdown---dropup---30DnN > .dropdown---dropdown-menu---1fkH0 {
+  top: auto;
+  bottom: 100%;
+}
+.dropdown---dropdown---1yvIZ.dropdown---auto-open---nH6JF:hover > .dropdown---dropdown-menu---1fkH0,
+.dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu---1fkH0 {
   display: block;
 }
-.dropdown---auto-open---nH6JF > a,
-.dropdown---open---1ju75 > a {
+.dropdown---dropdown-menu-wrapper---3gX-X {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.dropdown---dropdown-menu-wrapper---3gX-X > .dropdown---dropdown-menu---1fkH0 {
+  position: static;
+}
+.dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu-wrapper---3gX-X {
+  display: block;
+}
+.dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu-wrapper---3gX-X > .dropdown---dropdown-menu---1fkH0 {
+  display: inline-block;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.dropdown---dropdown---1yvIZ.dropdown---auto-open---nH6JF > a,
+.dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > a {
   outline: 0;
 }
 .dropdown---dropdown-header---3VGao {
