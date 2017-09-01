@@ -93,7 +93,7 @@ CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 
 To increase the CSS specificity of a rule, you can simply repeat a selector, like so:
 ```js
-const StyledMenuItem = styled(MenuItem)`
+const CustomMenuItem = styled(MenuItem)`
 && {
     a {
         &:hover {
@@ -102,7 +102,9 @@ const StyledMenuItem = styled(MenuItem)`
         padding: 0 6px;
     }
 }
-`
+`;
+CustomMenuItem.propTypes = MenuItem.propTypes;
+CustomMenuItem.defaultProps = MenuItem.defaultProps;
 ```
 
 ## Usage
