@@ -91,6 +91,20 @@ CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
 CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 ```
 
+To increase the CSS specificity of a rule, you can simply repeat a selector, like so:
+```js
+const StyledMenuItem = styled(MenuItem)`
+&& {
+    a {
+        &:hover {
+            background: ${styleConstants.selectionColor};
+        }
+        padding: 0 6px;
+    }
+}
+`
+```
+
 ## Usage
 
 ### Dropdown
