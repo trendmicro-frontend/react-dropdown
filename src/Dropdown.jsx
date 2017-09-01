@@ -133,7 +133,7 @@ class Dropdown extends PureComponent {
     }
     componentWillUpdate(nextProps) {
         if (!nextProps.open && this.props.open) {
-            this._focusInDropdown = contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
+            this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
         }
     }
     componentDidUpdate(prevProps) {
