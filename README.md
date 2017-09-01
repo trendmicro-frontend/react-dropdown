@@ -69,6 +69,28 @@ Then, import `Dropdown` component in your code:
 import Dropdown from './components/Dropdown';
 ```
 
+## Custom Styling
+
+You can make style changes using inline styles or [styled-components](https://github.com/styled-components/styled-components), and specify propTypes and defaultProps by setting them as properties on the function.
+
+### Inline Styles
+```js
+const CustomDropdownMenu = (props) => (
+    <Dropdown.Menu {...props} style={{ padding: '2px 0' }} />
+);
+CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
+CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
+```
+
+### Styled Components
+```js
+const CustomDropdownMenu = styled(Dropdown.Menu)`
+    padding: 2px 0;
+`;
+CustomDropdownMenu.propTypes = Dropdown.Menu.propTypes;
+CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
+```
+
 ## Usage
 
 ### Dropdown
