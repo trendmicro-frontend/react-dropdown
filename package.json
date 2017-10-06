@@ -44,8 +44,8 @@
     "react-dropdown"
   ],
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
+    "react": "^0.14.0 || >=15.0.0",
+    "react-dom": "^0.14.0 || >=15.0.0"
   },
   "dependencies": {
     "@trendmicro/react-anchor": "^0.5.5",
@@ -82,8 +82,8 @@
     "html-webpack-plugin": "~2.30.1",
     "http-server": "~0.10.0",
     "nib": "~1.1.2",
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0",
+    "react": "^0.14.0 || >=15.0.0",
+    "react-dom": "^0.14.0 || >=15.0.0",
     "style-loader": "~0.18.2",
     "stylint": "~1.5.9",
     "stylint-loader": "~1.0.0",
