@@ -16,7 +16,7 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
 
 2. At this point you can import `@trendmicro/react-dropdown` and its styles in your application as follows:
 
-  ```js
+  ```jsx
   import Dropdown, {
       DropdownToggle,
       DropdownMenu,
@@ -43,14 +43,14 @@ components/
 ```
 
 **components/Buttons/index.js**
-```js
+```jsx
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 
 export { Button, ButtonGroup, ButtonToolbar } from '@trendmicro/react-buttons';
 ```
 
 **components/Dropdown/index.js**
-```js
+```jsx
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
 import Dropdown from '@trendmicro/react-dropdown';
 import '../Buttons'; // Ensure CSS dependency
@@ -67,7 +67,7 @@ export {
 ```
 
 Then, import `Dropdown` component in your code:
-```js
+```jsx
 import Dropdown from './components/Dropdown';
 ```
 
@@ -76,7 +76,7 @@ import Dropdown from './components/Dropdown';
 You can make style changes using inline styles or [styled-components](https://github.com/styled-components/styled-components), and specify propTypes and defaultProps by setting them as properties on the function.
 
 ### Inline Styles
-```js
+```jsx
 const CustomDropdownMenu = (props) => (
     <Dropdown.Menu {...props} style={{ padding: '2px 0' }} />
 );
@@ -85,7 +85,7 @@ CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 ```
 
 ### Styled Components
-```js
+```jsx
 const CustomDropdownMenu = styled(Dropdown.Menu)`
     padding: 2px 0;
 `;
@@ -94,7 +94,7 @@ CustomDropdownMenu.defaultProps = Dropdown.Menu.defaultProps;
 ```
 
 To increase the CSS specificity of a rule, you can simply repeat a selector, like so:
-```js
+```jsx
 const CustomMenuItem = styled(MenuItem)`
 && {
     a {
@@ -113,7 +113,7 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
 
 ### Dropdown
 
-```js
+```jsx
 <Dropdown
     onSelect={(eventKey) => {
     }}
@@ -152,7 +152,7 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
 
 ### Multi-Level Dropdown
 
-```js
+```jsx
 <Dropdown>
     <Dropdown.Toggle title="Select an option" />
     <Dropdown.Menu>
@@ -185,7 +185,7 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
 
 ### Dropdown Menu Wrapper
 
-```js
+```jsx
 <Dropdown>
     <Dropdown.Toggle title="Select an option" />
     <Dropdown.MenuWrapper>
@@ -207,7 +207,7 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
 
 ### Dropdown Button
 
-```js
+```jsx
 <DropdownButton
     btnSize="xs"
     title="More"
