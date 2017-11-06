@@ -10,7 +10,7 @@ export default () => (
             <h3>Search Filter</h3>
             <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Sample" />
-                <Dropdown.Menu style={{ padding: 0 }}>
+                <Dropdown.MenuWrapper>
                     <div className={classNames(styles.inputIconGroup, styles.dropdownMenuFilter)}>
                         <input
                             id="filter"
@@ -44,7 +44,7 @@ export default () => (
                         <MenuItem>Menu item nine</MenuItem>
                         <MenuItem>Menu item ten</MenuItem>
                     </Dropdown.Menu>
-                </Dropdown.Menu>
+                </Dropdown.MenuWrapper>
             </Dropdown>
         </div>
     </Section>
