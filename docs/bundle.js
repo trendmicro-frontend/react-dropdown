@@ -28146,8 +28146,8 @@ exports.default = function () {
                 { open: true, onToggle: function onToggle() {} },
                 _react2.default.createElement(_src2.default.Toggle, { title: 'Sample' }),
                 _react2.default.createElement(
-                    _src2.default.Menu,
-                    { style: { padding: 0 } },
+                    _src2.default.MenuWrapper,
+                    null,
                     _react2.default.createElement(
                         'div',
                         { className: (0, _classnames2.default)(_SearchFilter2.default.inputIconGroup, _SearchFilter2.default.dropdownMenuFilter) },
@@ -28633,4 +28633,4 @@ if(false) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?d6f528151622c550575c
+//# sourceMappingURL=bundle.js.map?8801fd7b3204b9330311
