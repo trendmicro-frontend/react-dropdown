@@ -20,6 +20,7 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
   import Dropdown, {
       DropdownToggle,
       DropdownMenu,
+      DropdownMenuWrapper
       DropdownSubMenu,
       MenuItem,
       DropdownButton
@@ -58,6 +59,7 @@ export default Dropdown;
 export {
     DropdownToggle,
     DropdownMenu,
+    DropdownMenuWrapper,
     DropdownSubMenu,
     MenuItem,
     DropdownButton
@@ -181,7 +183,29 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
 </Dropdown>
 ```
 
-### DropdownButton
+### Dropdown Menu Wrapper
+
+```js
+<Dropdown>
+    <Dropdown.Toggle title="Select an option" />
+    <Dropdown.MenuWrapper>
+        <SearchFilter />
+        <Dropdown.Menu>
+            <MenuItem>
+                Menu item one
+            </MenuItem>
+            <MenuItem>
+                Menu item two
+            </MenuItem>
+            <MenuItem>
+                Menu item three
+            </MenuItem>
+        </Dropdown.Menu>
+    </Dropdown.MenuWrapper>
+</Dropdown>
+```
+
+### Dropdown Button
 
 ```js
 <DropdownButton
@@ -234,6 +258,17 @@ Name | Type | Default | Description
 componentClass | element | ul | A custom element for this component.
 scrollable | boolean | false | Whether or not the scrollbar is visible.
 maxHeight | number | 150 | The maximum height of the dropdown menu.
+open | boolean | false | Whether or not the dropdown is visible.
+pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
+onClose | function(event) | | A callback fired when the dropdown menu closes.
+onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
+rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
+
+#### DropdownMenuWrapper
+
+Name | Type | Default | Description 
+:--- | :--- | :------ | :----------
+componentClass | element | div | A custom element for this component.
 open | boolean | false | Whether or not the dropdown is visible.
 pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
