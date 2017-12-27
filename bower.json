@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-dropdown",
-  "description": "Trend Micro Components: React Dropdown",
+  "description": "React Dropdown component",
   "theme": "minimalism",
   "authors": [
     {
