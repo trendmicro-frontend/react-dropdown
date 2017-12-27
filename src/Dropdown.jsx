@@ -189,7 +189,8 @@ class Dropdown extends PureComponent {
         };
 
         if (typeof child.ref === 'string') {
-            warning(false,
+            warning(
+                false,
                 'String refs are not supported on `<Dropdown.Toggle>` components. ' +
                 'To apply a ref to the component use the callback signature:\n\n ' +
                 'https://facebook.github.io/react/docs/more-about-refs.html#the-ref-callback-attribute'
@@ -217,7 +218,8 @@ class Dropdown extends PureComponent {
         };
 
         if (typeof child.ref === 'string') {
-            warning(false,
+            warning(
+                false,
                 'String refs are not supported on `<Dropdown.Menu>` components. ' +
                 'To apply a ref to the component use the callback signature:\n\n ' +
                 'https://facebook.github.io/react/docs/more-about-refs.html#the-ref-callback-attribute'

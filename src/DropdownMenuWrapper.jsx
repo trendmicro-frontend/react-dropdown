@@ -11,6 +11,14 @@ import {
 
 class DropdownMenuWrapper extends PureComponent {
     static propTypes = {
+        dropdownRole: PropTypes.string,
+
+        // A custom element for this component.
+        componentClass: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func
+        ]),
+
         // Dropdown
         open: PropTypes.bool,
         pullRight: PropTypes.bool,
@@ -44,7 +52,8 @@ class DropdownMenuWrapper extends PureComponent {
         };
 
         if (typeof child.ref === 'string') {
-            warning(false,
+            warning(
+                false,
                 'String refs are not supported on `<Dropdown.Menu>` components. ' +
                 'To apply a ref to the component use the callback signature:\n\n ' +
                 'https://facebook.github.io/react/docs/more-about-refs.html#the-ref-callback-attribute'

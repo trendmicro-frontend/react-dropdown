@@ -9,6 +9,8 @@ import {
 
 class DropdownToggle extends PureComponent {
     static propTypes = {
+        dropdownRole: PropTypes.string,
+
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
             PropTypes.string,
