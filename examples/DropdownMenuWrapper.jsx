@@ -15,19 +15,19 @@ export default () => (
                 <Dropdown.Toggle title="Custom range" />
                 <Dropdown.MenuWrapper>
                     <Dropdown.Menu>
-                        <MenuItem eventKey={'1d'}>
+                        <MenuItem eventKey="1d">
                             Last 24 hours
                         </MenuItem>
-                        <MenuItem eventKey={'7d'}>
+                        <MenuItem eventKey="7d">
                             Last 7 days
                         </MenuItem>
-                        <MenuItem eventKey={'30d'}>
+                        <MenuItem eventKey="30d">
                             Last 30 days
                         </MenuItem>
-                        <MenuItem eventKey={'90d'}>
+                        <MenuItem eventKey="90d">
                             Last 90 days
                         </MenuItem>
-                        <MenuItem eventKey={'custom'}>
+                        <MenuItem eventKey="custom">
                             Custom range
                         </MenuItem>
                     </Dropdown.Menu>
