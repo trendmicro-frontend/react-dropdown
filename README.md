@@ -21,7 +21,6 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
       DropdownToggle,
       DropdownMenu,
       DropdownMenuWrapper
-      DropdownSubMenu,
       MenuItem,
       DropdownButton
   } from '@trendmicro/react-dropdown';
@@ -60,7 +59,6 @@ export {
     DropdownToggle,
     DropdownMenu,
     DropdownMenuWrapper,
-    DropdownSubMenu,
     MenuItem,
     DropdownButton
 } from '@trendmicro/react-dropdown';
@@ -166,19 +164,21 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
             Menu item three
         </MenuItem>
         <MenuItem divider />
-        <Dropdown.SubMenu title="Menu item four">
+        <MenuItem>
+            Menu item four
             <MenuItem>
                 Second level item one
             </MenuItem>
             <MenuItem>
                 Second level item two
             </MenuItem>
-            <Dropdown.SubMenu title="Second level item three">
+            <MenuItem>
+                Second level item three
                 <MenuItem>
                     Third level item one
                 </MenuItem>
-            </Dropdown.SubMenu>
-        </Dropdown.SubMenu>
+            </MenuItem>
+        </MenuItem>
     </Dropdown.Menu>
 </Dropdown>
 ```
@@ -273,19 +273,6 @@ onClose | function(event) | | A callback fired when the dropdown menu closes.
 onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
 rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
 
-#### DropdownSubMenu
-
-Name | Type | Default | Description 
-:--- | :--- | :------ | :----------
-active | boolean | false | Highlight the menu item as active.
-disabled | boolean | false | Disable the menu item, making it unselectable.
-eventKey | any | | Value passed to the `onSelect` handler, useful for identifying the selected menu item.
-open | boolean | false | Whether or not the dropdown submenu is visible.
-title | node | | Title content.
-href | string | | HTML `href` attribute corresponding to `a.href`.
-onClick | function(event) | | Callback fired when the menu item is clicked.
-onSelect | function(eventKey, event) | | Callback fired when the menu item is selected.
-
 #### MenuItem
 
 Name | Type | Default | Description 
@@ -297,7 +284,11 @@ eventKey | any | | Value passed to the `onSelect` handler, useful for identifyin
 header | boolean | false | Style the menu item as a header label, useful for describing a group of menu items.
 href | string | | HTML `href` attribute corresponding to `a.href`.
 onClick | function(event) | | Callback fired when the menu item is clicked.
-onSelect | function(eventKey, event) | | Callback fired when the menu item is selected.
+open | boolean | false | Whether or not the dropdown submenu is visible.
+pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
+onClose | function(event) | | A callback fired when the dropdown menu closes.
+onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
+rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
 
 #### DropdownButton
 
