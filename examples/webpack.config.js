@@ -5,7 +5,7 @@ const stylusLoader = require('stylus-loader');
 const nib = require('nib');
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-eval-source-map',
     entry: path.resolve(__dirname, 'index.jsx'),
     output: {
         path: path.join(__dirname, '../docs'),
