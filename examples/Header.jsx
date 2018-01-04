@@ -12,7 +12,7 @@ export default () => (
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
                     <MenuItem header>
-                        DROPDOWN HEADER
+                        Dropdown Header
                     </MenuItem>
                     <MenuItem>
                         Menu item one
@@ -24,7 +24,7 @@ export default () => (
                         Menu item three
                     </MenuItem>
                     <MenuItem header>
-                        DROPDOWN HEADER
+                        Dropdown Header
                     </MenuItem>
                     <MenuItem>
                         Menu item four
