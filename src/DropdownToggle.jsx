@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Button } from '@trendmicro/react-buttons';
@@ -58,29 +58,25 @@ class DropdownToggle extends PureComponent {
 
         const useCaret = !noCaret;
         const empty = !children && !props.title;
-        const dropdownToggleClasses = {
-            [styles.dropdownToggle]: true,
-            [styles.btnLink]: props.btnStyle === 'link', // CSS selector ".btn-link:hover .caret"
-            [styles.btnLg]: props.btnSize === 'lg' || props.btnSize === 'large',
-            [styles.btnMd]: props.btnSize === 'md' || props.btnSize === 'medium',
-            [styles.btnSm]: props.btnSize === 'sm' || props.btnSize === 'small',
-            [styles.btnXs]: props.btnSize === 'xs' || props.btnSize === 'extra-small',
-            [styles.empty]: empty
-        };
-        const caretClasses = {
-            [styles.caret]: true
-        };
 
         return (
             <Component
                 {...props}
-                role="button"
-                className={classNames(className, dropdownToggleClasses)}
                 aria-haspopup
                 aria-expanded={open}
+                role="button"
+                className={cx(className, {
+                    [styles.dropdownToggle]: true,
+                    [styles.btnLink]: props.btnStyle === 'link', // CSS selector ".btn-link:hover .caret"
+                    [styles.btnLg]: props.btnSize === 'lg' || props.btnSize === 'large',
+                    [styles.btnMd]: props.btnSize === 'md' || props.btnSize === 'medium',
+                    [styles.btnSm]: props.btnSize === 'sm' || props.btnSize === 'small',
+                    [styles.btnXs]: props.btnSize === 'xs' || props.btnSize === 'extra-small',
+                    [styles.empty]: empty
+                })}
             >
                 {children || props.title}
-                {useCaret && <span className={classNames(caretClasses)} />}
+                {useCaret && <span className={styles.caret} />}
             </Component>
         );
     }

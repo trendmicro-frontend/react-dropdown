@@ -1,5 +1,5 @@
 import chainedFunction from 'chained-function';
-import classNames from 'classnames';
+import cx from 'classnames';
 import activeElement from 'dom-helpers/activeElement';
 import contains from 'dom-helpers/query/contains';
 import PropTypes from 'prop-types';
@@ -11,7 +11,6 @@ import { ButtonGroup } from '@trendmicro/react-buttons';
 import DropdownToggle from './DropdownToggle';
 import DropdownMenuWrapper from './DropdownMenuWrapper';
 import DropdownMenu from './DropdownMenu';
-import DropdownSubMenu from './DropdownSubMenu';
 import match from './match-component';
 import styles from './index.styl';
 
@@ -308,15 +307,11 @@ class Dropdown extends PureComponent {
                     onMouseLeave,
                     this.handleMouseLeave
                 )}
-                className={classNames(
-                    className,
-                    styles.dropdown,
-                    {
-                        [styles.open]: open,
-                        [styles.disabled]: disabled,
-                        [styles.dropup]: dropup
-                    }
-                )}
+                className={cx(className, styles.dropdown, {
+                    [styles.open]: open,
+                    [styles.disabled]: disabled,
+                    [styles.dropup]: dropup
+                })}
             >
                 {React.Children.map(children, child => {
                     if (!React.isValidElement(child)) {
@@ -353,6 +348,5 @@ const UncontrollableDropdown = uncontrollable(Dropdown, {
 UncontrollableDropdown.Toggle = DropdownToggle;
 UncontrollableDropdown.Menu = DropdownMenu;
 UncontrollableDropdown.MenuWrapper = DropdownMenuWrapper;
-UncontrollableDropdown.SubMenu = DropdownSubMenu;
 
 export default UncontrollableDropdown;

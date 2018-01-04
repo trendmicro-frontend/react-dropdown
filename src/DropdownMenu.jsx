@@ -3,7 +3,9 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
+import MenuItem from './MenuItem';
 import RootCloseWrapper from './RootCloseWrapper';
+import match from './match-component';
 import styles from './index.styl';
 
 class DropdownMenu extends PureComponent {
@@ -26,32 +28,33 @@ class DropdownMenu extends PureComponent {
             'mousedown'
         ])
     };
+
     static defaultProps = {
-        componentClass: 'ul',
+        componentClass: 'div',
 
         // Dropdown
         open: false,
         pullRight: false
     };
 
-    actions = {
-        handleKeyDown: (event) => {
-            if (event.keyCode === 40) { // Down
-                this.focusNext();
-                event.preventDefault();
-                return;
-            }
+    isMenuItem = match(MenuItem);
 
-            if (event.keyCode === 38) { // up
-                this.focusPrevious();
-                event.preventDefault();
-                return;
-            }
+    handleKeyDown = (event) => {
+        if (event.keyCode === 40) { // Down
+            this.focusNext();
+            event.preventDefault();
+            return;
+        }
 
-            if (event.keyCode === 27 || event.keyCode === 9) { // esc or tab
-                this.props.onClose(event);
-                return;
-            }
+        if (event.keyCode === 38) { // up
+            this.focusPrevious();
+            event.preventDefault();
+            return;
+        }
+
+        if (event.keyCode === 27 || event.keyCode === 9) { // esc or tab
+            this.props.onClose(event);
+            return;
         }
     };
 
@@ -102,27 +105,8 @@ class DropdownMenu extends PureComponent {
             ...props
         } = this.props;
 
-        const activeMenuItems = [];
-        const menuItems = React.Children.map(children, child => {
-            if (!React.isValidElement(child)) {
-                return child;
-            }
-
-            if (child.props.active) {
-                activeMenuItems.push(child);
-            }
-
-            return cloneElement(child, {
-                onKeyDown: chainedFunction(
-                    child.props.onKeyDown,
-                    this.actions.handleKeyDown
-                ),
-                onSelect: chainedFunction(
-                    child.props.onSelect,
-                    onSelect
-                )
-            });
-        });
+        const activeMenuItems = React.Children.toArray(children)
+            .filter(child => React.isValidElement(child) && this.isMenuItem(child) && child.props.active);
 
         return (
             <RootCloseWrapper
@@ -140,7 +124,22 @@ class DropdownMenu extends PureComponent {
                     })}
                     style={style}
                 >
-                    {menuItems}
+                    {React.Children.map(children, child => {
+                        if (React.isValidElement(child) && this.isMenuItem(child)) {
+                            return cloneElement(child, {
+                                onKeyDown: chainedFunction(
+                                    child.props.onKeyDown,
+                                    this.handleKeyDown
+                                ),
+                                onSelect: chainedFunction(
+                                    child.props.onSelect,
+                                    onSelect
+                                )
+                            });
+                        }
+
+                        return child;
+                    })}
                 </Component>
             </RootCloseWrapper>
         );

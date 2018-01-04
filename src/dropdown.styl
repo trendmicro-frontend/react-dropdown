@@ -66,7 +66,7 @@
     overflow: hidden;
     background-color: #eeeeee;
 }
-.dropdown-menu > li > a {
+.dropdown-menu > .menu-item > a {
     display: block;
     padding: 4px 16px;
     clear: both;
@@ -76,7 +76,7 @@
     text-decoration: none;
     white-space: nowrap;
 }
-.dropdown-menu > li.dropdown-submenu > a {
+.dropdown-menu > .menu-item.dropdown-submenu > a {
     padding-right: 32px;
 }
 .dropdown-menu .badge {
@@ -84,17 +84,17 @@
     margin-left: 24px;
     margin-top: 1px;
 }
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a.focus {
+.dropdown-menu > .menu-item > a:hover,
+.dropdown-menu > .menu-item > a:focus,
+.dropdown-menu > .menu-item > a.focus {
     text-decoration: none;
     color: #222222;
     background-color: #eeeeee;
 }
-.dropdown-menu-selected > li > a {
+.dropdown-menu-selected > .menu-item > a {
     padding: 4px 32px 4px 40px;
 }
-.dropdown-menu-selected > li.active > a:before {
+.dropdown-menu-selected > .menu-item.active > a:before {
     background-image: url("./icon-check.svg");
     background-position: 0 2px;
     background-repeat: no-repeat;
@@ -105,9 +105,9 @@
     vertical-align: top;
     width: 16px;
 }
-.dropdown-menu-selected > li.active > a,
-.dropdown-menu-selected > li.active > a:hover,
-.dropdown-menu-selected > li.active > a:focus {
+.dropdown-menu-selected > .menu-item.active > a,
+.dropdown-menu-selected > .menu-item.active > a:hover,
+.dropdown-menu-selected > .menu-item.active > a:focus {
     text-decoration: none;
     outline: 0;
 }
@@ -175,6 +175,6 @@
     color: #888888;
     white-space: nowrap;
 }
-.dropdown-header ~ li > a {
+.dropdown-header ~ .menu-item > a {
     padding-left: 28px;
 }

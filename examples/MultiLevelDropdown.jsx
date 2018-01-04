@@ -1,51 +1,76 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Section from './Section';
 import Dropdown, { MenuItem } from '../src';
 import styles from './index.styl';
 
-export default () => (
-    <Section className="row-md-5 row-xl-5">
-        <div className={styles.sectionGroup}>
-            <h3>Multi-Level Dropdown</h3>
-            <Dropdown
-                open
-                onToggle={() => {
-                }}
-                onSelect={(eventKey, event) => {
-                    console.log(`Multi-Level Dropdown: eventKey=${eventKey}`);
-                }}
-            >
-                <Dropdown.Toggle title="Select an option" />
-                <Dropdown.Menu>
-                    <MenuItem eventKey="1">
-                        Menu item one
-                    </MenuItem>
-                    <MenuItem eventKey="2">
-                        Menu item two
-                    </MenuItem>
-                    <MenuItem eventKey="3">
-                        Menu item three
-                    </MenuItem>
-                    <MenuItem divider />
-                    <Dropdown.SubMenu
+export default class extends PureComponent {
+    state = {
+        selected: ''
+    };
+
+    render() {
+        const { selected } = this.state;
+
+        return (
+            <Section className="row-md-5 row-xl-5">
+                <div className={styles.sectionGroup}>
+                    <h3>Multi-Level Dropdown</h3>
+                    <Dropdown
                         open
-                        eventKey="4"
-                        title="Menu item four"
+                        onToggle={() => {
+                        }}
+                        onSelect={(eventKey, event) => {
+                            this.setState({ selected: eventKey });
+                        }}
                     >
-                        <MenuItem eventKey="4.1">
-                            Second level item one
-                        </MenuItem>
-                        <MenuItem eventKey="4.2">
-                            Second level item two
-                        </MenuItem>
-                        <Dropdown.SubMenu eventKey="4.3" title="Second level item three">
-                            <MenuItem eventKey="4.3.1">
-                                Third level item one
+                        <Dropdown.Toggle>
+                            {selected ? `Level ${selected}` : 'Select an option'}
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <MenuItem eventKey="1">
+                                Level 1
                             </MenuItem>
-                        </Dropdown.SubMenu>
-                    </Dropdown.SubMenu>
-                </Dropdown.Menu>
-            </Dropdown>
-        </div>
-    </Section>
-);
+                            <MenuItem eventKey="2">
+                                Level 2
+                            </MenuItem>
+                            <MenuItem eventKey="3">
+                                Level 3
+                            </MenuItem>
+                            <MenuItem divider />
+                            <MenuItem eventKey="4">
+                                Level 4
+                                <MenuItem eventKey="4.1">
+                                    Level 4.1
+                                </MenuItem>
+                                <MenuItem eventKey="4.2">
+                                    Level 4.2
+                                    <MenuItem eventKey="4.2.1">
+                                        Level 4.2.1
+                                        <MenuItem eventKey="4.2.1.1">
+                                            Level 4.2.1.1
+                                        </MenuItem>
+                                        <MenuItem eventKey="4.2.1.2">
+                                            Level 4.2.1.2
+                                        </MenuItem>
+                                    </MenuItem>
+                                </MenuItem>
+                                <MenuItem eventKey="4.3">
+                                    Level 4.3
+                                    <MenuItem eventKey="4.3.1">
+                                        Level 4.3.1
+                                        <MenuItem eventKey="4.3.1.1">
+                                            Level 4.3.1.1
+                                        </MenuItem>
+                                        <MenuItem eventKey="4.3.1.2">
+                                            Level 4.3.1.2
+                                        </MenuItem>
+                                    </MenuItem>
+                                </MenuItem>
+                            </MenuItem>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+            </Section>
+        );
+    }
+}

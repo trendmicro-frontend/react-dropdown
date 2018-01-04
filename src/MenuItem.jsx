@@ -1,13 +1,21 @@
 import chainedFunction from 'chained-function';
-import classNames from 'classnames';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Anchor from '@trendmicro/react-anchor';
+import match from './match-component';
+import DropdownMenu from './DropdownMenu';
 import styles from './index.styl';
 
 class MenuItem extends Component {
     static propTypes = {
         componentType: PropTypes.any,
+
+        // A custom element for this component.
+        componentClass: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func
+        ]),
 
         // Highlight the menu item as active.
         active: PropTypes.bool,
@@ -30,50 +38,68 @@ class MenuItem extends Component {
         // Callback fired when the menu item is clicked.
         onClick: PropTypes.func,
 
-        // Callback fired when the menu item is selected.
-        //
-        // ```js
-        // (eventKey: any, event: Object) => any
-        // ```
-        onSelect: PropTypes.func
+        // Dropdown
+        open: PropTypes.bool,
+        pullRight: PropTypes.bool,
+        onClose: PropTypes.func,
+        onSelect: PropTypes.func,
+        rootCloseEvent: PropTypes.oneOf([
+            'click',
+            'mousedown'
+        ])
     };
+
     static defaultProps = {
+        componentClass: 'div',
         active: false,
         disabled: false,
         divider: false,
-        header: false
+        header: false,
+
+        // DropdownMenu
+        open: false,
+        pullRight: false
     };
 
-    actions = {
-        handleClick: (event) => {
-            const { href, disabled, onSelect, eventKey } = this.props;
+    isMenuItem = match(MenuItem);
 
-            if (!href || disabled) {
-                event.preventDefault();
-            }
+    handleClick = (event) => {
+        const { href, disabled, onSelect, eventKey } = this.props;
 
-            if (disabled) {
-                return;
-            }
+        if (!href || disabled) {
+            event.preventDefault();
+        }
 
-            if (onSelect) {
-                onSelect(eventKey, event);
-            }
+        if (disabled) {
+            return;
+        }
+
+        if (onSelect) {
+            onSelect(eventKey, event);
         }
     };
 
     render() {
         const {
             componentType, // eslint-disable-line
+            componentClass: Component,
             active,
             disabled,
             divider,
             eventKey, // eslint-disable-line
             header,
             onClick,
-            onSelect, // eslint-disable-line
+
+            // Dropdown
+            open,
+            pullRight,
+            onClose,
+            onSelect,
+            rootCloseEvent,
+
             className,
             style,
+            children,
             ...props
         } = this.props;
 
@@ -82,35 +108,45 @@ class MenuItem extends Component {
             props.children = undefined;
 
             return (
-                <li
+                <Component
                     {...props}
                     role="separator"
-                    className={classNames(className, styles.divider)}
+                    className={cx(className, styles.divider)}
                     style={style}
-                />
+                >
+                    {children}
+                </Component>
             );
         }
 
         if (header) {
             return (
-                <li
+                <Component
                     {...props}
                     role="heading"
-                    className={classNames(className, styles.dropdownHeader)}
+                    className={cx(className, styles.dropdownHeader)}
                     style={style}
-                />
+                >
+                    {children}
+                </Component>
             );
         }
 
-        const classes = {
-            [styles.active]: active,
-            [styles.disabled]: disabled
-        };
+        const menuItems = React.Children.toArray(children)
+            .filter(child => React.isValidElement(child) && this.isMenuItem(child));
+
+        const others = React.Children.toArray(children)
+            .filter(child => !(React.isValidElement(child) && this.isMenuItem(child)));
 
         return (
-            <li
+            <Component
                 role="presentation"
-                className={classNames(className, classes)}
+                className={cx(className, styles.menuItem, {
+                    [styles.active]: active,
+                    [styles.disabled]: disabled,
+                    [styles.dropdownSubmenu]: menuItems.length > 0,
+                    [styles.open]: open
+                })}
                 style={style}
             >
                 <Anchor
@@ -118,9 +154,25 @@ class MenuItem extends Component {
                     disabled={disabled}
                     role="menuitem"
                     tabIndex="-1"
-                    onClick={chainedFunction(onClick, this.actions.handleClick)}
-                />
-            </li>
+                    onClick={chainedFunction(
+                        onClick,
+                        this.handleClick
+                    )}
+                >
+                    {others}
+                </Anchor>
+                {(menuItems.length > 0) &&
+                    <DropdownMenu
+                        open={open}
+                        pullRight={pullRight}
+                        onClose={onClose}
+                        onSelect={onSelect}
+                        rootCloseEvent={rootCloseEvent}
+                    >
+                        {menuItems}
+                    </DropdownMenu>
+                }
+            </Component>
         );
     }
 }
