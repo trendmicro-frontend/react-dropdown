@@ -19,12 +19,6 @@ class DropdownMenu extends PureComponent {
             PropTypes.func
         ]),
 
-        // Whether or not the scroll bar is visible.
-        scrollable: PropTypes.bool,
-
-        // The maximum height of the dropdown menu.
-        maxHeight: PropTypes.number,
-
         // Dropdown
         open: PropTypes.bool,
         pullRight: PropTypes.bool,
@@ -38,8 +32,6 @@ class DropdownMenu extends PureComponent {
     static defaultProps = {
         dropdownRole: DROPDOWN_MENU_ROLE, // Accessed by Dropdown
         componentClass: 'ul',
-        scrollable: false,
-        maxHeight: 150,
 
         // Dropdown
         open: false,
@@ -102,8 +94,6 @@ class DropdownMenu extends PureComponent {
     render() {
         const {
             componentClass: Component,
-            scrollable,
-            maxHeight,
             open,
             pullRight,
             onClose,
@@ -138,11 +128,6 @@ class DropdownMenu extends PureComponent {
                 )
             });
         });
-
-        if (scrollable) {
-            style.maxHeight = maxHeight;
-            style.overflowY = 'auto';
-        }
 
         return (
             <RootCloseWrapper

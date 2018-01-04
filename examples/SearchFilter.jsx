@@ -29,9 +29,10 @@ export default () => (
                             borderTop: '1px solid #eee',
                             boxShadow: 'none',
                             display: 'block',
-                            minWidth: 240
+                            minWidth: 240,
+                            maxHeight: 150,
+                            overflowY: 'auto'
                         }}
-                        scrollable
                     >
                         <MenuItem>Menu item one</MenuItem>
                         <MenuItem>Menu item two</MenuItem>

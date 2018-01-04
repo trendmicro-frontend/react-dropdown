@@ -6,10 +6,10 @@ import styles from './index.styl';
 export default () => (
     <Section className="row-md-5 row-xl-5">
         <div className={styles.sectionGroup}>
-            <h3>Scrollable</h3>
+            <h3>Scrollbar</h3>
             <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Sample" />
-                <Dropdown.Menu scrollable>
+                <Dropdown.Menu style={{ maxHeight: 150, overflowY: 'auto' }}>
                     <MenuItem>Menu item one</MenuItem>
                     <MenuItem>Menu item two</MenuItem>
                     <MenuItem>Menu item three</MenuItem>

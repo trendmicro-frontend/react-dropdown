@@ -256,8 +256,6 @@ open | boolean | false | Whether or not the dropdown is visible.
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 componentClass | element | ul | A custom element for this component.
-scrollable | boolean | false | Whether or not the scrollbar is visible.
-maxHeight | number | 150 | The maximum height of the dropdown menu.
 open | boolean | false | Whether or not the dropdown is visible.
 pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
