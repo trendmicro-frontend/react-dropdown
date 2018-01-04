@@ -3,13 +3,10 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Button } from '@trendmicro/react-buttons';
 import styles from './index.styl';
-import {
-    DROPDOWN_TOGGLE_ROLE
-} from './constants';
 
 class DropdownToggle extends PureComponent {
     static propTypes = {
-        dropdownRole: PropTypes.string,
+        componentType: PropTypes.any,
 
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -34,7 +31,6 @@ class DropdownToggle extends PureComponent {
         open: PropTypes.bool
     };
     static defaultProps = {
-        dropdownRole: DROPDOWN_TOGGLE_ROLE, // Accessed by Dropdown
         componentClass: Button,
         noCaret: false,
 
@@ -45,6 +41,7 @@ class DropdownToggle extends PureComponent {
 
     render() {
         const {
+            componentType, // eslint-disable-line
             componentClass: Component,
             noCaret,
             open,
@@ -52,8 +49,6 @@ class DropdownToggle extends PureComponent {
             children,
             ...props
         } = this.props;
-
-        delete props.dropdownRole; // Accessed by Dropdown
 
         if (Component === Button) {
             props.btnStyle = props.btnStyle || 'flat';
@@ -90,5 +85,8 @@ class DropdownToggle extends PureComponent {
         );
     }
 }
+
+// For component matching
+DropdownToggle.defaultProps.componentType = DropdownToggle;
 
 export default DropdownToggle;

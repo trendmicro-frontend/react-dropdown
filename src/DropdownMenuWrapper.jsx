@@ -3,15 +3,14 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { PureComponent, cloneElement } from 'react';
 import warning from 'warning';
+import DropdownMenu from './DropdownMenu';
 import RootCloseWrapper from './RootCloseWrapper';
+import match from './match-component';
 import styles from './index.styl';
-import {
-    DROPDOWN_MENU_ROLE
-} from './constants';
 
 class DropdownMenuWrapper extends PureComponent {
     static propTypes = {
-        dropdownRole: PropTypes.string,
+        componentType: PropTypes.any,
 
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -29,8 +28,8 @@ class DropdownMenuWrapper extends PureComponent {
             'mousedown'
         ])
     };
+
     static defaultProps = {
-        dropdownRole: 'menu', // Accessed by Dropdown
         componentClass: 'div',
 
         // Dropdown
@@ -39,6 +38,8 @@ class DropdownMenuWrapper extends PureComponent {
     };
 
     menu = null; // <DropdownMenu ref={c => this.menu = c} />
+
+    isDropdownMenu = match(DropdownMenu);
 
     focusNext() {
         this.menu && this.menu.focusNext && this.menu.focusNext();
@@ -69,6 +70,7 @@ class DropdownMenuWrapper extends PureComponent {
     }
     render() {
         const {
+            componentType, // eslint-disable-line
             componentClass: Component,
             open,
             pullRight,
@@ -79,8 +81,6 @@ class DropdownMenuWrapper extends PureComponent {
             className,
             ...props
         } = this.props;
-
-        delete props.dropdownRole; // Accessed by Dropdown
 
         return (
             <RootCloseWrapper
@@ -97,7 +97,7 @@ class DropdownMenuWrapper extends PureComponent {
                             return child;
                         }
 
-                        if (child.props.dropdownRole === DROPDOWN_MENU_ROLE) {
+                        if (this.isDropdownMenu(child)) {
                             return this.renderMenu(child, {
                                 // Do not pass onClose and rootCloseEvent to the dropdown menu
                                 open, pullRight, onSelect
@@ -111,5 +111,8 @@ class DropdownMenuWrapper extends PureComponent {
         );
     }
 }
+
+// For component matching
+DropdownMenuWrapper.defaultProps.componentType = DropdownMenuWrapper;
 
 export default DropdownMenuWrapper;

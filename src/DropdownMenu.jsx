@@ -5,13 +5,10 @@ import React, { PureComponent, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import RootCloseWrapper from './RootCloseWrapper';
 import styles from './index.styl';
-import {
-    DROPDOWN_MENU_ROLE
-} from './constants';
 
 class DropdownMenu extends PureComponent {
     static propTypes = {
-        dropdownRole: PropTypes.string,
+        componentType: PropTypes.any,
 
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
@@ -30,7 +27,6 @@ class DropdownMenu extends PureComponent {
         ])
     };
     static defaultProps = {
-        dropdownRole: DROPDOWN_MENU_ROLE, // Accessed by Dropdown
         componentClass: 'ul',
 
         // Dropdown
@@ -93,6 +89,7 @@ class DropdownMenu extends PureComponent {
     }
     render() {
         const {
+            componentType, // eslint-disable-line
             componentClass: Component,
             open,
             pullRight,
@@ -104,8 +101,6 @@ class DropdownMenu extends PureComponent {
             children,
             ...props
         } = this.props;
-
-        delete props.dropdownRole; // Accessed by Dropdown
 
         const activeMenuItems = [];
         const menuItems = React.Children.map(children, child => {
@@ -151,5 +146,8 @@ class DropdownMenu extends PureComponent {
         );
     }
 }
+
+// For component matching
+DropdownMenu.defaultProps.componentType = DropdownMenu;
 
 export default DropdownMenu;

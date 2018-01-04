@@ -7,6 +7,8 @@ import styles from './index.styl';
 
 class MenuItem extends Component {
     static propTypes = {
+        componentType: PropTypes.any,
+
         // Highlight the menu item as active.
         active: PropTypes.bool,
 
@@ -62,18 +64,18 @@ class MenuItem extends Component {
 
     render() {
         const {
+            componentType, // eslint-disable-line
             active,
             disabled,
             divider,
+            eventKey, // eslint-disable-line
             header,
             onClick,
+            onSelect, // eslint-disable-line
             className,
             style,
             ...props
         } = this.props;
-
-        delete props.eventKey;
-        delete props.onSelect;
 
         if (divider) {
             // Forcibly blank out the children; separators shouldn't render any.
@@ -122,5 +124,8 @@ class MenuItem extends Component {
         );
     }
 }
+
+// For component matching
+MenuItem.defaultProps.componentType = MenuItem;
 
 export default MenuItem;

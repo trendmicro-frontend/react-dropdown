@@ -12,14 +12,13 @@ import DropdownToggle from './DropdownToggle';
 import DropdownMenuWrapper from './DropdownMenuWrapper';
 import DropdownMenu from './DropdownMenu';
 import DropdownSubMenu from './DropdownSubMenu';
+import match from './match-component';
 import styles from './index.styl';
-import {
-    DROPDOWN_TOGGLE_ROLE,
-    DROPDOWN_MENU_ROLE
-} from './constants';
 
 class Dropdown extends PureComponent {
     static propTypes = {
+        componentType: PropTypes.any,
+
         // A custom element for this component.
         componentClass: PropTypes.oneOfType([
             PropTypes.string,
@@ -66,7 +65,10 @@ class Dropdown extends PureComponent {
         rootCloseEvent: PropTypes.oneOf([
             'click',
             'mousedown'
-        ])
+        ]),
+
+        onMouseEnter: PropTypes.func,
+        onMouseLeave: PropTypes.func
     };
 
     static defaultProps = {
@@ -77,56 +79,82 @@ class Dropdown extends PureComponent {
         open: false
     };
 
-    actions = {
-        handleClick: (event) => {
-            if (this.props.disabled) {
-                return;
-            }
-
-            this.toggleOpen('click');
-        },
-        handleKeyDown: (event) => {
-            if (this.props.disabled) {
-                return;
-            }
-
-            if (event.keyCode === 38) { // up
-                if (!this.props.open) {
-                    this.toggleOpen('keyup');
-                } else if (this.menu.focusPrevious) {
-                    this.menu.focusPrevious();
-                }
-                event.preventDefault();
-                return;
-            }
-
-            if (event.keyCode === 40) { // down
-                if (!this.props.open) {
-                    this.toggleOpen('keydown');
-                } else if (this.menu.focusNext) {
-                    this.menu.focusNext();
-                }
-                event.preventDefault();
-                return;
-            }
-
-            if (event.keyCode === 27 || event.keyCode === 9) { // esc or tab
-                this.actions.handleClose(event);
-                return;
-            }
-        },
-        handleClose: (event) => {
-            if (!this.props.open) {
-                return;
-            }
-
-            this.toggleOpen(null);
-        }
-    };
     menu = null; // <DropdownMenu ref={c => this.menu = c} />
     toggle = null; // <DropdownToggle ref={c => this.toggle = c} />
     _focusInDropdown = false;
     lastOpenEventType = null;
+
+    isDropdownToggle = match(DropdownToggle);
+    isDropdownMenu = match(DropdownMenu);
+    isDropdownMenuWrapper = match(DropdownMenuWrapper);
+
+    handleToggleClick = (event) => {
+        if (this.props.disabled) {
+            return;
+        }
+
+        this.toggleDropdown('click');
+    };
+
+    handleToggleKeyDown = (event) => {
+        if (this.props.disabled) {
+            return;
+        }
+
+        if (event.keyCode === 38) { // up
+            if (!this.props.open) {
+                this.toggleDropdown('keyup');
+            } else if (this.menu.focusPrevious) {
+                this.menu.focusPrevious();
+            }
+            event.preventDefault();
+            return;
+        }
+
+        if (event.keyCode === 40) { // down
+            if (!this.props.open) {
+                this.toggleDropdown('keydown');
+            } else if (this.menu.focusNext) {
+                this.menu.focusNext();
+            }
+            event.preventDefault();
+            return;
+        }
+
+        if (event.keyCode === 27 || event.keyCode === 9) { // esc or tab
+            this.closeDropdown();
+            return;
+        }
+    };
+
+    handleMouseEnter = (event) => {
+        const { autoOpen, onToggle } = this.props;
+
+        if (autoOpen && typeof onToggle === 'function') {
+            onToggle(true);
+        }
+    };
+
+    handleMouseLeave = (event) => {
+        const { autoOpen, onToggle } = this.props;
+
+        if (autoOpen && typeof onToggle === 'function') {
+            onToggle(false);
+        }
+    };
+
+    closeDropdown = () => {
+        const { open, autoOpen, onToggle } = this.props;
+
+        if (open) {
+            this.toggleDropdown(null);
+            return;
+        }
+
+        if (autoOpen && typeof onToggle === 'function') {
+            onToggle(false);
+        }
+    };
 
     componentDidMount() {
         this.focusOnOpen();
@@ -152,15 +180,16 @@ class Dropdown extends PureComponent {
             }
         }
     }
-    toggleOpen(eventType) {
-        const open = !this.props.open;
+    toggleDropdown(eventType) {
+        const { open, onToggle } = this.props;
+        const shouldOpen = !open;
 
-        if (open) {
+        if (shouldOpen) {
             this.lastOpenEventType = eventType;
         }
 
-        if (this.props.onToggle) {
-            this.props.onToggle(open);
+        if (typeof onToggle === 'function') {
+            onToggle(shouldOpen);
         }
     }
     focusOnOpen() {
@@ -204,11 +233,11 @@ class Dropdown extends PureComponent {
             ref,
             onClick: chainedFunction(
                 child.props.onClick,
-                this.actions.handleClick
+                this.handleToggleClick
             ),
             onKeyDown: chainedFunction(
                 child.props.onKeyDown,
-                this.actions.handleKeyDown
+                this.handleToggleKeyDown
             )
         });
     }
@@ -234,33 +263,35 @@ class Dropdown extends PureComponent {
             onClose: chainedFunction(
                 child.props.onClose,
                 onClose,
-                this.actions.handleClose,
+                this.closeDropdown
             ),
             onSelect: chainedFunction(
                 child.props.onSelect,
                 onSelect,
-                this.actions.handleClose
+                this.closeDropdown
             ),
             rootCloseEvent
         });
     }
     render() {
         const {
+            componentType, // eslint-disable-line
             componentClass: Component,
             dropup,
             disabled,
             pullRight,
             open,
-            autoOpen,
+            autoOpen, // eslint-disable-line
             onClose,
             onSelect,
             className,
             rootCloseEvent,
+            onMouseEnter,
+            onMouseLeave,
+            onToggle, // eslint-disable-line
             children,
             ...props
         } = this.props;
-
-        delete props.onToggle;
 
         if (Component === ButtonGroup) {
             props.dropdownOpen = open;
@@ -269,12 +300,19 @@ class Dropdown extends PureComponent {
         return (
             <Component
                 {...props}
+                onMouseEnter={chainedFunction(
+                    onMouseEnter,
+                    this.handleMouseEnter
+                )}
+                onMouseLeave={chainedFunction(
+                    onMouseLeave,
+                    this.handleMouseLeave
+                )}
                 className={classNames(
                     className,
                     styles.dropdown,
                     {
                         [styles.open]: open,
-                        [styles.autoOpen]: autoOpen,
                         [styles.disabled]: disabled,
                         [styles.dropup]: dropup
                     }
@@ -285,13 +323,13 @@ class Dropdown extends PureComponent {
                         return child;
                     }
 
-                    if (child.props.dropdownRole === DROPDOWN_TOGGLE_ROLE) {
+                    if (this.isDropdownToggle(child)) {
                         return this.renderToggle(child, {
                             disabled, open
                         });
                     }
 
-                    if (child.props.dropdownRole === DROPDOWN_MENU_ROLE) {
+                    if (this.isDropdownMenu(child) || this.isDropdownMenuWrapper(child)) {
                         return this.renderMenu(child, {
                             open, pullRight, onClose, onSelect, rootCloseEvent
                         });
@@ -303,6 +341,9 @@ class Dropdown extends PureComponent {
         );
     }
 }
+
+// For component matching
+Dropdown.defaultProps.componentType = Dropdown;
 
 const UncontrollableDropdown = uncontrollable(Dropdown, {
     // Define the pairs of prop/handlers you want to be uncontrollable

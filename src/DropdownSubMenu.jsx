@@ -8,6 +8,8 @@ import styles from './index.styl';
 
 class DropdownSubMenu extends Component {
     static propTypes = {
+        componentType: PropTypes.any,
+
         // Highlight the menu item as active.
         active: PropTypes.bool,
 
@@ -65,6 +67,7 @@ class DropdownSubMenu extends Component {
 
     render() {
         const {
+            componentType, // eslint-disable-line
             active,
             disabled,
             open,
@@ -121,5 +124,8 @@ class DropdownSubMenu extends Component {
         );
     }
 }
+
+// For component matching
+DropdownSubMenu.defaultProps.componentType = DropdownSubMenu;
 
 export default DropdownSubMenu;
