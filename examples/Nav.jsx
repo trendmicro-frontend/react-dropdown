@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import Anchor from '@trendmicro/react-anchor';
 import { Button } from '@trendmicro/react-buttons';
 import styles from './Nav.styl';
 
@@ -36,7 +37,7 @@ export default class extends Component {
                             <span className={styles.iconBar} />
                             <span className={styles.iconBar} />
                         </button>
-                        <a href="#" className={styles.navbarBrand}>{name}</a>
+                        <Anchor className={styles.navbarBrand}>{name}</Anchor>
                     </div>
                     <div
                         className={classNames(
