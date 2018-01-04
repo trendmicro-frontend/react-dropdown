@@ -11,16 +11,16 @@ export default () => (
             <Dropdown open onToggle={() => {}}>
                 <Dropdown.Toggle title="Select an option" />
                 <Dropdown.Menu>
-                    <MenuItem>
+                    <MenuItem eventKey="1">
                         Menu item one
                     </MenuItem>
-                    <MenuItem>
+                    <MenuItem eventKey="2">
                         Menu item two
                     </MenuItem>
-                    <MenuItem>
+                    <MenuItem eventKey="3">
                         Menu item three
                     </MenuItem>
-                    <MenuItem>
+                    <MenuItem eventKey="4">
                         Menu item four
                     </MenuItem>
                 </Dropdown.Menu>

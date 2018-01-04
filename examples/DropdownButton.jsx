@@ -15,9 +15,9 @@ export default () => (
                         Large
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <MenuItem>Action</MenuItem>
-                        <MenuItem>Another Action</MenuItem>
-                        <MenuItem>Something else here</MenuItem>
+                        <MenuItem eventKey="1">Action</MenuItem>
+                        <MenuItem eventKey="2">Another Action</MenuItem>
+                        <MenuItem eventKey="3">Something else here</MenuItem>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown>
@@ -25,9 +25,9 @@ export default () => (
                         Medium
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <MenuItem>Action</MenuItem>
-                        <MenuItem>Another Action</MenuItem>
-                        <MenuItem>Something else here</MenuItem>
+                        <MenuItem eventKey="1">Action</MenuItem>
+                        <MenuItem eventKey="2">Another Action</MenuItem>
+                        <MenuItem eventKey="3">Something else here</MenuItem>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown>
@@ -35,9 +35,9 @@ export default () => (
                         Small
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <MenuItem>Action</MenuItem>
-                        <MenuItem>Another Action</MenuItem>
-                        <MenuItem>Something else here</MenuItem>
+                        <MenuItem eventKey="1">Action</MenuItem>
+                        <MenuItem eventKey="2">Another Action</MenuItem>
+                        <MenuItem eventKey="3">Something else here</MenuItem>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown>
@@ -45,9 +45,9 @@ export default () => (
                         Extra Small
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <MenuItem>Action</MenuItem>
-                        <MenuItem>Another Action</MenuItem>
-                        <MenuItem>Something else here</MenuItem>
+                        <MenuItem eventKey="1">Action</MenuItem>
+                        <MenuItem eventKey="2">Another Action</MenuItem>
+                        <MenuItem eventKey="3">Something else here</MenuItem>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
@@ -61,9 +61,9 @@ export default () => (
                 </Button>
                 <Dropdown.Toggle btnSize="lg" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
             <Dropdown>
@@ -75,9 +75,9 @@ export default () => (
                 </Button>
                 <Dropdown.Toggle btnSize="md" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
             <Dropdown>
@@ -86,9 +86,9 @@ export default () => (
                 </Button>
                 <Dropdown.Toggle btnSize="sm" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
             <Dropdown>
@@ -97,9 +97,9 @@ export default () => (
                 </Button>
                 <Dropdown.Toggle btnSize="xs" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
@@ -111,10 +111,10 @@ export default () => (
                     &nbsp;All
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <MenuItem>All</MenuItem>
-                    <MenuItem>File</MenuItem>
-                    <MenuItem>IP Address</MenuItem>
-                    <MenuItem>URL</MenuItem>
+                    <MenuItem eventKey="all">All</MenuItem>
+                    <MenuItem eventKey="file">File</MenuItem>
+                    <MenuItem eventKey="ipaddr">IP Address</MenuItem>
+                    <MenuItem eventKey="url">URL</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
@@ -127,9 +127,9 @@ export default () => (
                     All devices
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
@@ -138,9 +138,9 @@ export default () => (
             <Dropdown>
                 <Dropdown.Toggle btnStyle="link" title="All devices" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
@@ -150,9 +150,9 @@ export default () => (
             <Dropdown dropup>
                 <Dropdown.Toggle btnStyle="flat" title="Dropdown" />
                 <Dropdown.Menu>
-                    <MenuItem>Action</MenuItem>
-                    <MenuItem>Another Action</MenuItem>
-                    <MenuItem>Something else here</MenuItem>
+                    <MenuItem eventKey="1">Action</MenuItem>
+                    <MenuItem eventKey="2">Another Action</MenuItem>
+                    <MenuItem eventKey="3">Something else here</MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
         </div>
