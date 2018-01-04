@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-dropdown",
-  "version": "0.7.3",
+  "version": "1.0.0",
   "description": "React Dropdown component",
   "main": "lib/index.js",
   "files": [
