@@ -119,7 +119,7 @@ class DropdownMenu extends PureComponent {
                     role="menu"
                     className={cx(className, {
                         [styles.dropdownMenu]: true,
-                        [styles.dropdownMenuSelected]: activeMenuItems.length > 0,
+                        [styles.selected]: activeMenuItems.length > 0,
                         [styles.pullRight]: pullRight
                     })}
                     style={style}

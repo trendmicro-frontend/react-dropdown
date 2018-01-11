@@ -1,6 +1,6 @@
 {
   "name": "@trendmicro/react-dropdown",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React Dropdown component",
   "main": "lib/index.js",
   "files": [
@@ -47,7 +47,6 @@
     "react-dom": "^0.14.0 || >=15.0.0"
   },
   "dependencies": {
-    "@trendmicro/react-anchor": "^0.5.6",
     "@trendmicro/react-buttons": "^1.3.0",
     "chained-function": "^0.5.0",
     "classnames": "^2.2.5",
@@ -57,6 +56,7 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
+    "@trendmicro/react-anchor": "^0.5.6",
     "babel-cli": "~6.26.0",
     "babel-core": "~6.26.0",
     "babel-eslint": "~8.1.2",

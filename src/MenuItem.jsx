@@ -2,7 +2,6 @@ import chainedFunction from 'chained-function';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Anchor from '@trendmicro/react-anchor';
 import match from './match-component';
 import DropdownMenu from './DropdownMenu';
 import styles from './index.styl';
@@ -31,9 +30,6 @@ class MenuItem extends Component {
 
         // Style the menu item as a header label, useful for describing a group of menu items.
         header: PropTypes.bool,
-
-        // HTML `href` attribute corresponding to `a.href`.
-        href: PropTypes.string,
 
         // Callback fired when the menu item is clicked.
         onClick: PropTypes.func,
@@ -64,9 +60,9 @@ class MenuItem extends Component {
     isMenuItem = match(MenuItem);
 
     handleClick = (event) => {
-        const { href, disabled, onSelect, eventKey } = this.props;
+        const { disabled, onSelect, eventKey } = this.props;
 
-        if (!href || disabled) {
+        if (disabled) {
             event.preventDefault();
         }
 
@@ -124,7 +120,7 @@ class MenuItem extends Component {
                 <Component
                     {...props}
                     role="heading"
-                    className={cx(className, styles.dropdownHeader)}
+                    className={cx(className, styles.header)}
                     style={style}
                 >
                     {children}
@@ -141,7 +137,7 @@ class MenuItem extends Component {
         return (
             <Component
                 role="presentation"
-                className={cx(className, styles.menuItem, {
+                className={cx(className, styles.menuItemWrapper, {
                     [styles.active]: active,
                     [styles.disabled]: disabled,
                     [styles.dropdownSubmenu]: menuItems.length > 0,
@@ -149,8 +145,9 @@ class MenuItem extends Component {
                 })}
                 style={style}
             >
-                <Anchor
+                <div
                     {...props}
+                    className={styles.menuItem}
                     disabled={disabled}
                     role="menuitem"
                     tabIndex="-1"
@@ -160,7 +157,7 @@ class MenuItem extends Component {
                     )}
                 >
                     {others}
-                </Anchor>
+                </div>
                 {(menuItems.length > 0) &&
                     <DropdownMenu
                         open={open}

@@ -136,7 +136,6 @@ CustomMenuItem.defaultProps = MenuItem.defaultProps;
         </MenuItem>
         <MenuItem
             eventKey={5}
-            href="#someHref"
             active
             onSelect={(eventKey) => {
                 alert(`Alert from menu item.\neventKey: ${eventKey}`);
@@ -282,7 +281,6 @@ disabled | boolean | false | Disable the menu item, making it unselectable.
 divider | boolean | false | Style the menu item as a horizontal rule, providing visual separation between groups of menu items.
 eventKey | any | | Value passed to the `onSelect` handler, useful for identifying the selected menu item.
 header | boolean | false | Style the menu item as a header label, useful for describing a group of menu items.
-href | string | | HTML `href` attribute corresponding to `a.href`.
 onClick | function(event) | | Callback fired when the menu item is clicked.
 open | boolean | false | Whether or not the dropdown submenu is visible.
 pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
