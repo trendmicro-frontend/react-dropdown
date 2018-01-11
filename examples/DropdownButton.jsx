@@ -10,12 +10,38 @@ export default () => (
         <div className={styles.sectionGroup}>
             <div style={{ display: 'inline-block', marginRight: 20 }}>
                 <h5>General</h5>
-                <Dropdown>
-                    <Dropdown.Toggle btnSize="lg" btnStyle="flat">
+                <Dropdown
+                    onSelect={(eventKey, event) => {
+                    }}
+                >
+                    <Dropdown.Toggle
+                        btnSize="lg"
+                        btnStyle="flat"
+                    >
                         Large
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <MenuItem eventKey="1">Action</MenuItem>
+                        <MenuItem eventKey="1">
+                            <Dropdown
+                                onClick={event => {
+                                    event.stopPropagation();
+                                }}
+                                onSelect={(eventKey, event) => {
+                                }}
+                            >
+                                <Dropdown.Toggle>
+                                    ...
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                    <MenuItem eventKey="1.1">
+                                        Another Action
+                                    </MenuItem>
+                                    <MenuItem eventKey="1.2">
+                                        Another Action
+                                    </MenuItem>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </MenuItem>
                         <MenuItem eventKey="2">Another Action</MenuItem>
                         <MenuItem eventKey="3">Something else here</MenuItem>
                     </Dropdown.Menu>
