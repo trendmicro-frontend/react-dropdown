@@ -20,7 +20,7 @@ Demo: https://trendmicro-frontend.github.io/react-dropdown
   import Dropdown, {
       DropdownToggle,
       DropdownMenu,
-      DropdownMenuWrapper
+      DropdownMenuWrapper,
       MenuItem,
       DropdownButton
   } from '@trendmicro/react-dropdown';
@@ -276,6 +276,7 @@ rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired 
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
+componentClass | element | Button | A custom element for this component.
 active | boolean | false | Highlight the menu item as active.
 disabled | boolean | false | Disable the menu item, making it unselectable.
 divider | boolean | false | Style the menu item as a horizontal rule, providing visual separation between groups of menu items.
