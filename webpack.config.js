@@ -1,18 +1,18 @@
-var pkg = require('./package.json');
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var findImports = require('find-imports');
-var stylusLoader = require('stylus-loader');
-var nib = require('nib');
-var publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
-var banner = [
+const pkg = require('./package.json');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const findImports = require('find-imports');
+const stylusLoader = require('stylus-loader');
+const nib = require('nib');
+const publicname = pkg.name.replace(/^@\w+\//, ''); // Strip out "@trendmicro/" from package name
+const banner = [
     publicname + ' v' + pkg.version,
     '(c) ' + new Date().getFullYear() + ' Trend Micro Inc.',
     pkg.license,
     pkg.homepage
 ].join(' | ');
-var localClassPrefix = publicname.replace(/^react-/, ''); // Strip out "react-" from publicname
+const localClassPrefix = publicname.replace(/^react-/, ''); // Strip out "react-" from publicname
 
 module.exports = {
     devtool: 'source-map',
