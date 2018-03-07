@@ -1,4 +1,4 @@
-/*! react-dropdown v1.2.0 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v1.2.1 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown---1yvIZ {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -163,6 +163,14 @@
 }
 .dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu-wrapper---3gX-X {
   display: block;
+}
+.dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu-wrapper---3gX-X.dropdown---flex---15eWs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
 }
 .dropdown---dropdown---1yvIZ.dropdown---open---1ju75 > .dropdown---dropdown-menu-wrapper---3gX-X > .dropdown---dropdown-menu---1fkH0 {
   display: inline-block;

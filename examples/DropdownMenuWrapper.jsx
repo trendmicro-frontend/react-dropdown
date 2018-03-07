@@ -13,8 +13,8 @@ export default () => (
                 style={{ width: '100%' }}
             >
                 <Dropdown.Toggle title="Custom range" />
-                <Dropdown.MenuWrapper>
-                    <Dropdown.Menu>
+                <Dropdown.MenuWrapper flex>
+                    <Dropdown.Menu style={{ flex: '1 0 0' }}>
                         <MenuItem eventKey="1d">
                             Last 24 hours
                         </MenuItem>
@@ -33,6 +33,7 @@ export default () => (
                     </Dropdown.Menu>
                     <div
                         style={{
+                            flex: '0 0 auto',
                             display: 'inline-block',
                             padding: 12,
                             borderLeft: '1px solid #ddd',
