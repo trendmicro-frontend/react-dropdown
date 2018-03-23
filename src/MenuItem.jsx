@@ -31,7 +31,7 @@ class MenuItem extends Component {
         // Style the menu item as a header label, useful for describing a group of menu items.
         header: PropTypes.bool,
 
-        // Callback fired when the menu item is clicked.
+        // Callback fired when the menu item is clicked, even if it is disabled.
         onClick: PropTypes.func,
 
         // Dropdown
