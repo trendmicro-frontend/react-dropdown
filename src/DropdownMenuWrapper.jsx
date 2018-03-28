@@ -18,8 +18,6 @@ class DropdownMenuWrapper extends PureComponent {
             PropTypes.func
         ]),
 
-        flex: PropTypes.bool,
-
         // Dropdown
         open: PropTypes.bool,
         pullRight: PropTypes.bool,
@@ -33,8 +31,6 @@ class DropdownMenuWrapper extends PureComponent {
 
     static defaultProps = {
         componentClass: 'div',
-
-        flex: false,
 
         // Dropdown
         open: false,
@@ -76,7 +72,6 @@ class DropdownMenuWrapper extends PureComponent {
         const {
             componentType, // eslint-disable-line
             componentClass: Component,
-            flex,
             open,
             pullRight,
             onClose,
@@ -96,8 +91,7 @@ class DropdownMenuWrapper extends PureComponent {
                 <Component
                     {...props}
                     className={cx(className, {
-                        [styles.dropdownMenuWrapper]: true,
-                        [styles.flex]: !!flex
+                        [styles.dropdownMenuWrapper]: true
                     })}
                 >
                     {React.Children.map(children, child => {

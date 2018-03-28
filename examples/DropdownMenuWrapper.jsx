@@ -10,11 +10,10 @@ export default () => (
             <Dropdown
                 open
                 onToggle={() => {}}
-                style={{ width: '100%' }}
             >
                 <Dropdown.Toggle title="Custom range" />
-                <Dropdown.MenuWrapper flex>
-                    <Dropdown.Menu style={{ flex: '1 0 0' }}>
+                <Dropdown.MenuWrapper style={{ whiteSpace: 'nowrap' }}>
+                    <Dropdown.Menu>
                         <MenuItem eventKey="1d">
                             Last 24 hours
                         </MenuItem>
@@ -33,11 +32,10 @@ export default () => (
                     </Dropdown.Menu>
                     <div
                         style={{
-                            flex: '0 0 auto',
                             display: 'inline-block',
                             padding: 12,
                             borderLeft: '1px solid #ddd',
-                            height: 200
+                            width: 400
                         }}
                     >
                         <p>Specify a date/time range.</p>

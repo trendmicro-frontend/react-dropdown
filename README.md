@@ -266,7 +266,6 @@ rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 componentClass | element | div | A custom element for this component.
-flex | boolean | false | Whether to use the flexbox layout.
 open | boolean | false | Whether or not the dropdown is visible.
 pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
