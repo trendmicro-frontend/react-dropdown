@@ -8,11 +8,13 @@ export default () => (
         <div className={styles.sectionGroup}>
             <h3>Dropdown Menu Wrapper</h3>
             <Dropdown
-                open
                 onToggle={() => {}}
+                open
             >
                 <Dropdown.Toggle title="Custom range" />
-                <Dropdown.MenuWrapper style={{ whiteSpace: 'nowrap' }}>
+                <Dropdown.MenuWrapper
+                    style={{ whiteSpace: 'nowrap' }}
+                >
                     <Dropdown.Menu>
                         <MenuItem eventKey="1d">
                             Last 24 hours
