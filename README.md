@@ -248,15 +248,12 @@ btnStyle | One of:<br/>'default'<br/>'primary'<br/>'emphasis'<br/>'flat'<br/>'li
 noCaret | boolean | false | Whether to prevent a caret from being rendered next to the title.
 title | node | | Title content.
 disabled | boolean | false | Whether or not component is disabled.
-open | boolean | false | Whether or not the dropdown is visible.
 
 #### DropdownMenu
 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 componentClass | element | ul | A custom element for this component.
-open | boolean | false | Whether or not the dropdown is visible.
-pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
 onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
 rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
@@ -266,8 +263,6 @@ rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired 
 Name | Type | Default | Description 
 :--- | :--- | :------ | :----------
 componentClass | element | div | A custom element for this component.
-open | boolean | false | Whether or not the dropdown is visible.
-pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
 onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
 rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.
@@ -284,7 +279,6 @@ eventKey | any | | Value passed to the `onSelect` handler, useful for identifyin
 header | boolean | false | Style the menu item as a header label, useful for describing a group of menu items.
 onClick | function(event) | | Callback fired when the menu item is clicked, even if it is disabled.
 open | boolean | false | Whether or not the dropdown submenu is visible.
-pullRight | boolean | false | Align the menu to the right side of the dropdown toggle.
 onClose | function(event) | | A callback fired when the dropdown menu closes.
 onSelect | function(eventKey, event) | | A callback fired when a menu item is selected.
 rootCloseEvent | One of:<br/>'click'<br/>'mousedown' | | Which event when fired outside the component will cause it to be closed.

@@ -30,11 +30,7 @@ class DropdownMenuWrapper extends PureComponent {
     };
 
     static defaultProps = {
-        componentClass: 'div',
-
-        // Dropdown
-        open: false,
-        pullRight: false
+        componentClass: 'div'
     };
 
     menu = null; // <DropdownMenu ref={c => this.menu = c} />
@@ -91,7 +87,8 @@ class DropdownMenuWrapper extends PureComponent {
                 <Component
                     {...props}
                     className={cx(className, {
-                        [styles.dropdownMenuWrapper]: true
+                        [styles.dropdownMenuWrapper]: true,
+                        [styles.pullRight]: !!pullRight
                     })}
                 >
                     {React.Children.map(children, child => {
@@ -102,7 +99,9 @@ class DropdownMenuWrapper extends PureComponent {
                         if (this.isDropdownMenu(child)) {
                             return this.renderMenu(child, {
                                 // Do not pass onClose and rootCloseEvent to the dropdown menu
-                                open, pullRight, onSelect
+                                open,
+                                pullRight,
+                                onSelect
                             });
                         }
 

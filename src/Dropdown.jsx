@@ -326,7 +326,11 @@ class Dropdown extends PureComponent {
 
                     if (this.isDropdownMenu(child) || this.isDropdownMenuWrapper(child)) {
                         return this.renderMenu(child, {
-                            open, pullRight, onClose, onSelect, rootCloseEvent
+                            open,
+                            pullRight,
+                            onClose,
+                            onSelect,
+                            rootCloseEvent
                         });
                     }
 

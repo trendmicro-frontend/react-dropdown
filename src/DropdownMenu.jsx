@@ -30,11 +30,7 @@ class DropdownMenu extends PureComponent {
     };
 
     static defaultProps = {
-        componentClass: 'div',
-
-        // Dropdown
-        open: false,
-        pullRight: false
+        componentClass: 'div'
     };
 
     isMenuItem = match(MenuItem);
@@ -120,7 +116,7 @@ class DropdownMenu extends PureComponent {
                     className={cx(className, {
                         [styles.dropdownMenu]: true,
                         [styles.selected]: activeMenuItems.length > 0,
-                        [styles.pullRight]: pullRight
+                        [styles.pullRight]: !!pullRight
                     })}
                     style={style}
                 >
