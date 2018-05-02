@@ -1,4 +1,4 @@
-/*! react-dropdown v1.2.2 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
+/*! react-dropdown v1.2.3 | (c) 2018 Trend Micro Inc. | MIT | https://github.com/trendmicro-frontend/react-dropdown */
 .dropdown---dropdown---1yvIZ {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -156,6 +156,10 @@
   border: 1px solid #bbb;
   -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.dropdown---dropdown-menu-wrapper---3gX-X.dropdown---pull-right---2juGH {
+  right: 0;
+  left: auto;
 }
 .dropdown---dropdown-menu-wrapper---3gX-X > .dropdown---dropdown-menu---1fkH0 {
   position: static;
