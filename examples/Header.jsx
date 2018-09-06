@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from './Section';
+import Space from './Space';
 import Dropdown, { MenuItem } from '../src';
 import styles from './index.styl';
 
@@ -15,22 +16,23 @@ export default () => (
                         Dropdown Header
                     </MenuItem>
                     <MenuItem>
-                        Menu item one
+                        <Space width={16} />
+                        Menu item one (16px padding)
                     </MenuItem>
                     <MenuItem>
-                        Menu item two
+                        <Space width={24} />
+                        Menu item two (24px padding)
                     </MenuItem>
-                    <MenuItem>
-                        Menu item three
-                    </MenuItem>
+                    <MenuItem divider />
                     <MenuItem header>
                         Dropdown Header
                     </MenuItem>
                     <MenuItem>
-                        Menu item four
+                        Menu item three
                     </MenuItem>
+                    <MenuItem divider />
                     <MenuItem>
-                        Menu item five
+                        Menu item four
                     </MenuItem>
                 </Dropdown.Menu>
             </Dropdown>
