@@ -158,17 +158,13 @@ class Dropdown extends PureComponent {
     componentDidMount() {
         this.focusOnOpen();
     }
-    componentWillUpdate(nextProps) {
-        if (!nextProps.open && this.props.open) {
-            this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
-        }
-    }
     componentDidUpdate(prevProps) {
         const { open } = this.props;
         const prevOpen = prevProps.open;
 
         if (open && !prevOpen) {
             this.focusOnOpen();
+            this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
         }
 
         if (!open && prevOpen) {
@@ -207,7 +203,7 @@ class Dropdown extends PureComponent {
     focus() {
         const toggle = ReactDOM.findDOMNode(this.toggle);
 
-        if (toggle && toggle.focus) {
+        if (toggle && typeof toggle.focus === 'function') {
             toggle.focus();
         }
     }
