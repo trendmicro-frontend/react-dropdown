@@ -164,7 +164,6 @@ class Dropdown extends PureComponent {
 
         if (open && !prevOpen) {
             this.focusOnOpen();
-            this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
         }
 
         if (!open && prevOpen) {
@@ -172,6 +171,8 @@ class Dropdown extends PureComponent {
             if (this._focusInDropdown) {
                 this._focusInDropdown = false;
                 this.focus();
+            } else {
+                this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
             }
         }
     }
