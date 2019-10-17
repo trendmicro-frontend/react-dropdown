@@ -80,7 +80,6 @@ class Dropdown extends PureComponent {
 
     menu = null; // <DropdownMenu ref={c => this.menu = c} />
     toggle = null; // <DropdownToggle ref={c => this.toggle = c} />
-    _focusInDropdown = false;
     lastOpenEventType = null;
 
     isDropdownToggle = match(DropdownToggle);
@@ -155,10 +154,20 @@ class Dropdown extends PureComponent {
         }
     };
 
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        if (!this.props.open && prevProps.open) {
+            const focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
+            return focusInDropdown;
+        }
+
+        return null;
+    }
+
     componentDidMount() {
         this.focusOnOpen();
     }
-    componentDidUpdate(prevProps) {
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
         const { open } = this.props;
         const prevOpen = prevProps.open;
 
@@ -168,14 +177,13 @@ class Dropdown extends PureComponent {
 
         if (!open && prevOpen) {
             // if focus hasn't already moved from the menu lets return it to the toggle
-            if (this._focusInDropdown) {
-                this._focusInDropdown = false;
+            const focusInDropdown = (snapshot === true);
+            if (focusInDropdown) {
                 this.focus();
-            } else {
-                this._focusInDropdown = this.menu && contains(ReactDOM.findDOMNode(this.menu), activeElement(document));
             }
         }
     }
+
     toggleDropdown(eventType) {
         const { open, onToggle } = this.props;
         const shouldOpen = !open;
@@ -188,6 +196,7 @@ class Dropdown extends PureComponent {
             onToggle(shouldOpen);
         }
     }
+
     focusOnOpen() {
         const menu = this.menu;
 
@@ -201,6 +210,7 @@ class Dropdown extends PureComponent {
             return;
         }
     }
+
     focus() {
         const toggle = ReactDOM.findDOMNode(this.toggle);
 
@@ -208,6 +218,7 @@ class Dropdown extends PureComponent {
             toggle.focus();
         }
     }
+
     renderToggle(child, props) {
         let ref = c => {
             this.toggle = c;
@@ -237,6 +248,7 @@ class Dropdown extends PureComponent {
             )
         });
     }
+
     renderMenu(child, { id, onClose, onSelect, rootCloseEvent, ...props }) {
         let ref = c => {
             this.menu = c;
@@ -269,6 +281,7 @@ class Dropdown extends PureComponent {
             rootCloseEvent
         });
     }
+
     render() {
         const {
             componentType, // eslint-disable-line
