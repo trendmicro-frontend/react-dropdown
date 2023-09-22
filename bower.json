@@ -2,13 +2,6 @@
   "name": "@trendmicro/react-dropdown",
   "description": "React Dropdown component",
   "theme": "minimalism",
-  "authors": [
-    {
-      "name": "Cheton Wu",
-      "email": "cheton_wu@trend.com.tw",
-      "homepage": "https://github.com/cheton"
-    }
-  ],
   "homepage": "https://github.com/trendmicro-frontend/react-dropdown",
   "snapshots": [
     "./snapshots/dropdown-buttons.png",
