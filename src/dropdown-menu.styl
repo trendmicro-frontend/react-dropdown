@@ -3,7 +3,8 @@
     top: 100%;
     left: 0;
     z-index: 1000;
-    display: none;
+    display: block;
+    visibility: hidden;
     min-width: 0;
     padding: 8px 0;
     margin: 0;
@@ -111,5 +112,5 @@
 }
 
 .dropdown.open > .dropdown-menu {
-    display: block;
+    visibility: visible;
 }

@@ -1,5 +1,6 @@
 .dropdown-menu-wrapper {
-    display: none;
+    display: inline-block;
+    visibility: hidden;
     position: absolute;
     left: 0;
     top: 100%;
@@ -24,7 +25,7 @@
 }
 
 .dropdown.open > .dropdown-menu-wrapper > .dropdown-menu {
-    display: inline-block;
+    visibility: visible;
     border: 0;
     box-shadow: none;
 }
