@@ -289,7 +289,7 @@ class Dropdown extends PureComponent {
             dropup,
             disabled,
             pullRight,
-            open,
+            open: requestedOpen,
             autoOpen, // eslint-disable-line
             onClose,
             onSelect,
@@ -301,6 +301,8 @@ class Dropdown extends PureComponent {
             children,
             ...props
         } = this.props;
+
+        const open = requestedOpen && !disabled;
 
         if (Component === ButtonGroup) {
             props.dropdownOpen = open;

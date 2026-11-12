@@ -35,3 +35,24 @@ test('<Dropdown />', (t) => {
 
     t.end();
 });
+
+test('<Dropdown /> becoming disabled while open', (t) => {
+    const wrapper = mount((
+        <Dropdown open>
+            <Dropdown.Toggle>Fruit</Dropdown.Toggle>
+            <Dropdown.Menu>
+                <MenuItem eventKey="orange">Orange</MenuItem>
+            </Dropdown.Menu>
+        </Dropdown>
+    ));
+
+    t.equal(wrapper.find(Dropdown.Menu).prop('open'), true, 'opens while enabled');
+    wrapper.setProps({ disabled: true });
+    t.equal(wrapper.find(Dropdown.Toggle).prop('open'), false, 'reports the menu as closed');
+    t.equal(wrapper.find(Dropdown.Menu).prop('open'), false, 'closes the menu while disabled');
+
+    wrapper.setProps({ disabled: false });
+    t.equal(wrapper.find(Dropdown.Menu).prop('open'), true, 'restores the controlled open state');
+    wrapper.unmount();
+    t.end();
+});
